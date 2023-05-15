@@ -9,6 +9,8 @@ import { ReponsesComponent } from './reponses/reponses.component';
 import { InputComponent } from './input/input.component';
 import { TitleComponent } from './title/title.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { FooterRedirectHomeComponent } from './footer-redirect-home/footer-redirect-home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FooterComponent } from './footer/footer.component';
     ReponsesComponent,
     InputComponent,
     TitleComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    FooterRedirectHomeComponent
   ],
   imports: [
     BrowserModule,

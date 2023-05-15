@@ -3,15 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuestionComponent } from './question/question.component';
 import { ConceptComponent } from './concept/concept.component';
 import { InputComponent } from './input/input.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: QuestionComponent,
-  },
-  {
-    path: 'home',
-    component: InputComponent,
+    component: HomeComponent,
   },
   {
     path: 'concept',
@@ -19,12 +16,12 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full',
   }
 ];

@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-concept',
-  templateUrl: './concept.component.html',
-  styles: [
-  ]
+  template: `
+    <app-title></app-title>
+    <app-footer-redirect-home></app-footer-redirect-home>
+  `,
+  styles: []
 })
 export class ConceptComponent {
-
+  //
 }
