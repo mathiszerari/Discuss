@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
     <app-input></app-input>
 
     <app-reponses></app-reponses> 
+
+    <app-footer></app-footer>
   `,
   styles: []
 })

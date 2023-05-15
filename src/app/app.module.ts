@@ -8,6 +8,7 @@ import { ConceptComponent } from './concept/concept.component';
 import { ReponsesComponent } from './reponses/reponses.component';
 import { InputComponent } from './input/input.component';
 import { TitleComponent } from './title/title.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TitleComponent } from './title/title.component';
     ConceptComponent,
     ReponsesComponent,
     InputComponent,
-    TitleComponent
+    TitleComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
