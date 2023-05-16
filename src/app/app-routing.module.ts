@@ -1,9 +1,7 @@
 import { Input, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { QuestionComponent } from './question/question.component';
-import { ConceptComponent } from './concept/concept.component';
-import { InputComponent } from './input/input.component';
-import { HomeComponent } from './home/home.component';
+import { ConceptComponent } from './component/concept/concept.component';
+import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   {

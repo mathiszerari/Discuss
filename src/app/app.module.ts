@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { QuestionComponent } from './question/question.component';
-import { ConceptComponent } from './concept/concept.component';
-import { ReponsesComponent } from './reponses/reponses.component';
-import { InputComponent } from './input/input.component';
-import { TitleComponent } from './title/title.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { FooterRedirectHomeComponent } from './footer-redirect-home/footer-redirect-home.component';
-import { ConceptTextComponent } from './concept-text/concept-text.component';
+import { QuestionComponent } from './component/question/question.component';
+import { ConceptComponent } from './component/concept/concept.component';
+import { ReponsesComponent } from './component/reponses/reponses.component';
+import { InputComponent } from './component/input/input.component';
+import { TitleComponent } from './component/title/title.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { HomeComponent } from './component/home/home.component';
+import { FooterRedirectHomeComponent } from './component/footer-redirect-home/footer-redirect-home.component';
+import { ConceptTextComponent } from './component/concept-text/concept-text.component';
 
 @NgModule({
   declarations: [
