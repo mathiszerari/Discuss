@@ -11,6 +11,7 @@ import { TitleComponent } from './title/title.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FooterRedirectHomeComponent } from './footer-redirect-home/footer-redirect-home.component';
+import { ConceptTextComponent } from './concept-text/concept-text.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterRedirectHomeComponent } from './footer-redirect-home/footer-redir
     TitleComponent,
     FooterComponent,
     HomeComponent,
-    FooterRedirectHomeComponent
+    FooterRedirectHomeComponent,
+    ConceptTextComponent
   ],
   imports: [
     BrowserModule,
