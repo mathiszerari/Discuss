@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './input.component.html',
 })
 export class InputComponent {
+  reponse: string;
 
+  constructor() {
+    this.reponse = '';
+  }
 }
