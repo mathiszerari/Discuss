@@ -7,6 +7,7 @@ import { ReplyService } from '../../reply.service';
 })
   
 export class ReponsesComponent {
+  isReplyClicked: boolean | undefined;
   reply: string | undefined;
 
   constructor(private replyService: ReplyService) {
@@ -14,6 +15,6 @@ export class ReponsesComponent {
       this.reply = reply;
       console.log('reply added:', this.reply);
     });
-  }
+  }  
   
 }

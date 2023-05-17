@@ -9,6 +9,7 @@ export class ReplyService {
   private replySubject = new BehaviorSubject<string>('');
 
   reply$ = this.replySubject.asObservable();
+  isReplyClicked$: any;
 
   setReply(reply: string) {
     this.replySubject.next(reply);
