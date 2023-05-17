@@ -1,24 +1,10 @@
-<!-- <div class="flex">
-    <div class="div-input w-3/5 max-w-3xl mt-10 pb-5 mx-auto relative">
-      <input
-        class="input h-40 w-full py-2 pl-10 pr-3 leading-5 border border-gray-200 bg-gray-900 text-white rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent"
-        type="text" placeholder="Answer..." name="reponse"
-        [(ngModel)]="reponse" />
-    </div>
-</div>
-
-  <div class="text-white">Your Reply: <span>{{ reponse }}</span></div>
-  
- -->
-
-
 <form class="mt-10 max-w-xl mx-auto">
     <div class="w-full mb-4 border rounded-xl bg-gray-700 border-gray-600">
         <div class="px-4 py-2 bg-white rounded-t-xl dark:bg-gray-800">
             <label for="comment" class="sr-only">Your comment</label>
-            <textarea id="comment" rows="3" class="w-full resize-none focus-visible:outline-none px-0 text-sm 
+            <textarea id="comment" rows="3" name="replyContent" class="w-full resize-none focus-visible:outline-none px-0 text-sm 
             text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" 
-            placeholder="Write a comment..." required ng-model="replyContent"></textarea>
+            placeholder="Write a comment..." required [ngModel]="replyContent" (ngModelChange)="replyContent = $event"></textarea>
         </div>
         <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <button (click)="onClick()" type="submit" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white shadow-lg shadow-cyan-500/50 rounded-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-cyan-400/50">
@@ -26,4 +12,4 @@
             </button>
         </div>
     </div>
-</form> 
+</form>

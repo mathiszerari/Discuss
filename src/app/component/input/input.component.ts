@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReponsesComponent } from '../reponses/reponses.component';
+import { ReplyService } from '../../reply.service';
 
 @Component({
   selector: 'app-input',
@@ -7,18 +7,13 @@ import { ReponsesComponent } from '../reponses/reponses.component';
 })
   
 export class InputComponent {
-  constructor(private ReponsesComponent: ReponsesComponent) { }
   
   replyContent: string = '';
 
-  ngOnInit() {
-    // this.ReponsesComponent.reply = this.replyContent;
-  }
+  constructor(private replyService: ReplyService) { }
 
   onClick() {
-    console.log('reply added');
-    
-    this.ReponsesComponent.reply = this.replyContent;
-    console.log(this.ReponsesComponent.reply);
+    this.replyService.setReply(this.replyContent);
+    this.replyContent = ''; // Réinitialise le contenu de la réponse après l'avoir envoyé
   }
 }

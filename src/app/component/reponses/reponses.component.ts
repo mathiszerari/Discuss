@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ReplyService } from '../../reply.service';
 
 @Component({
   selector: 'app-reponses',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
   
 export class ReponsesComponent {
   reply: string | undefined;
+
+  constructor(private replyService: ReplyService) {
+    this.replyService.reply$.subscribe(reply => {
+      this.reply = reply;
+      console.log('reply added:', this.reply);
+    });
+  }
+  
 }
