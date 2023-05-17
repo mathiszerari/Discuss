@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
+import { ReponsesComponent } from '../reponses/reponses.component';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
 })
+  
 export class InputComponent {
-  reponse: string;
+  constructor(private ReponsesComponent: ReponsesComponent) { }
+  
+  replyContent: string = '';
 
-  constructor() {
-    this.reponse = '';
+  ngOnInit() {
+    // this.ReponsesComponent.reply = this.replyContent;
+  }
+
+  onClick() {
+    console.log('reply added');
+    
+    this.ReponsesComponent.reply = this.replyContent;
+    console.log(this.ReponsesComponent.reply);
   }
 }

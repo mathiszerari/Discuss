@@ -32,7 +32,9 @@ import { ConceptTextComponent } from './component/concept-text/concept-text.comp
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ReponsesComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
