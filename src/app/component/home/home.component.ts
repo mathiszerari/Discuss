@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
 
     <app-reponses></app-reponses> 
 
+    <app-connexion></app-connexion> 
+
     <app-footer></app-footer>
   `,
   styles: []

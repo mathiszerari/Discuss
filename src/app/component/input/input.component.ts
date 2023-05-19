@@ -11,9 +11,7 @@ export class InputComponent {
   replyContent: string = '';
   isReplyClicked: boolean = false;
 
-  constructor(private replyService: ReplyService) {
-    console.log(this.replyService.isReplyClicked$)
-  }
+  constructor(private replyService: ReplyService) {}
 
   ngOnInit(): void {
 
