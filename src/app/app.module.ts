@@ -14,6 +14,7 @@ import { HomeComponent } from './component/home/home.component';
 import { FooterRedirectHomeComponent } from './component/footer-redirect-home/footer-redirect-home.component';
 import { ConceptTextComponent } from './component/concept-text/concept-text.component';
 import { ReplyService } from './reply.service';
+import { ConnexionComponent } from './component/connexion/connexion.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReplyService } from './reply.service';
     FooterComponent,
     HomeComponent,
     FooterRedirectHomeComponent,
-    ConceptTextComponent
+    ConceptTextComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
