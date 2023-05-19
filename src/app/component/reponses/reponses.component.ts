@@ -7,14 +7,20 @@ import { ReplyService } from '../../reply.service';
 })
   
 export class ReponsesComponent {
-  isReplyClicked: boolean | undefined;
+  clicked: any;
   reply: string | undefined;
+
+  ngOnInit() {
+    this.replyService.clicked$.subscribe(nouvelleValeur => {
+      this.clicked = nouvelleValeur;
+    });
+  }
 
   constructor(private replyService: ReplyService) {
     this.replyService.reply$.subscribe(reply => {
       this.reply = reply;
-      console.log('reply added:', this.reply);
     });
   }  
+
   
 }

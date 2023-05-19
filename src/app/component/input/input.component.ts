@@ -7,15 +7,23 @@ import { ReplyService } from '../../reply.service';
 })
   
 export class InputComponent {
-  
+  isClicked: any;
   replyContent: string = '';
-  isReplyClicked: boolean | undefined;
+  isReplyClicked: boolean = false;
 
-  constructor(private replyService: ReplyService) { }
+  constructor(private replyService: ReplyService) {
+    console.log(this.replyService.isReplyClicked$)
+  }
+
+  ngOnInit(): void {
+
+  }
 
   onClick() {
     this.replyService.setReply(this.replyContent);
-    this.replyContent = ''; // Réinitialise le contenu de la réponse après l'avoir envoyé
-    this.isReplyClicked = true;
+    this.replyContent = '';
+
+    const nouvelleValeur = true;
+    this.replyService.updateMaVariable(nouvelleValeur);
   }
 }
