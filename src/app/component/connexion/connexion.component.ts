@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connexion',
   templateUrl: './connexion.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class ConnexionComponent {
+  @ViewChild('modal', { static: true })
+  modal!: ElementRef;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   navigate() {
     this.router.navigate(['home/login']);
-    console.log(['navigate ouuuuu'])
+    console.log('navigate ouuuuu');
+    
+    const classes = this.modal.nativeElement.classList;
+    if (classes.contains('hidden')) {
+      classes.remove('hidden');
+    }
   }
 }
