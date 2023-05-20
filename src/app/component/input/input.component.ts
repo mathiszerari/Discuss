@@ -17,7 +17,7 @@ export class InputComponent {
 
   }
 
-  onClick() {
+  reply() {
     this.replyService.setReply(this.replyContent);
     this.replyContent = '';
 

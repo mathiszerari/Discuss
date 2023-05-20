@@ -17,8 +17,17 @@ export class ConnexionComponent {
     console.log('navigate ouuuuu');
     
     const classes = this.modal.nativeElement.classList;
+    
     if (classes.contains('hidden')) {
       classes.remove('hidden');
+    }
+  }
+
+  close() {
+    const classes = this.modal.nativeElement.classList;
+
+    if (!classes.contains('hidden')) {
+      classes.add('hidden');
     }
   }
 }
