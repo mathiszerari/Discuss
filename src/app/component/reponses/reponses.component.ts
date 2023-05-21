@@ -21,6 +21,4 @@ export class ReponsesComponent {
       this.reply = reply;
     });
   }  
-
-  
 }

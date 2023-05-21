@@ -14,14 +14,21 @@ export class InputComponent {
   constructor(private replyService: ReplyService) {}
 
   ngOnInit(): void {
-
+    console.log(this.isReplyClicked);
+    
   }
 
   reply() {
+    console.log(this.isReplyClicked);
+    
     this.replyService.setReply(this.replyContent);
     this.replyContent = '';
 
     const nouvelleValeur = true;
     this.replyService.updateMaVariable(nouvelleValeur);
+
+    this.isReplyClicked = true;
+    console.log(this.isReplyClicked);
+    
   }
 }
