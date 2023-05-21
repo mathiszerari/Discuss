@@ -1,7 +1,8 @@
-<h2 class="text-xl  max-w-3xl p-5 text text-gray-200 mx-auto">Top responses</h2>
+<!-- <h2 class="text-xl  max-w-3xl p-5 text text-gray-200 mx-auto">Top responses</h2>
 
-<div class="grid grid-cols-2 gap-4 pb-10">
-  <!--  *ngFor="let _ of [].constructor(4)"  -->
+grid-cols-2
+<div class="grid gap-4 pb-10">
+  *ngFor="let _ of [].constructor(4)"
   <div *ngIf="clicked == true" class="py-5 mx-auto">
     <div class="bg-gray-800 max-w-md rounded-full grid-cols-4">
       <div class="container card p-5 bg-gray-700 rounded-full">
@@ -12,10 +13,37 @@
             <p class="text-gray-400">username</p>
           </div>
         </div>
-        <h3 class="text-xl mt-5 pl-10 pr-10 text text-gray-200"> {{ reply }}</h3>
+        <h3 class="text-xl mt-5 pl-10 pb-5 pr-10 break-words text text-gray-200"> {{ reply }}</h3>
       </div>
-      <div class="flex items-center text-center">
-        <h5 class="text-gray-200 font-semibold ml-14 py-2 px-3">upvote</h5>
+      <div class="flex items-center px-24 justify-between text-center">
+        <h5 class="text-gray-200 font-semibold py-2 px-3">upvote</h5>
+        <h5 class="text-gray-200 font-semibold py-2 px-3">downvote</h5>
+        <h5 class="text-gray-200 font-semibold py-2 px-3">share</h5>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<h2 class="text-xl max-w-3xl p-5 mt-10 text text-gray-200 mx-auto">Top responses</h2>
+
+<!--  grid-cols-2  -->
+<div class="grid gap-4 pb-10">
+  <!--  *ngFor="let _ of [].constructor(4)"  -->
+  <div *ngIf="clicked == true" class="py-5 mx-auto">
+    <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
+      <div class="container card p-5 bg-gray-700 rounded-3xl">
+        <div class="pl-10 pr-10 flex items-center">
+          <img src="assets/newlogo.png" alt="Description de l'image" class="w-10 h-10 rounded-full mr-4">
+          <div>
+            <h3 class="text-gray-200">Nom d'utilisateur</h3>
+            <p class="text-gray-400">username</p>
+          </div>
+        </div>
+        <h3 class="text-xl mt-5 pb-5 pl-10 pr-10 text break-all text-gray-200"> {{ reply }}</h3>
+      </div>
+      <div class="flex items-center justify-around text-center">
+        <h5 class="text-gray-200 font-semibold py-2 px-3">upvote</h5>
         <h5 class="text-gray-200 font-semibold py-2 px-3">downvote</h5>
         <h5 class="text-gray-200 font-semibold py-2 px-3">share</h5>
       </div>
