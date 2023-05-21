@@ -53,7 +53,7 @@ export class ConnexionComponent {
         console.log(this.username, this.password);
         setTimeout(() => {
           this.close(); 
-        }, 5000);
+        }, 2000);
       });
   }
 
