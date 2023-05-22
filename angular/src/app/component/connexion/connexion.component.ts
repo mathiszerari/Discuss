@@ -23,7 +23,7 @@ export class ConnexionComponent {
   email: string;
   username: string;
   password: string;
-  createAccount: string;
+  creatingAccount: boolean;
   auth: AuthService;
 
   constructor(
@@ -35,7 +35,7 @@ export class ConnexionComponent {
     this.email = '';
     this.username = '';
     this.password = '';
-    this.createAccount = '';
+    this.creatingAccount = false;
     this.auth = authService;
     this.users = [];
   }
@@ -77,13 +77,17 @@ export class ConnexionComponent {
       console.log(this.username, this.password);
       setTimeout(() => {
         this.close();
-      }, 2000);
+      }, 1500);
     });
   }
 
   logout() {
     this.auth.logout();
     this.message = 'Vous avez été déconnecté';
+  }
+
+  signup() {
+    
   }
 
   navigate() {
@@ -104,4 +108,44 @@ export class ConnexionComponent {
       classes.add('hidden');
     }
   }
+
+  createAccount() {
+    this.router.navigate(['home/login']);
+
+    const classes = this.modal.nativeElement.classList;
+
+    if (classes.contains('hidden')) {
+      classes.remove('hidden');
+    }
+
+    this.creatingAccount = true;
+  }
+
+  submitForm() {
+    // Récupère les valeurs des inputs
+    const emailValue = this.email;
+    const usernameValue = this.username;
+    const passwordValue = this.password;
+    console.log(emailValue, usernameValue, passwordValue);
+    
+  
+    // Envoie les données vers Flask
+    // Utilise HttpClient pour effectuer une requête POST vers ton endpoint Flask
+    // Exemple :
+    this.http.post('/users', { email: emailValue, username: usernameValue, password: passwordValue })
+      .subscribe(
+        (response) => {
+          // Traitement de la réponse si nécessaire
+        },
+        (error) => {
+          console.error('Error submitting form:', error);
+        }
+      );
+  
+    // Réinitialise les valeurs des inputs après l'envoi du formulaire
+    this.email = '';
+    this.username = '';
+    this.password = '';
+  }
+  
 }
