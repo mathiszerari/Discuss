@@ -46,7 +46,6 @@ Thumbs.db
 
 ### venv ###
 # Virtualenv
-# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
 [Bb]in
 [Ii]nclude
@@ -57,5 +56,3 @@ Thumbs.db
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-
-# End of https://www.toptal.com/developers/gitignore/api/venv

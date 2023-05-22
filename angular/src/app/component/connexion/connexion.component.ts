@@ -122,26 +122,24 @@ export class ConnexionComponent {
   }
 
   submitForm() {
-    // Récupère les valeurs des inputs
     const emailValue = this.email;
     const usernameValue = this.username;
     const passwordValue = this.password;
+
     console.log(emailValue, usernameValue, passwordValue);
-    
-  
+
     // Envoie les données vers Flask
-    // Utilise HttpClient pour effectuer une requête POST vers ton endpoint Flask
-    // Exemple :
-    this.http.post('/users', { email: emailValue, username: usernameValue, password: passwordValue })
+    this.http.post<any>('http://localhost:5000/users', { email: emailValue, username: usernameValue, password: passwordValue })
       .subscribe(
         (response) => {
           // Traitement de la réponse si nécessaire
+          console.log('Response:', response);
         },
         (error) => {
           console.error('Error submitting form:', error);
         }
       );
-  
+
     // Réinitialise les valeurs des inputs après l'envoi du formulaire
     this.email = '';
     this.username = '';
