@@ -46,7 +46,7 @@ export class ConnexionComponent {
   }
 
   getUsers() {
-    this.http.get<User[]>('/users').subscribe(
+    this.http.get<User[]>('http://localhost:5000/users').subscribe(
       (response) => {
         this.users = response;
       },
