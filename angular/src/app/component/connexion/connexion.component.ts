@@ -25,6 +25,7 @@ export class ConnexionComponent {
   password: string;
   creatingAccount: boolean;
   auth: AuthService;
+  url: string;
 
   constructor(
     private router: Router,
@@ -38,14 +39,20 @@ export class ConnexionComponent {
     this.creatingAccount = false;
     this.auth = authService;
     this.users = [];
+    this.url = '';
   }
 
   ngOnInit() {
     this.auth = this.authService;
     this.getUsers();
+
+    const url = 'https://localhost:5000/users';
   }
 
   getUsers() {
+    const headers = {
+      'Access-Control-Allow-Origin': '*',
+    };
     this.http.get<User[]>('http://localhost:5000/users').subscribe(
       (response) => {
         this.users = response;
@@ -54,6 +61,7 @@ export class ConnexionComponent {
         console.error('Error retrieving users:', error);
       }
     );
+    return this.http.get(this.url, { headers });
   }
 
   setMessage() {
@@ -92,8 +100,6 @@ export class ConnexionComponent {
 
   navigate() {
     this.router.navigate(['home/login']);
-    console.log('navigate ouuuuu');
-
     this.open()
   }
 
