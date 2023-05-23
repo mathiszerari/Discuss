@@ -94,11 +94,7 @@ export class ConnexionComponent {
     this.router.navigate(['home/login']);
     console.log('navigate ouuuuu');
 
-    const classes = this.modal.nativeElement.classList;
-
-    if (classes.contains('hidden')) {
-      classes.remove('hidden');
-    }
+    this.open()
   }
 
   close() {
@@ -114,11 +110,23 @@ export class ConnexionComponent {
 
     const classes = this.modal.nativeElement.classList;
 
+    this.open()
+
+    this.creatingAccount = true;
+  }
+
+  loginAccount() {
+    this.router.navigate(['home/login']);
+
+    this.creatingAccount = false;
+  }
+
+  open() {
+    const classes = this.modal.nativeElement.classList;
+
     if (classes.contains('hidden')) {
       classes.remove('hidden');
     }
-
-    this.creatingAccount = true;
   }
 
   submitForm() {

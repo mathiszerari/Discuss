@@ -33,15 +33,15 @@
                               <div class="flex items-center h-5">
                                   <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-300" required>
                               </div>
-                              <label for="remember" class="ml-2 text-sm font-medium text-white">Remember me</label>
+                              <label *ngIf="!creatingAccount" for="remember" class="ml-2 text-sm font-medium text-white">Remember me</label>
                           </div>
-                          <a href="#" class="text-sm0 hover:underline text-cyan-400">Lost Password?</a>
+                          <a *ngIf="!creatingAccount" href="#" class="text-sm0 hover:underline text-cyan-400">Lost Password?</a>
                       </div>
                       <button *ngIf="!creatingAccount" (click)="login()" type="submit" class="w-full text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 focus:ring-cyan-500">Login to your account</button>
                       <button *ngIf="creatingAccount" (click)="signup()" type="submit" class="w-full text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 focus:ring-cyan-500">Create an account</button>
                       <div *ngIf="!auth.isLogged" class="text-sm flex justify-between text-white font-medium">
                         <a *ngIf="!creatingAccount" (click)="createAccount()" class=" hover:underline mx-auto text-cyan-400">Create account</a>
-                        <a *ngIf="creatingAccount" (click)="createAccount()" class=" hover:underline mx-auto text-cyan-400">Login</a>
+                        <a *ngIf="creatingAccount" (click)="loginAccount()" class=" hover:underline mx-auto text-cyan-400">Login</a>
                       </div>
                       <div (click)="logout()" *ngIf="auth.isLogged" class="text-sm flex justify-between text-white font-medium">
                         <a href="#" class=" hover:underline mx-auto text-cyan-400">Se deonnecté</a>
