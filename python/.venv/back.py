@@ -17,7 +17,7 @@ port = parsed_uri['nodelist'][0][1]
 
 app = Flask("discuss")
 CORS(app)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources=["http://localhost:4200"])
 
 client = MongoClient(host, port)
 db = client['discuss']

@@ -82,7 +82,7 @@ export class ConnexionComponent {
         this.password = '';
         this.router.navigate(['home/login']);
       }
-      console.log(this.username, this.password);
+      // console.log(this.username, this.password);
       setTimeout(() => {
         this.close();
       }, 1500);
