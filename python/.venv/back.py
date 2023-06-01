@@ -33,16 +33,5 @@ def get_users():
         })
     return jsonify({'users': users})
 
-# @app.route('/login', methods=['POST'])
-# def get_users():
-#     users = []
-#     for user in collection.find():
-#         users.append({
-#             'username': user['username'],
-#             'email': user['email'],
-#             'password': user['password']
-#         })
-#     return jsonify({'users': users})
-
 if __name__ == '__main__':
     app.run()
