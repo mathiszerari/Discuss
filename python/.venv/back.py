@@ -4,6 +4,7 @@ from pymongo import MongoClient
 from pymongo.uri_parser import parse_uri
 from dotenv import load_dotenv, find_dotenv
 import os
+import re
 
 load_dotenv(find_dotenv())
 
@@ -33,6 +34,9 @@ def get_users():
         })
     return jsonify({'users': users})
 
+
+regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+
 @app.route('/users', methods=['POST'])
 def create_users():
     data = request.get_json()
@@ -40,15 +44,34 @@ def create_users():
     email = data['email']
     password = data['password']
     
+    # Conditions de validation
+
+    if username == '' or email == '' or password == '':
+        return jsonify({'message': 'Champ(s) invalide(s)'})
+    
+    existing_user = collection.find_one({'username': username})
+    if existing_user:
+        return jsonify({'message': 'Le nom d\'utilisateur est déjà pris'})
+    
+    existing_email = collection.find_one({'email': email})
+    if existing_email:
+        return jsonify({'message': 'L\'email est déjà pris'})
+    
+    if not re.fullmatch(regex, email):
+        print('Email invalide')
+        return jsonify({'message': 'Email invalide'})
+
+    # Insérer le nouvel utilisateur dans la base de données
     user_data = {
         'username': username,
         'email': email,
         'password': password
     }
-    print(user_data)
+
     collection.insert_one(user_data)
     
-    return jsonify({'message': 'User created successfully'})
+    return jsonify({'message': 'Utilisateur créé avec succès'})
+
 
 if __name__ == '__main__':
     app.run()
