@@ -5,6 +5,7 @@ from pymongo.uri_parser import parse_uri
 from dotenv import load_dotenv, find_dotenv
 import os
 import re
+import bcrypt
 
 load_dotenv(find_dotenv())
 
@@ -43,9 +44,12 @@ def create_users():
     username = data['username']
     email = data['email']
     password = data['password']
+
+
+    salt = bcrypt.gensalt()
+    password = bcrypt.hashpw(password.encode('utf-8'), salt)
     
     # Conditions de validation
-
     if username == '' or email == '' or password == '':
         return jsonify({'message': 'Champ(s) invalide(s)'})
     
@@ -71,6 +75,18 @@ def create_users():
     collection.insert_one(user_data)
     
     return jsonify({'message': 'Utilisateur créé avec succès'})
+
+
+
+mdp = "motdepasse123"
+
+# Génération du sel aléatoire
+salt = bcrypt.gensalt()
+
+# Hachage du mot de passe avec le sel
+
+# Vérification du mot de passe haché
+
 
 
 if __name__ == '__main__':

@@ -68,7 +68,6 @@ export class ConnexionComponent {
         this.password = '';
         this.router.navigate(['home/login']);
       }
-      // console.log(this.username, this.password);
       setTimeout(() => {
         this.close();
       }, 1500);
@@ -84,8 +83,6 @@ export class ConnexionComponent {
     const emailValue = this.email;
     const usernameValue = this.username;
     const passwordValue = this.password;
-  
-    console.log(emailValue, usernameValue, passwordValue);
   
     // Envoie les données vers Flask
     this.http.post<any>(this.url, { email: emailValue, username: usernameValue, password: passwordValue })
