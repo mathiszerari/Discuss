@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 import { HttpClient } from '@angular/common/http';
+import { catchError, throwError } from 'rxjs';
 
 interface User {
   username: string;
@@ -22,6 +23,7 @@ export class ConnexionComponent {
   email: string = '';
   username: string = '';
   password: string = '';
+  erreur: string = '';
   creatingAccount: boolean = false;
   url: string = 'http://127.0.0.1:5000/users';
 
@@ -86,10 +88,26 @@ export class ConnexionComponent {
   
     // Envoie les données vers Flask
     this.http.post<any>(this.url, { email: emailValue, username: usernameValue, password: passwordValue })
+      .pipe(
+        catchError(error => {
+          if (error.error.message === 'Le nom d\'utilisateur est déjà pris') {
+            // Gérer l'erreur ici, par exemple afficher un message à l'utilisateur
+            console.log('Le nom d\'utilisateur est déjà pris');
+            return throwError(error);
+          }
+          if (error.error.message === 'Champ(s) invalide(s)') {
+            // Gérer l'erreur ici, par exemple afficher un message à l'utilisateur
+            console.log('Champ(s) invalide(s)');
+            return throwError(error);
+          }
+          return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+        })
+      )
       .subscribe(
         (response) => {
           // Traitement de la réponse si nécessaire
-          console.log('Response:', response);
+          this.erreur = response.message
+          console.log(response.message);
         },
         (error) => {
           console.error('Error submitting form:', error);
@@ -100,9 +118,13 @@ export class ConnexionComponent {
     this.email = '';
     this.username = '';
     this.password = '';
-
-    this.close()
+        
+    setTimeout(() => {
+      this.close();
+    }, 5000);
+    
   }
+  
 
   navigate() {
     this.router.navigate(['home/login']);
