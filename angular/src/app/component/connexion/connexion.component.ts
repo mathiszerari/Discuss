@@ -12,48 +12,31 @@ interface User {
 @Component({
   selector: 'app-connexion',
   templateUrl: './connexion.component.html',
-  styles: []
 })
 export class ConnexionComponent {
-  users: User[];
+  users: User[] = [];
 
   @ViewChild('modal', { static: true })
   modal!: ElementRef;
-  message: string;
-  email: string;
-  username: string;
-  password: string;
-  creatingAccount: boolean;
-  auth: AuthService;
-  url: string;
+  message: string = '';
+  email: string = '';
+  username: string = '';
+  password: string = '';
+  creatingAccount: boolean = false;
+  url: string = 'http://127.0.0.1:5000/users';
 
   constructor(
     private router: Router,
     private http: HttpClient,
-    private authService: AuthService
-  ) {
-    this.message = '';
-    this.email = '';
-    this.username = '';
-    this.password = '';
-    this.creatingAccount = false;
-    this.auth = authService;
-    this.users = [];
-    this.url = '';
-  }
+    public authService: AuthService
+  ) {}
 
   ngOnInit() {
-    this.auth = this.authService;
     this.getUsers();
-
-    const url = 'https://localhost:5000/users';
   }
 
   getUsers() {
-    const headers = {
-      'Access-Control-Allow-Origin': '*',
-    };
-    this.http.get<User[]>('http://localhost:5000/users').subscribe(
+    this.http.get<User[]>(this.url).subscribe(
       (response) => {
         this.users = response;
       },
@@ -61,11 +44,11 @@ export class ConnexionComponent {
         console.error('Error retrieving users:', error);
       }
     );
-    return this.http.get(this.url, { headers });
+    return this.http.get(this.url);
   }
 
   setMessage() {
-    if (this.auth.isLogged) {
+    if (this.authService.isLogged) {
       this.message = '(pastille & msg vert) Vous êtes connecté';
     } else {
       this.message = '(pastille & msg rouge) Réessayez le mot de passe ou le nom d\'utilisateur incorrect';
@@ -74,7 +57,7 @@ export class ConnexionComponent {
 
   login() {
     this.message = 'Connexion en cours';
-    this.auth.login(this.username, this.password).subscribe((isLogged: boolean) => {
+    this.authService.login(this.username, this.password).subscribe((isLogged: boolean) => {
       this.setMessage();
       if (isLogged) {
         this.router.navigate(['home']);
@@ -90,7 +73,7 @@ export class ConnexionComponent {
   }
 
   logout() {
-    this.auth.logout();
+    this.authService.logout();
     this.message = 'Vous avez été déconnecté';
   }
 
@@ -143,7 +126,7 @@ export class ConnexionComponent {
     console.log(emailValue, usernameValue, passwordValue);
 
     // Envoie les données vers Flask
-    this.http.post<any>('http://localhost:5000/users', { email: emailValue, username: usernameValue, password: passwordValue })
+    this.http.post<any>(this.url, { email: emailValue, username: usernameValue, password: passwordValue })
       .subscribe(
         (response) => {
           // Traitement de la réponse si nécessaire

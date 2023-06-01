@@ -15,9 +15,8 @@ parsed_uri = parse_uri(connection_string)
 host = parsed_uri['nodelist'][0][0]
 port = parsed_uri['nodelist'][0][1]
 
-app = Flask("discuss")
-CORS(app)
-CORS(app, resources=["http://localhost:4200"])
+app = Flask(__name__)
+CORS(app, resources={r"/users/*": {"origins": "*"}})
 
 client = MongoClient(host, port)
 db = client['discuss']
@@ -33,6 +32,17 @@ def get_users():
             'password': user['password']
         })
     return jsonify({'users': users})
+
+# @app.route('/login', methods=['POST'])
+# def get_users():
+#     users = []
+#     for user in collection.find():
+#         users.append({
+#             'username': user['username'],
+#             'email': user['email'],
+#             'password': user['password']
+#         })
+#     return jsonify({'users': users})
 
 if __name__ == '__main__':
     app.run()
