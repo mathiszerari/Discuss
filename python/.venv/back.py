@@ -19,8 +19,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/users/*": {"origins": "*"}})
 
 client = MongoClient(host, port)
-db = client['discuss']
-collection = db['usersdatas']
+db = client.discuss
+collection = db.usersdatas
 
 @app.route('/users', methods=['GET'])
 def get_users():
@@ -32,6 +32,23 @@ def get_users():
             'password': user['password']
         })
     return jsonify({'users': users})
+
+@app.route('/users', methods=['POST'])
+def create_users():
+    data = request.get_json()
+    username = data['username']
+    email = data['email']
+    password = data['password']
+    
+    user_data = {
+        'username': username,
+        'email': email,
+        'password': password
+    }
+    print(user_data)
+    collection.insert_one(user_data)
+    
+    return jsonify({'message': 'User created successfully'})
 
 if __name__ == '__main__':
     app.run()

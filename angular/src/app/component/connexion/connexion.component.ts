@@ -32,7 +32,7 @@ export class ConnexionComponent {
   ) {}
 
   ngOnInit() {
-    this.getUsers();
+    // this.getUsers();
   }
 
   getUsers() {
@@ -78,7 +78,30 @@ export class ConnexionComponent {
   }
 
   signup() {
-    
+    const emailValue = this.email;
+    const usernameValue = this.username;
+    const passwordValue = this.password;
+  
+    console.log(emailValue, usernameValue, passwordValue);
+  
+    // Envoie les données vers Flask
+    this.http.post<any>(this.url, { email: emailValue, username: usernameValue, password: passwordValue })
+      .subscribe(
+        (response) => {
+          // Traitement de la réponse si nécessaire
+          console.log('Response:', response);
+        },
+        (error) => {
+          console.error('Error submitting form:', error);
+        }
+      );
+  
+    // Réinitialise les valeurs des inputs après l'envoi du formulaire
+    this.email = '';
+    this.username = '';
+    this.password = '';
+
+    this.close()
   }
 
   navigate() {
@@ -95,8 +118,6 @@ export class ConnexionComponent {
   }
 
   createAccount() {
-    this.router.navigate(['home/login']);
-
     const classes = this.modal.nativeElement.classList;
 
     this.open()
@@ -117,30 +138,4 @@ export class ConnexionComponent {
       classes.remove('hidden');
     }
   }
-
-  submitForm() {
-    const emailValue = this.email;
-    const usernameValue = this.username;
-    const passwordValue = this.password;
-
-    console.log(emailValue, usernameValue, passwordValue);
-
-    // Envoie les données vers Flask
-    this.http.post<any>(this.url, { email: emailValue, username: usernameValue, password: passwordValue })
-      .subscribe(
-        (response) => {
-          // Traitement de la réponse si nécessaire
-          console.log('Response:', response);
-        },
-        (error) => {
-          console.error('Error submitting form:', error);
-        }
-      );
-
-    // Réinitialise les valeurs des inputs après l'envoi du formulaire
-    this.email = '';
-    this.username = '';
-    this.password = '';
-  }
-  
 }
