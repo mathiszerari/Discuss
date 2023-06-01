@@ -96,8 +96,10 @@ export class ConnexionComponent {
           // Traitement de la réponse si nécessaire
           if (response.message == 'Utilisateur créé avec succès') {
             this.success = response.message
+            this.erreur = ''
           } else {
             this.erreur = response.message
+            this.success = ''
           }
         },
         (error) => {
