@@ -24,6 +24,7 @@ export class ConnexionComponent {
   username: string = '';
   password: string = '';
   erreur: string = '';
+  success: string = '';
   creatingAccount: boolean = false;
   url: string = 'http://127.0.0.1:5000/users';
 
@@ -96,8 +97,11 @@ export class ConnexionComponent {
       .subscribe(
         (response) => {
           // Traitement de la réponse si nécessaire
-          this.erreur = response.message
-          console.log(response.message);
+          if (response.message == 'Utilisateur créé avec succès') {
+            this.success = response.message
+          } else {
+            this.erreur = response.message
+          }
         },
         (error) => {
           console.error('Error submitting form:', error);
