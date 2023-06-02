@@ -84,15 +84,14 @@ export class ConnexionComponent {
             this.router.navigate(['home/login']);
           }
           
-          // setTimeout(() => {
-          //   this.close();
-          // }, 1500);
+          setTimeout(() => {
+            this.close();
+          }, 1750);
         },
         (error) => {
           console.error('Error submitting form:', error);
         }
     );
-    
   }
   
 
@@ -138,7 +137,6 @@ export class ConnexionComponent {
     setTimeout(() => {
       this.close();
     }, 5000);
-    
   }
   
 
