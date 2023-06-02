@@ -18,7 +18,7 @@ host = parsed_uri['nodelist'][0][0]
 port = parsed_uri['nodelist'][0][1]
 
 app = Flask(__name__)
-CORS(app, resources={r"/users/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 client = MongoClient(host, port)
 db = client.discuss
@@ -36,6 +36,28 @@ def get_users():
     return jsonify({'users': users})
 
 
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data['email']
+    password = data['password']
+
+    existing_user = collection.find_one({'email': email})
+    print(existing_user)
+    if not existing_user:
+        return jsonify({'message': 'Utilisateur introuvable'})
+    
+    salt = bcrypt.gensalt()
+    password = bcrypt.hashpw(password.encode('utf-8'), salt)
+
+    if not bcrypt.checkpw(password.encode('utf-8'), existing_user['password']):
+        return jsonify({'message': 'Mot de passe incorrecte'} )
+    
+    # içi on créer le token jwt
+
+    return jsonify({'message': 'Authentification réussie'})
+
+
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
 @app.route('/users', methods=['POST'])
@@ -44,7 +66,6 @@ def create_users():
     username = data['username']
     email = data['email']
     password = data['password']
-
 
     salt = bcrypt.gensalt()
     password = bcrypt.hashpw(password.encode('utf-8'), salt)
