@@ -43,19 +43,20 @@ def login():
     password = data['password']
 
     existing_user = collection.find_one({'email': email})
-    print(existing_user)
     if not existing_user:
         return jsonify({'message': 'Utilisateur introuvable'})
-    
-    salt = bcrypt.gensalt()
-    password = bcrypt.hashpw(password.encode('utf-8'), salt)
 
-    if not bcrypt.checkpw(password.encode('utf-8'), existing_user['password']):
-        return jsonify({'message': 'Mot de passe incorrecte'} )
-    
-    # içi on créer le token jwt
+    # Hacher le mot de passe saisi par l'utilisateur
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), existing_user['password'])
+
+    if not bcrypt.checkpw(password.encode('utf-8'), hashed_password):
+        return jsonify({'message': 'Mot de passe incorrect'})
+
+    # Ici, vous pouvez générer le jeton JWT
 
     return jsonify({'message': 'Authentification réussie'})
+
+
 
 
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')

@@ -63,7 +63,7 @@ export class ConnexionComponent {
     this.message = 'Connexion en cours';
     this.authService.login(this.username, this.password)
     console.log(this.username, this.password);
-    this.http.post<any>(this.url + 'login', { email: this.email, username: this.username, password: this.password })
+    this.http.post<any>(this.url + 'login', { email: this.email, password: this.password })
       .pipe(
         catchError(error => {
           return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
