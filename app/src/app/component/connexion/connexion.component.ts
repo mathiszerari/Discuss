@@ -37,7 +37,7 @@ export class ConnexionComponent {
 
   ngOnInit() {
     this.inSession = localStorage.getItem('userAuthenticated') === 'true';
-    console.log(this.inSession);
+    console.log('utilisateur connecté = ' + this.inSession);
   }
 
   getUsers() {
@@ -73,7 +73,7 @@ export class ConnexionComponent {
       .subscribe(
         (response: any) => { // Définir le type de 'response' comme 'any'
           if (response && response.message == 'Authentification réussie') {
-            console.log('auth reussie');
+            this.success = response.message
             localStorage.setItem('userAuthenticated', 'true');
             this.router.navigate(['home']);
           } else {
@@ -87,7 +87,7 @@ export class ConnexionComponent {
           
           setTimeout(() => {
             this.close();
-          }, 1750);
+          }, 2000);
         },
         (error) => {
           console.error('Error submitting form:', error);
