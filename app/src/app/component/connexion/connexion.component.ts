@@ -37,6 +37,7 @@ export class ConnexionComponent {
 
   ngOnInit() {
     this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+    console.log(this.inSession);
   }
 
   getUsers() {
@@ -61,8 +62,8 @@ export class ConnexionComponent {
 
   login() {
     this.message = 'Connexion en cours';
-    this.authService.login(this.username, this.password)
-    console.log(this.username, this.password);
+    this.authService.login(this.email, this.password)
+    console.log(this.email, this.password);
     this.http.post<any>(this.url + 'login', { email: this.email, password: this.password })
       .pipe(
         catchError(error => {

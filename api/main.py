@@ -44,7 +44,7 @@ def login():
 
     existing_user = collection.find_one({'email': email})
     if not existing_user:
-        return jsonify({'message': 'Utilisateur introuvable'})
+        return jsonify({'message': data})
 
     # Hacher le mot de passe saisi par l'utilisateur
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), existing_user['password'])
@@ -104,11 +104,6 @@ mdp = "motdepasse123"
 
 # Génération du sel aléatoire
 salt = bcrypt.gensalt()
-
-# Hachage du mot de passe avec le sel
-
-# Vérification du mot de passe haché
-
 
 
 if __name__ == '__main__':
