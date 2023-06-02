@@ -55,6 +55,7 @@ Thumbs.db
 [Ss]cripts
 pyvenv.cfg
 .venv
+python/.venv
 pip-selfcheck.json
 
 # Created by https://www.toptal.com/developers/gitignore/api/angular
