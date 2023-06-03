@@ -1,7 +1,11 @@
 <!-- Modal toggle -->
-<button data-modal-target="modalId" (click)="navigate()" data-modal-toggle="authentication-modal" class="block text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 mx-0 focus:ring-cyan-500" type="button">
+<button *ngIf="iDconnexion" data-modal-target="modalId" (click)="navigate()" data-modal-toggle="authentication-modal" class="block text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 mx-0 focus:ring-cyan-500" type="button">
+    {{iDconnexion}}
+</button>
+
+<button *ngIf="!iDconnexion" data-modal-target="modalId" (click)="navigate()" data-modal-toggle="authentication-modal" class="block text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 mx-0 focus:ring-cyan-500" type="button">
     Connexion
-  </button>
+</button>
   
   <!-- Main modal -->
   <div id="default-modal" #modal tabindex="-1" aria-hidden="true" data-modal-show="modalID" class="hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] flex justify-between max-h-full">

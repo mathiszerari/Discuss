@@ -29,6 +29,8 @@ export class ConnexionComponent {
   url: string = 'http://127.0.0.1:5000/';
   inSession: boolean = false;
   emailOrUsername: string = '';
+  sessionName: string = '';
+  iDconnexion: string = '';
 
   constructor(
     private router: Router,
@@ -38,7 +40,14 @@ export class ConnexionComponent {
 
   ngOnInit() {
     this.inSession = localStorage.getItem('userAuthenticated') === 'true';
-    console.log('utilisateur connecté = ' + this.inSession);
+    console.log(localStorage);
+    console.log('connected : ' + localStorage['userAuthenticated']);
+    console.log('name : ' + localStorage['username']);
+    // console.log('utilisateur connecté = ' + this.inSession);
+    
+    if (localStorage['username']) {
+      this.iDconnexion = localStorage['username']
+    }
   }
 
   getUsers() {
@@ -78,8 +87,13 @@ export class ConnexionComponent {
             localStorage.setItem('userAuthenticated', 'true');
             this.inSession = localStorage.getItem('userAuthenticated') === 'true';
             console.log(this.inSession);
+
+            localStorage.setItem('username', this.emailOrUsername);
+            console.log(localStorage['username']);
+            
             
             localStorage.setItem('username', this.emailOrUsername) // Utiliser emailOrUsername comme nom d'utilisateur
+            this.iDconnexion = localStorage['username']
             this.router.navigate(['home']);
           } else {
 
@@ -118,8 +132,16 @@ export class ConnexionComponent {
         (response) => {
           // Traitement de la réponse si nécessaire
           if (response.message == 'Utilisateur créé avec succès') {
+            localStorage.setItem('userAuthenticated', 'true');
+            this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+            console.log(this.inSession);
             this.success = response.message
             this.erreur = ''
+
+            console.log(usernameValue);
+            
+            localStorage.setItem('username', usernameValue) 
+            this.iDconnexion = localStorage['username']
           } else {
             this.erreur = response.message
             this.success = ''
@@ -146,6 +168,10 @@ export class ConnexionComponent {
     localStorage.setItem('userAuthenticated', 'false');
     this.inSession = localStorage.getItem('userAuthenticated') === 'true';
     console.log(this.inSession);
+
+
+    localStorage.setItem('username', '');
+    this.iDconnexion = ''
   }
 
   navigate() {
