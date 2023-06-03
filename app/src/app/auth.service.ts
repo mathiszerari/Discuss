@@ -9,8 +9,8 @@ export class AuthService {
   isLogged: boolean = false;
   redirectUrl: InputComponent | undefined
 
-  login(email: string, name: string, password: string): Observable<boolean> {
-    const isLogged = (name == 'mathis' && password == 'Mathis10')
+  login(emailOrUsername: string, password: string): Observable<boolean> {
+    const isLogged = (emailOrUsername == 'mathis' && password == 'Mathis10')
 
     return of(isLogged).pipe(
       delay(1000),

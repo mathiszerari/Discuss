@@ -28,6 +28,7 @@ export class ConnexionComponent {
   creatingAccount: boolean = false;
   url: string = 'http://127.0.0.1:5000/';
   inSession: boolean = false;
+  emailOrUsername: string = '';
 
   constructor(
     private router: Router,
@@ -62,9 +63,9 @@ export class ConnexionComponent {
 
   login() {
     this.message = 'Connexion en cours';
-    this.authService.login(this.email, this.password, this.username)
-    console.log(this.email, this.password);
-    this.http.post<any>(this.url + 'login', { email: this.email, username: this.username, password: this.password })
+    this.authService.login(this.emailOrUsername, this.password) // Passer emailOrUsername au lieu de email et laisser une chaîne vide pour username
+    console.log(this.emailOrUsername, this.password);
+    this.http.post<any>(this.url + 'login', { emailOrUsername: this.emailOrUsername, password: this.password }) // Utiliser emailOrUsername dans la requête HTTP
       .pipe(
         catchError(error => {
           return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
@@ -77,10 +78,12 @@ export class ConnexionComponent {
             localStorage.setItem('userAuthenticated', 'true');
             this.inSession = localStorage.getItem('userAuthenticated') === 'true';
             console.log(this.inSession);
-          
-            localStorage.setItem('username', this.username)
+            
+            localStorage.setItem('username', this.emailOrUsername) // Utiliser emailOrUsername comme nom d'utilisateur
             this.router.navigate(['home']);
           } else {
+
+            this.message = 'Utilisateur introuvable';
             console.log('auth ratée');
             console.log(response);
             console.log(response.message);
@@ -97,15 +100,6 @@ export class ConnexionComponent {
           console.error('Error submitting form:', error);
         }
     );
-  }
-  
-
-  logout() {
-    this.authService.logout();
-    this.message = 'Vous avez été déconnecté';
-    this.inSession = localStorage.getItem('userAuthenticated') === 'false';
-    console.log(this.inSession);
-    
   }
 
   signup() {
@@ -145,7 +139,14 @@ export class ConnexionComponent {
       this.close();
     }, 5000);
   }
-  
+
+  logout() {
+    console.log(this.inSession);
+    this.message = 'Vous avez été déconnecté';
+    localStorage.setItem('userAuthenticated', 'false');
+    this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+    console.log(this.inSession);
+  }
 
   navigate() {
     this.router.navigate(['home/login']);
