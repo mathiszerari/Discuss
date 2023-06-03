@@ -39,18 +39,19 @@ def get_users():
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
+    username = data['username']
     email = data['email']
     password = data['password']
 
-    existing_user = collection.find_one({'email': email})
+    existing_user = collection.find_one({'$or': [{'email': email}, {'username': username}]})
     if not existing_user:
         return jsonify({'message': data})
 
-    # Hacher le mot de passe saisi par l'utilisateur
-    hashed_password = bcrypt.hashpw(password.encode('utf-8'), existing_user['password'])
+    hashed_password = existing_user['password']  # Utilisez le mot de passe haché stocké en base de données
 
     if not bcrypt.checkpw(password.encode('utf-8'), hashed_password):
         return jsonify({'message': 'Mot de passe incorrect'})
+
 
     # Ici, vous pouvez générer le jeton JWT
 

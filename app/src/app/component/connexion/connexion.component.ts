@@ -62,9 +62,9 @@ export class ConnexionComponent {
 
   login() {
     this.message = 'Connexion en cours';
-    this.authService.login(this.email, this.password)
+    this.authService.login(this.email, this.password, this.username)
     console.log(this.email, this.password);
-    this.http.post<any>(this.url + 'login', { email: this.email, password: this.password })
+    this.http.post<any>(this.url + 'login', { email: this.email, username: this.username, password: this.password })
       .pipe(
         catchError(error => {
           return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
@@ -75,6 +75,10 @@ export class ConnexionComponent {
           if (response && response.message == 'Authentification réussie') {
             this.success = response.message
             localStorage.setItem('userAuthenticated', 'true');
+            this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+            console.log(this.inSession);
+          
+            localStorage.setItem('username', this.username)
             this.router.navigate(['home']);
           } else {
             console.log('auth ratée');
@@ -100,6 +104,8 @@ export class ConnexionComponent {
     this.authService.logout();
     this.message = 'Vous avez été déconnecté';
     this.inSession = localStorage.getItem('userAuthenticated') === 'false';
+    console.log(this.inSession);
+    
   }
 
   signup() {
