@@ -108,18 +108,41 @@ def response():
     username = data['username']
     reply = data['reply']
     
+    user = collection_users.find_one({'username': username})
+    if not user:
+        return jsonify({'message': 'Utilisateur non trouvé'})
+
+    user_id = str(user['_id'])  # Convertir l'ObjectId en une chaîne de caractères
+
     answer = {
         'username': username,
-        'reply': reply
+        'reply': reply,
+        'user_id': user_id
     }
 
-    # Insérer la réponse dans la collection 'responses'
     response = collection_responses.insert_one(answer)
 
-    # Convertir l'ObjectId en une chaîne de caractères
-    answer['_id'] = str(response.inserted_id)
+    answer['_id'] = str(response.inserted_id)  # Convertir l'ObjectId en une chaîne de caractères
 
     return jsonify({'message': 'Réponse enregistrée avec succès', 'answer': answer})
+
+
+
+@app.route('/responses', methods=['GET'])
+def get_responses():
+    responses = []
+    for response in collection_responses.find():
+        user_id = response['user_id']
+        user = collection_users.find_one({'_id': user_id})
+        if user:
+            response_data = {
+                'username': user['username'],
+                'reply': response['reply']
+            }
+            responses.append(response_data)
+
+    return jsonify({'responses': responses})
+
 
 
 if __name__ == '__main__':
