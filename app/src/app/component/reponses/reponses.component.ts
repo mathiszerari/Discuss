@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ReplyService } from '../../reply.service';
 
 @Component({
@@ -6,12 +6,25 @@ import { ReplyService } from '../../reply.service';
   templateUrl: './reponses.component.html',
 })
   
-export class ReponsesComponent {
+export class ReponsesComponent implements OnInit {
+  responses: any[] = [];
+
   clicked: any;
   reply: string | undefined;
   username: string | undefined;
 
   ngOnInit() {
+    
+    this.replyService.getResponses().subscribe(
+      (data) => {
+        this.responses = data;
+        console.log(this.responses);
+      },
+      (error) => {
+        console.log('Une erreur est survenue lors de la récupération des réponses.');
+      }
+    );
+
     this.replyService.clicked$.subscribe(nouvelleValeur => {
       this.clicked = nouvelleValeur;
     });

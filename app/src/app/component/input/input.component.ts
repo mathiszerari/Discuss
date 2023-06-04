@@ -36,8 +36,8 @@ export class InputComponent implements AfterViewInit {
       }, 1000);
     }
   }
-  
-  reply() {
+
+  response() {
     if (this.replyContent.length > 0) {
       this.replyService.setReply(this.replyContent);
       console.log(this.replyContent);
@@ -48,9 +48,7 @@ export class InputComponent implements AfterViewInit {
     } else {
       this.shakeit();
     }
-  }
 
-  response() {
     const usernameValue = localStorage['username'];
     const replyValue = this.replyContent;
   

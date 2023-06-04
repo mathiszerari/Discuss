@@ -128,7 +128,7 @@ def response():
 
 
 
-@app.route('/responses', methods=['GET'])
+@app.route('/getresponses', methods=['GET'])
 def get_responses():
     responses = []
     for response in collection_responses.find():
@@ -141,7 +141,8 @@ def get_responses():
             }
             responses.append(response_data)
 
-    return jsonify({'responses': responses})
+    return jsonify(responses)
+
 
 
 
