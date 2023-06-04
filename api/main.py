@@ -6,6 +6,7 @@ from dotenv import load_dotenv, find_dotenv
 import os
 import re
 import bcrypt
+from bson import ObjectId
 
 load_dotenv(find_dotenv())
 
@@ -22,12 +23,13 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 client = MongoClient(host, port)
 db = client.discuss
-collection = db.usersdatas
+collection_users = db.usersdatas
+collection_responses = db.responses
 
 @app.route('/users', methods=['GET'])
 def get_users():
     users = []
-    for user in collection.find():
+    for user in collection_users.find():
         users.append({
             'username': user['username'],
             'email': user['email'],
@@ -42,7 +44,7 @@ def login():
     email_or_username = data['emailOrUsername']  # Modifier le nom de la clé pour correspondre à la valeur du champ unique
     password = data['password']
 
-    existing_user = collection.find_one({'$or': [{'email': email_or_username}, {'username': email_or_username}]})  # Utiliser la même logique pour vérifier email ou username
+    existing_user = collection_users.find_one({'$or': [{'email': email_or_username}, {'username': email_or_username}]})  # Utiliser la même logique pour vérifier email ou username
     if not existing_user:
         return jsonify({'message': 'Utilisateur non trouvé'})  # Modifier le message d'erreur si l'utilisateur n'existe pas
 
@@ -56,9 +58,8 @@ def login():
     return jsonify({'message': 'Authentification réussie'})
 
 
-
-
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+
 
 @app.route('/users', methods=['POST'])
 def create_users():
@@ -69,19 +70,19 @@ def create_users():
 
     salt = bcrypt.gensalt()
     password = bcrypt.hashpw(password.encode('utf-8'), salt)
-    
+
     # Conditions de validation
     if username == '' or email == '' or password == '':
         return jsonify({'message': 'Champ(s) invalide(s)'})
-    
-    existing_user = collection.find_one({'username': username})
+
+    existing_user = collection_users.find_one({'username': username})
     if existing_user:
         return jsonify({'message': 'Le nom d\'utilisateur est déjà pris'})
-    
-    existing_email = collection.find_one({'email': email})
+
+    existing_email = collection_users.find_one({'email': email})
     if existing_email:
         return jsonify({'message': 'L\'email est déjà pris'})
-    
+
     if not re.fullmatch(regex, email):
         print('Email invalide')
         return jsonify({'message': 'Email invalide'})
@@ -93,16 +94,32 @@ def create_users():
         'password': password
     }
 
-    collection.insert_one(user_data)
-    
+    collection_users.insert_one(user_data)
+
     return jsonify({'message': 'Utilisateur créé avec succès'})
-
-
-
-mdp = "motdepasse123"
 
 # Génération du sel aléatoire
 salt = bcrypt.gensalt()
+
+
+@app.route('/response', methods=['POST'])
+def response():
+    data = request.get_json()
+    username = data['username']
+    reply = data['reply']
+    
+    answer = {
+        'username': username,
+        'reply': reply
+    }
+
+    # Insérer la réponse dans la collection 'responses'
+    response = collection_responses.insert_one(answer)
+
+    # Convertir l'ObjectId en une chaîne de caractères
+    answer['_id'] = str(response.inserted_id)
+
+    return jsonify({'message': 'Réponse enregistrée avec succès', 'answer': answer})
 
 
 if __name__ == '__main__':
