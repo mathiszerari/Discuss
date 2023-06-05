@@ -51,7 +51,6 @@ export class InputComponent implements AfterViewInit {
   }
 
   response() {
-
     const usernameValue = localStorage['username'];
     const replyValue = this.replyContent;
   
@@ -68,16 +67,20 @@ export class InputComponent implements AfterViewInit {
           if (response.message == 'Réponse enregistrée avec succès') {
             console.log(response.answer);
             console.log(replyValue);
+  
+            // Stocker l'ID utilisateur dans le localStorage
+            const userId = response.user_id;
+            localStorage.setItem('user_id', userId);
           } else {
-            
-            console.log('réponse non enregistrée');
+            console.log('Réponse non enregistrée');
           }
         },
         (error) => {
-          console.error('Error submitting form:', error);
+          console.error('Erreur lors de l\'envoi du formulaire :', error);
         }
-    );
-    
-    this.replyContent = ''
+      );
+  
+    this.replyContent = '';
   }
+  
 }

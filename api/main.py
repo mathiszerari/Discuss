@@ -112,19 +112,21 @@ def response():
     if not user:
         return jsonify({'message': 'Utilisateur non trouvé'})
 
-    username = str(user['_id'])  # Convertir l'ObjectId en une chaîne de caractères
+    user_id = str(user['_id'])
 
     answer = {
         'username': username,
         'reply': reply,
-        'username': user_id
+        'user_id': user_id
     }
 
     response = collection_responses.insert_one(answer)
 
-    answer['_id'] = str(response.inserted_id)  # Convertir l'ObjectId en une chaîne de caractères
+    # Après l'insertion de la réponse dans la base de données
+    response_id = str(response.inserted_id)
+    answer['_id'] = response_id
 
-    return jsonify({'message': 'Réponse enregistrée avec succès', 'answer': answer})
+    return jsonify({'message': 'Réponse enregistrée avec succès', 'answer': answer, 'user_id': user_id})
 
 
 
