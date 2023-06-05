@@ -15,6 +15,7 @@ export class InputComponent implements AfterViewInit {
   isReplyClicked: boolean = false;
   isShaking: boolean = false;
   url: string = 'http://127.0.0.1:5000/';
+  newresponse: string = '';
 
   constructor(
     private replyService: ReplyService,
@@ -80,7 +81,17 @@ export class InputComponent implements AfterViewInit {
         }
       );
   
-    this.replyContent = '';
+    
+    if (this.replyContent.length > 0) {
+      this.replyService.setReply(this.replyContent);
+      console.log(this.replyContent);
+      this.replyContent = '';
+      const nouvelleValeur = true;
+      this.replyService.updateMaVariable(nouvelleValeur);
+      this.isReplyClicked = true;
+    } else {
+      this.shakeit();
+    }
   }
   
 }

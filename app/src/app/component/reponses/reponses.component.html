@@ -2,6 +2,32 @@
 
 <!--  grid-cols-2  -->
 <div *ngFor="let response of responses" class="grid gap-4 pb-10">
+
+  <div *ngIf="clicked == true" class="py-5 mx-auto">
+    <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
+      <div class="container card p-5 bg-gray-700 rounded-3xl">
+        <div class="pl-10 pr-10 flex items-center">
+          <img src="assets/newlogo.png" alt="Description de l'image" class="w-10 h-10 rounded-full mr-4">
+          <div>
+            <h3 class="text-gray-200">@{{ username }}</h3>
+          </div>
+        </div>
+        <h3 class="text-xl mt-5 pb-5 pl-10 pr-10 text break-all text-gray-200"> {{ reply }}</h3>
+      </div>
+      <div class="flex items-center justify-around text-center">
+        <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
+          <img src="assets/arrow.up@2x.png" alt="">
+        </h5>
+        <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
+          <img src="assets/arrow.down@2x.png" alt="">
+        </h5>
+        <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
+          <img src="assets/square.and.arrow.up@2x.png" alt="share">
+        </h5>
+      </div>
+    </div>
+  </div>
+
   <div class="py-5 mx-auto">
     <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
       <div class="container card p-5 bg-gray-700 rounded-3xl">
