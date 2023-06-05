@@ -1,7 +1,7 @@
 <h2 class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 mt-10 text text-gray-200">Top responses</h2>
 
 <!--  grid-cols-2  -->
-<div *ngFor="let response of responses" class="grid gap-4 pb-10">
+<div *ngFor="let response of responses.slice?.(0,5)" class="grid gap-4 pb-10">
 
   <div *ngIf="clicked == true" class="py-5 mx-auto">
     <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
