@@ -109,6 +109,7 @@ def response():
     reply = data['reply']
     upvote = data['upvote']
     downvote = data['downvote']
+    question = data['question']
     
     user = collection_users.find_one({'username': username})
     if not user:
@@ -117,11 +118,12 @@ def response():
     user_id = str(user['_id'])
 
     responses = {
+        'question': question,
+        'user_id': user_id,
         'username': username,
         'reply': reply,
-        'user_id': user_id,
         'upvote': upvote,
-        'downvote': downvote,
+        'downvote': downvote
     }
 
     response = collection_responses.insert_one(responses)

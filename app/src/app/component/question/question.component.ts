@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
-  styles: [
-  ]
+  styles: []
 })
-export class QuestionComponent {
+export class QuestionComponent implements OnInit {
+  question: string = 'Why is Messi better than Ronaldo ?';
 
+  ngOnInit() {
+    localStorage.setItem('question', this.question);
+  }
 }
