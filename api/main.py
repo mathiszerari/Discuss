@@ -141,6 +141,7 @@ def get_responses():
             }
             responses.append(response_data)
 
+    responses.reverse()
     return jsonify(responses)
 
 
