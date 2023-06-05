@@ -151,10 +151,13 @@ def get_responses():
                 'username': user['username'],
                 'reply': response['reply']
             }
+            if 'heure' in response:
+                response_data['heure'] = response['heure']
             responses.append(response_data)
 
     responses.reverse()
     return jsonify(responses)
+
 
 
 
