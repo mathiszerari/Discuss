@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
@@ -110,6 +111,7 @@ def response():
     upvote = data['upvote']
     downvote = data['downvote']
     question = data['question']
+    heure_actuelle = datetime.now()
     
     user = collection_users.find_one({'username': username})
     if not user:
@@ -117,23 +119,25 @@ def response():
 
     user_id = str(user['_id'])
 
+    print(heure_actuelle)
+
     responses = {
         'question': question,
         'user_id': user_id,
         'username': username,
         'reply': reply,
         'upvote': upvote,
-        'downvote': downvote
+        'downvote': downvote,
+        'heure': heure_actuelle
     }
-
     response = collection_responses.insert_one(responses)
+
 
     # Après l'insertion de la réponse dans la base de données
     response_id = str(response.inserted_id)
     responses['_id'] = response_id
 
     return jsonify({'message': 'Réponse enregistrée avec succès', 'responses': responses, 'user_id': user_id})
-
 
 
 @app.route('/getresponses', methods=['GET'])
