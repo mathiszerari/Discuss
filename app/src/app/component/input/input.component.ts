@@ -16,6 +16,8 @@ export class InputComponent implements AfterViewInit {
   isShaking: boolean = false;
   url: string = 'http://127.0.0.1:5000/';
   newresponse: string = '';
+  upvote: number = 0;
+  downvote: number = 0;
 
   constructor(
     private replyService: ReplyService,
@@ -54,9 +56,12 @@ export class InputComponent implements AfterViewInit {
   response() {
     const usernameValue = localStorage['username'];
     const replyValue = this.replyContent;
+    let upvote = this.upvote;
+    let downvote = this.downvote;
+    
   
     // Envoie les données vers Flask
-    this.http.post<any>(this.url + 'response', { username: usernameValue, reply: replyValue })
+    this.http.post<any>(this.url + 'response', { username: usernameValue, reply: replyValue, upvote: upvote, downvote: downvote })
       .pipe(
         catchError(error => {
           return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
@@ -66,7 +71,7 @@ export class InputComponent implements AfterViewInit {
         (response) => {
           // Traitement de la réponse si nécessaire
           if (response.message == 'Réponse enregistrée avec succès') {
-            console.log(response.answer);
+            console.log(response.responses);
             console.log(replyValue);
   
             // Stocker l'ID utilisateur dans le localStorage

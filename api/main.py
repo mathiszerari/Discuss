@@ -107,6 +107,8 @@ def response():
     data = request.get_json()
     username = data['username']
     reply = data['reply']
+    upvote = data['upvote']
+    downvote = data['downvote']
     
     user = collection_users.find_one({'username': username})
     if not user:
@@ -114,19 +116,21 @@ def response():
 
     user_id = str(user['_id'])
 
-    answer = {
+    responses = {
         'username': username,
         'reply': reply,
-        'user_id': user_id
+        'user_id': user_id,
+        'upvote': upvote,
+        'downvote': downvote,
     }
 
-    response = collection_responses.insert_one(answer)
+    response = collection_responses.insert_one(responses)
 
     # Après l'insertion de la réponse dans la base de données
     response_id = str(response.inserted_id)
-    answer['_id'] = response_id
+    responses['_id'] = response_id
 
-    return jsonify({'message': 'Réponse enregistrée avec succès', 'answer': answer, 'user_id': user_id})
+    return jsonify({'message': 'Réponse enregistrée avec succès', 'responses': responses, 'user_id': user_id})
 
 
 
