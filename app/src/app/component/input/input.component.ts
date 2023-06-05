@@ -76,6 +76,8 @@ export class InputComponent implements AfterViewInit {
         (error) => {
           console.error('Error submitting form:', error);
         }
-      );
+    );
+    
+    this.replyContent = ''
   }
 }

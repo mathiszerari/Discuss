@@ -112,12 +112,12 @@ def response():
     if not user:
         return jsonify({'message': 'Utilisateur non trouvé'})
 
-    user_id = str(user['_id'])  # Convertir l'ObjectId en une chaîne de caractères
+    username = str(user['_id'])  # Convertir l'ObjectId en une chaîne de caractères
 
     answer = {
         'username': username,
         'reply': reply,
-        'user_id': user_id
+        'username': user_id
     }
 
     response = collection_responses.insert_one(answer)
@@ -132,9 +132,9 @@ def response():
 def get_responses():
     responses = []
     for response in collection_responses.find():
-        user_id = response['user_id']
-        user = collection_users.find_one({'_id': user_id})
-        if user:
+        username = response['username']
+        users = collection_users.find({'username': username})
+        for user in users:
             response_data = {
                 'username': user['username'],
                 'reply': response['reply']
@@ -142,6 +142,7 @@ def get_responses():
             responses.append(response_data)
 
     return jsonify(responses)
+
 
 
 
