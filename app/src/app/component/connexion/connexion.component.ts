@@ -41,9 +41,10 @@ export class ConnexionComponent {
   ngOnInit() {
     this.inSession = localStorage.getItem('userAuthenticated') === 'true';
     console.log(localStorage);
-    console.log('connected : ' + localStorage['userAuthenticated']);
-    console.log('name : ' + localStorage['username']);
-    // console.log('utilisateur connecté = ' + this.inSession);
+    // console.log('connected : ' + localStorage['userAuthenticated']);
+    if (localStorage.getItem('userAuthenticated') === 'true') {
+      console.log('name : ' + localStorage['username']);
+    }
     
     if (localStorage['username']) {
       this.iDconnexion = localStorage['username']
@@ -86,7 +87,7 @@ export class ConnexionComponent {
             this.success = response.message
             localStorage.setItem('userAuthenticated', 'true');
             this.inSession = localStorage.getItem('userAuthenticated') === 'true';
-            console.log(this.inSession);
+            // console.log(this.inSession);
 
             localStorage.setItem('username', this.emailOrUsername);
             console.log(localStorage['username']);
