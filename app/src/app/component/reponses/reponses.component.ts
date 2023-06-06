@@ -96,7 +96,7 @@ export class ReponsesComponent implements OnInit {
       .subscribe(
         (response) => {
           // Traitement de la réponse si nécessaire
-          if (response.message == 'Vote effectué') {
+          if (response.message == 'Upvote enregistré avec succès') {
             console.log(response.responses);
           } else {
             console.log('Le vote a échoué');
