@@ -20,11 +20,15 @@ export class ReplyService {
     this.replySubject.next(reply);
   }
 
-  private isClicked = new Subject<any>();
-  clicked$ = this.isClicked.asObservable();
-
   updateMaVariable(nouvelleValeur: any) {
     this.isClicked.next(nouvelleValeur);
+  }
+
+  private isClicked = new BehaviorSubject<any>(null);
+  clicked$ = this.isClicked.asObservable();
+
+  onClick(reply: any) {
+    this.isClicked.next(reply);
   }
 
   getResponses() {
