@@ -31,6 +31,7 @@ export class ConnexionComponent {
   emailOrUsername: string = '';
   sessionName: string = '';
   iDconnexion: string = '';
+  infoOpen: boolean | undefined;
 
   constructor(
     private router: Router,
@@ -208,5 +209,9 @@ export class ConnexionComponent {
     if (classes.contains('hidden')) {
       classes.remove('hidden');
     }
+  }
+
+  openmini() {
+    this.infoOpen = true
   }
 }
