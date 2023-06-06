@@ -83,13 +83,17 @@ def create_users():
     email = data["email"].lower()
     password = data["password"]
 
-    salt = bcrypt.gensalt()
-    password = bcrypt.hashpw(password.encode("utf-8"), salt)
-
     # Conditions de validation
     if username == "" or email == "" or password == "":
         app.logger.error("Champ(s) invalide(s)")
         return jsonify({"message": "Champ(s) invalide(s)"})
+    
+    if not re.match(regex_password, password):
+        app.logger.error("Le mot de passe ne respecte pas les critères de sécurité")
+        return jsonify({"message": "Le mot de passe ne respecte pas les critères de sécurité"})
+
+    salt = bcrypt.gensalt()
+    password = bcrypt.hashpw(password.encode("utf-8"), salt)
 
     if not re.fullmatch(regex_username, username):
         app.logger.error("Username invalide")
@@ -98,10 +102,6 @@ def create_users():
     if not re.fullmatch(regex, email):
         app.logger.error("Email invalide")
         return jsonify({"message": "Email invalide"})
-
-    if not re.match(regex_password, password):
-        app.logger.error("Le mot de passe ne respecte pas les critères de sécurité")
-        return jsonify({"message": "Le mot de passe ne respecte pas les critères de sécurité"})
 
     existing_user = collection_users.find_one({"username": username})
 

@@ -214,4 +214,8 @@ export class ConnexionComponent {
   openmini() {
     this.infoOpen = true
   }
+
+  backmini() {
+    this.infoOpen = false
+  }
 }
