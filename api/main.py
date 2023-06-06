@@ -42,7 +42,7 @@ def get_users():
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
-    email_or_username = data['emailOrUsername']  # Modifier le nom de la clé pour correspondre à la valeur du champ unique
+    email_or_username = data['emailOrUsername'].lower()  # Modifier le nom de la clé pour correspondre à la valeur du champ unique
     password = data['password']
 
     existing_user = collection_users.find_one({'$or': [{'email': email_or_username}, {'username': email_or_username}]})  # Utiliser la même logique pour vérifier email ou username
@@ -60,13 +60,14 @@ def login():
 
 
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+regex_username = re.compile(r'^[a-zA-Z0-9_]{1,15}$')
 
 
 @app.route('/users', methods=['POST'])
 def create_users():
     data = request.get_json()
-    username = data['username']
-    email = data['email']
+    username = data['username'].lower()
+    email = data['email'].lower()
     password = data['password']
 
     salt = bcrypt.gensalt()
@@ -83,6 +84,10 @@ def create_users():
     existing_email = collection_users.find_one({'email': email})
     if existing_email:
         return jsonify({'message': 'L\'email est déjà pris'})
+    
+    if not re.fullmatch(regex_username, username):
+        print('Username invalide')
+        return jsonify({'message': 'Username invalide'})
 
     if not re.fullmatch(regex, email):
         print('Email invalide')
