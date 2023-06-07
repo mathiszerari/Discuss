@@ -20,10 +20,11 @@ export class ReponsesComponent implements OnInit {
   clickedUser: string | undefined;
   clickedReply: string | undefined;
   sliceIndex: number = 6;
+  upvoteimg: string = 'assets/arrow.up@2x.png';
+  downvoteimg: string = 'assets/arrow.down@2x.png';
 
 
   ngOnInit() {
-    
     this.replyService.getResponses().subscribe(
       (data) => {
         this.responses = data;
@@ -77,6 +78,8 @@ export class ReponsesComponent implements OnInit {
           console.error('Erreur lors de la transmission des informations :', error);
         }
       );
+    response.downvote += 1;
+    this.downvoteimg = 'assets/arrow.down.red@2x.png'
   }  
 
   upvotefn(response: any) {
@@ -106,7 +109,9 @@ export class ReponsesComponent implements OnInit {
         (error) => {
           console.error('Erreur lors de la transmission des informations :', error);
         }
-      );
+    );
+    response.upvote += 1;
+    this.upvoteimg = 'assets/arrow.up.blue@2x.png'
   }  
 
   seemore(): void {

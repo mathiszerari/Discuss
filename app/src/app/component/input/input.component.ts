@@ -18,6 +18,7 @@ export class InputComponent implements AfterViewInit {
   newresponse: string = '';
   upvote: number = 0;
   downvote: number = 0;
+  index: number = 0;
 
   constructor(
     private replyService: ReplyService,
@@ -59,10 +60,11 @@ export class InputComponent implements AfterViewInit {
     let upvote = this.upvote;
     let downvote = this.downvote;
     let question = localStorage.getItem('question')
-    
+    let index = this.index;
+    index++
   
     // Envoie les données vers Flask
-    this.http.post<any>(this.url + 'response', { username: usernameValue, reply: replyValue, upvote: upvote, downvote: downvote, question: question })
+    this.http.post<any>(this.url + 'response', { index: index, username: usernameValue, reply: replyValue, upvote: upvote, downvote: downvote, question: question })
       .pipe(
         catchError(error => {
           return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur

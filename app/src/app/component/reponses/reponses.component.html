@@ -1,7 +1,7 @@
 <h2 class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 mt-10 text text-gray-200">Top responses</h2>
 
 <div class="flex flex-wrap justify-center">
-  <div *ngFor="let response of responses.slice?.(0,sliceIndex)" class="basis-1/4 pb-10 mx-3">
+  <div *ngFor="let response of responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/4 pb-10 mx-3">
     <div *ngIf="clicked == true" class="py-5">
       <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
         <div class="container card p-5 bg-gray-700 rounded-3xl">
@@ -17,9 +17,11 @@
         <div class="flex items-center justify-around text-center">
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
             <img (click)="downvotefn(response)" src="assets/arrow.up@2x.png" alt="">
+            {{response.upvote}}
           </h5>
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
             <img (click)="upvotefn(response)" src="assets/arrow.down@2x.png" alt="">
+            {{response.downvote}}
           </h5>
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
             <img src="assets/square.and.arrow.up@2x.png" alt="share">
@@ -42,10 +44,12 @@
         </div>
         <div class="flex items-center justify-around text-center">
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
-            <img (click)="upvotefn(response)" src="assets/arrow.up@2x.png" alt="">
+            <img (click)="upvotefn(response)" [src]="upvoteimg" alt="">
+            {{response.upvote}}
           </h5>
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
-            <img (click)="downvotefn(response)" src="assets/arrow.down@2x.png" alt="">
+            <img (click)="downvotefn(response)" [src]="downvoteimg" alt="">
+            {{response.downvote}}
           </h5>
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
             <img src="assets/square.and.arrow.up@2x.png" alt="share">

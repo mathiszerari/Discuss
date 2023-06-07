@@ -140,7 +140,8 @@ def response():
 
     user_id = str(user["_id"])
 
-    print(heure_actuelle)
+    total_responses = collection_responses.count_documents({})  # Nombre total de réponses dans la collection
+    index = total_responses  # Nouvelle valeur de l'index pour la réponse actuelle
 
     responses = {
         "question": question,
@@ -150,6 +151,7 @@ def response():
         "upvote": upvote,
         "downvote": downvote,
         "heure": heure_actuelle,
+        "index": index,
     }
     response = collection_responses.insert_one(responses)
 
@@ -162,8 +164,10 @@ def response():
             "message": "Réponse enregistrée avec succès",
             "responses": responses,
             "user_id": user_id,
+            "index": index,
         }
     )
+
 
 
 @app.route("/getresponses", methods=["GET"])
@@ -176,6 +180,10 @@ def get_responses():
             response_data = {"username": user["username"], "reply": response["reply"]}
             if "heure" in response:
                 response_data["heure"] = response["heure"]
+            if "upvote" in response:
+                response_data["upvote"] = response["upvote"]
+            if "downvote" in response:
+                response_data["downvote"] = response["downvote"]
             responses.append(response_data)
 
     responses.reverse()
