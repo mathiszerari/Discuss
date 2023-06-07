@@ -19,6 +19,7 @@ export class ReponsesComponent implements OnInit {
   downvote: number | undefined;
   clickedUser: string | undefined;
   clickedReply: string | undefined;
+  sliceIndex: number = 6;
 
 
   ngOnInit() {
@@ -107,4 +108,8 @@ export class ReponsesComponent implements OnInit {
         }
       );
   }  
+
+  seemore(): void {
+    this.sliceIndex += 6;
+  }
 }
