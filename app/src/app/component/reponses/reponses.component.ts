@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReplyService } from '../../reply.service';
 import { HttpClient } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-reponses',
@@ -22,6 +23,7 @@ export class ReponsesComponent implements OnInit {
   sliceIndex: number = 6;
   upvoteimg: string = 'assets/arrow.up@2x.png';
   downvoteimg: string = 'assets/arrow.down@2x.png';
+  heure: any
 
 
   ngOnInit() {
@@ -29,6 +31,11 @@ export class ReponsesComponent implements OnInit {
       (data) => {
         this.responses = data;
         console.log(this.responses);
+
+        this.responses.forEach((response) => {
+          response.upvoteimg = 'assets/arrow.up@2x.png';
+          response.downvoteimg = 'assets/arrow.down@2x.png';
+        });
       },
       (error) => {
         console.log('Une erreur est survenue lors de la récupération des réponses.');
@@ -79,7 +86,11 @@ export class ReponsesComponent implements OnInit {
         }
       );
     response.downvote += 1;
-    this.downvoteimg = 'assets/arrow.down.red@2x.png'
+    response.downvoteimg = 'assets/arrow.down.red@2x.png'
+    if (response.upvote == 'assets/arrow.up.red@2x.png') {
+      response.upvote = 'assets/arrow.up@2x.png'
+      response.upvote -= 1;
+    }
   }  
 
   upvotefn(response: any) {
@@ -110,9 +121,38 @@ export class ReponsesComponent implements OnInit {
           console.error('Erreur lors de la transmission des informations :', error);
         }
     );
+  
+    // Incrémente le compteur d'upvote
     response.upvote += 1;
-    this.upvoteimg = 'assets/arrow.up.blue@2x.png'
-  }  
+    response.upvoteimg = 'assets/arrow.up.blue@2x.png';
+  
+    // Vérifie si le downvote est activé, puis annule le downvote
+    if (response.downvoteimg === 'assets/arrow.down.red@2x.png') {
+      response.downvoteimg = 'assets/arrow.down@2x.png';
+      response.downvote -= 1;
+    }
+  }
+  
+  getElapsedTime(date: string): string {
+    const responseDate = moment(date, 'ddd, DD MMM YYYY HH:mm:ss [GMT]');
+    const now = moment();
+    const duration = moment.duration(now.diff(responseDate));
+  
+    const days = Math.floor(duration.asDays());
+    const hours = Math.floor(duration.asHours()) % 24;
+    const minutes = Math.floor(duration.asMinutes()) % 60;
+  
+    if (days > 0) {
+      return `${days} days ago`;
+    } else if (hours > 0) {
+      return `${hours} hours ago`;
+    } else if (minutes > 0) {
+      return `${minutes} minutes ago`;
+    } else {
+      return 'À l\'instant';
+    }
+  }
+  
 
   seemore(): void {
     this.sliceIndex += 6;

@@ -178,6 +178,8 @@ def get_responses():
         users = collection_users.find({"username": username})
         for user in users:
             response_data = {"username": user["username"], "reply": response["reply"]}
+            if "index" in response:
+                response_data["index"] = response["index"]
             if "heure" in response:
                 response_data["heure"] = response["heure"]
             if "upvote" in response:
