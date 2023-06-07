@@ -75,8 +75,8 @@ export class ReponsesComponent implements OnInit {
       .subscribe(
         (response) => {
           // Traitement de la réponse si nécessaire
-          if (response.message == 'Downvote enregistré avec succès') {
-            console.log(response.responses);
+          if (response.message === "Downvote enregistré avec succès") {
+            console.log(response.message);
           } else {
             console.log('Le vote a échoué');
           }
@@ -112,7 +112,7 @@ export class ReponsesComponent implements OnInit {
         (response) => {
           // Traitement de la réponse si nécessaire
           if (response.message == 'Upvote enregistré avec succès') {
-            console.log(response.responses);
+            console.log(response.message);
           } else {
             console.log('Le vote a échoué');
           }
