@@ -28,8 +28,6 @@ export class ReponsesComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.upvote, this.downvote);
-    
     this.replyService.getResponses().subscribe(
       (data) => {
         this.responses = data;

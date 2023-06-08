@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReplyService } from '../../reply.service';
 import { HttpClient } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
@@ -23,6 +24,7 @@ export class InputComponent implements AfterViewInit {
   constructor(
     private replyService: ReplyService,
     private renderer: Renderer2,
+    private router: Router,
     private http: HttpClient
   ) { }
 
@@ -94,7 +96,8 @@ export class InputComponent implements AfterViewInit {
           console.error('Erreur lors de l\'envoi du formulaire :', error);
         }
     );
-    
+
+    this.router.navigate(['login']);
 
     this.replyService.setReply(this.replyContent);
     console.log(this.replyContent);

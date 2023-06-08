@@ -1,7 +1,7 @@
 <h2 class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 mt-10 text text-gray-200">Top responses</h2>
 
 <div class="flex flex-wrap justify-center">
-  <ng-container *ngFor="let response of responses.slice?.(0,1), let i = index" class=" pb-10 mx-3">
+  <ng-container *ngFor="let response of responses.slice(0, 1), let i = index" class=" pb-10 mx-3">
     <div *ngIf="clicked == true" class="py-5 basis-1/4 mx-3 items-center">
         <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
           <div class="container card p-5 bg-gray-700 rounded-3xl">
