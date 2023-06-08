@@ -16,17 +16,20 @@ export class ReponsesComponent implements OnInit {
   clicked: any;
   reply: string | undefined;
   username: string | undefined;
-  upvote: number | undefined;
-  downvote: number | undefined;
+  upvote: number = 0;
+  downvote: number = 0;
   clickedUser: string | undefined;
   clickedReply: string | undefined;
   sliceIndex: number = 6;
   upvoteimg: string = 'assets/arrow.up@2x.png';
   downvoteimg: string = 'assets/arrow.down@2x.png';
   heure: any
+  instant: string = 'À l\'instant'
 
 
   ngOnInit() {
+    console.log(this.upvote, this.downvote);
+    
     this.replyService.getResponses().subscribe(
       (data) => {
         this.responses = data;

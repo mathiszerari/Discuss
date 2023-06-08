@@ -93,7 +93,15 @@ export class InputComponent implements AfterViewInit {
         (error) => {
           console.error('Erreur lors de l\'envoi du formulaire :', error);
         }
-      );
+    );
+    
+
+    this.replyService.setReply(this.replyContent);
+    console.log(this.replyContent);
+    this.replyContent = '';
+    const nouvelleValeur = true;
+    this.replyService.updateMaVariable(nouvelleValeur);
+    this.isReplyClicked = true;
   }
   
 }
