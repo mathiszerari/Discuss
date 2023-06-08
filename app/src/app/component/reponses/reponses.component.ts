@@ -31,7 +31,7 @@ export class ReponsesComponent implements OnInit {
       (data) => {
         this.responses = data;
         console.log(this.responses);
-
+  
         this.responses.forEach((response) => {
           response.upvoteimg = 'assets/arrow.up@2x.png';
           response.downvoteimg = 'assets/arrow.down@2x.png';
@@ -41,14 +41,15 @@ export class ReponsesComponent implements OnInit {
         console.log('Une erreur est survenue lors de la récupération des réponses.');
       }
     );
-
+  
     this.replyService.clicked$.subscribe(nouvelleValeur => {
       this.clicked = nouvelleValeur;
     });
-
+  
     console.log('connected : ' + localStorage['userAuthenticated']);
     this.username = localStorage['username'];
   }
+  
 
   constructor(private replyService: ReplyService,
               private http: HttpClient) {
@@ -157,4 +158,9 @@ export class ReponsesComponent implements OnInit {
   seemore(): void {
     this.sliceIndex += 6;
   }
+  
+  addCard(response: any) {
+    this.responses.push(response);
+  }
+  
 }

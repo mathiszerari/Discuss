@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ReplyService {
   private apiUrl = 'http://127.0.0.1:5000';
   private replySubject = new BehaviorSubject<string>('');
+  responses: any[] = [];
 
   constructor(private http: HttpClient) {}
 

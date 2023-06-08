@@ -8,7 +8,7 @@ import { catchError, throwError } from 'rxjs';
   templateUrl: './input.component.html',
 })
 export class InputComponent implements AfterViewInit {
-  @ViewChild('commentInput', { static: false })
+  @ViewChild('input', { static: false })
   commentInput!: ElementRef;
   isClicked: any;
   replyContent: string = '';
@@ -55,6 +55,12 @@ export class InputComponent implements AfterViewInit {
   }
 
   response() {
+
+    if (this.replyContent.length === 0) {
+      this.shakeit();
+      return;
+    }
+
     const usernameValue = localStorage['username'];
     const replyValue = this.replyContent;
     let upvote = this.upvote;
@@ -88,18 +94,6 @@ export class InputComponent implements AfterViewInit {
           console.error('Erreur lors de l\'envoi du formulaire :', error);
         }
       );
-  
-    
-    if (this.replyContent.length > 0) {
-      this.replyService.setReply(this.replyContent);
-      console.log(this.replyContent);
-      this.replyContent = '';
-      const nouvelleValeur = true;
-      this.replyService.updateMaVariable(nouvelleValeur);
-      this.isReplyClicked = true;
-    } else {
-      this.shakeit();
-    }
   }
   
 }
