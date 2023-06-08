@@ -97,7 +97,7 @@ export class InputComponent implements AfterViewInit {
         }
     );
 
-    this.router.navigate(['login']);
+    window.location.reload();
 
     this.replyService.setReply(this.replyContent);
     console.log(this.replyContent);
