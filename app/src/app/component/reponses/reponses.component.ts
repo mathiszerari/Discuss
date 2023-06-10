@@ -24,6 +24,8 @@ export class ReponsesComponent implements OnInit {
   upvoteimg: string = 'assets/arrow.up@2x.png';
   downvoteimg: string = 'assets/arrow.down@2x.png';
   heure: any
+  voteddown: boolean = false
+  votedup: boolean = false
   instant: string = 'À l\'instant'
 
 
@@ -66,31 +68,42 @@ export class ReponsesComponent implements OnInit {
     this.clickedReply = response.reply;
     console.log(this.clickedUser);
     console.log(this.clickedReply);
-    
-    // Envoie les données vers Flask
-    this.http.post<any>(this.url + 'downvote', { username: this.clickedUser, reply: this.clickedReply })
-      .pipe(
-        catchError(error => {
-          return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
-        })
-      )
-      .subscribe(
-        (response) => {
-          // Traitement de la réponse si nécessaire
-          if (response.message === "Downvote enregistré avec succès") {
-            console.log(response.message);
-          } else {
-            console.log('Le vote a échoué');
+
+    if (response.downvoteimg == 'assets/arrow.down.red@2x.png' && this.voteddown) {
+      response.downvoteimg = 'assets/arrow.down@2x.png'
+      response.downvote -= 1;
+      setTimeout(() => {
+        this.voteddown = false
+      }, 500);
+    }
+
+    if (this.voteddown == false) {
+      // Envoie les données vers Flask
+      this.http.post<any>(this.url + 'downvote', { username: this.clickedUser, reply: this.clickedReply })
+        .pipe(
+          catchError(error => {
+            return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse si nécessaire
+            if (response.message === "Downvote enregistré avec succès") {
+              console.log(response.message);
+            } else {
+              console.log('Le vote a échoué');
+            }
+          },
+          (error) => {
+            console.error('Erreur lors de la transmission des informations :', error);
           }
-        },
-        (error) => {
-          console.error('Erreur lors de la transmission des informations :', error);
-        }
-      );
-    response.downvote += 1;
-    response.downvoteimg = 'assets/arrow.down.red@2x.png'
-    if (response.upvote == 'assets/arrow.up.red@2x.png') {
-      response.upvote = 'assets/arrow.up@2x.png'
+        );
+      response.downvote += 1;
+      response.downvoteimg = 'assets/arrow.down.red@2x.png'
+      this.voteddown = true
+    }
+    if (response.upvoteimg == 'assets/arrow.up.blue@2x.png') {
+      response.upvoteimg = 'assets/arrow.up@2x.png'
       response.upvote -= 1;
     }
   }  
@@ -102,33 +115,45 @@ export class ReponsesComponent implements OnInit {
     this.clickedReply = response.reply;
     console.log(this.clickedUser);
     console.log(this.clickedReply);
-    
-    // Envoie les données vers Flask
-    this.http.post<any>(this.url + 'upvote', { username: this.clickedUser, reply: this.clickedReply })
-      .pipe(
-        catchError(error => {
-          return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
-        })
-      )
-      .subscribe(
-        (response) => {
-          // Traitement de la réponse si nécessaire
-          if (response.message == 'Upvote enregistré avec succès') {
-            console.log(response.message);
-          } else {
-            console.log('Le vote a échoué');
+
+    if (response.upvoteimg == 'assets/arrow.up.blue@2x.png' && this.votedup) {
+      response.upvoteimg = 'assets/arrow.up@2x.png'
+      response.upvote -= 1;
+      setTimeout(() => {
+        this.votedup = false
+      }, 500);
+    }
+
+    if (!this.votedup) {
+      this.http.post<any>(this.url + 'upvote', { username: this.clickedUser, reply: this.clickedReply })
+        .pipe(
+          catchError(error => {
+            return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse si nécessaire
+            if (response.message == 'Upvote enregistré avec succès') {
+              console.log(response.message);
+            } else {
+              console.log('Le vote a échoué');
+            }
+          },
+          (error) => {
+            console.error('Erreur lors de la transmission des informations :', error);
           }
-        },
-        (error) => {
-          console.error('Erreur lors de la transmission des informations :', error);
-        }
-    );
-  
-    // Incrémente le compteur d'upvote
-    response.upvote += 1;
-    response.upvoteimg = 'assets/arrow.up.blue@2x.png';
-  
-    // Vérifie si le downvote est activé, puis annule le downvote
+      );
+      console.log(this.votedup);
+          
+      // Incrémente le compteur d'upvote
+      response.upvote += 1;
+      response.upvoteimg = 'assets/arrow.up.blue@2x.png';
+      this.votedup = true
+      console.log(this.votedup);
+      console.log(this.upvoteimg);
+    }
+    
     if (response.downvoteimg === 'assets/arrow.down.red@2x.png') {
       response.downvoteimg = 'assets/arrow.down@2x.png';
       response.downvote -= 1;
