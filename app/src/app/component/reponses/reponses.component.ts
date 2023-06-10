@@ -72,6 +72,26 @@ export class ReponsesComponent implements OnInit {
     if (response.downvoteimg == 'assets/arrow.down.red@2x.png' && this.voteddown) {
       response.downvoteimg = 'assets/arrow.down@2x.png'
       response.downvote -= 1;
+
+      this.http.post<any>(this.url + 'canceldownvote', { username: this.clickedUser, reply: this.clickedReply })
+        .pipe(
+          catchError(error => {
+            return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse si nécessaire
+            if (response.message === "Downvote annulé avec succès") {
+              console.log(response.message);
+            } else {
+              console.log('Le vote a échoué');
+            }
+          },
+          (error) => {
+            console.error('Erreur lors de la transmission des informations :', error);
+          }
+        );
       setTimeout(() => {
         this.voteddown = false
       }, 500);
@@ -119,6 +139,26 @@ export class ReponsesComponent implements OnInit {
     if (response.upvoteimg == 'assets/arrow.up.blue@2x.png' && this.votedup) {
       response.upvoteimg = 'assets/arrow.up@2x.png'
       response.upvote -= 1;
+
+      this.http.post<any>(this.url + 'cancelupvote', { username: this.clickedUser, reply: this.clickedReply })
+        .pipe(
+          catchError(error => {
+            return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse si nécessaire
+            if (response.message == 'Upvote annulé avec succès') {
+              console.log(response.message);
+            } else {
+              console.log('Le vote a échoué');
+            }
+          },
+          (error) => {
+            console.error('Erreur lors de la transmission des informations :', error);
+          }
+      );
       setTimeout(() => {
         this.votedup = false
       }, 500);
