@@ -11,6 +11,10 @@ import { catchError, throwError } from 'rxjs';
 export class InputComponent implements AfterViewInit {
   @ViewChild('input', { static: false })
   commentInput!: ElementRef;
+
+  @ViewChild('textera', { static: false })
+  textera!: ElementRef;
+
   isClicked: any;
   replyContent: string = '';
   isReplyClicked: boolean = false;
@@ -20,6 +24,7 @@ export class InputComponent implements AfterViewInit {
   upvote: number = 0;
   downvote: number = 0;
   index: number = 0;
+  connected: string = localStorage['connected'];
 
   constructor(
     private replyService: ReplyService,
@@ -28,7 +33,17 @@ export class InputComponent implements AfterViewInit {
     private http: HttpClient
   ) { }
 
+  ngOnInit(): void {
+    console.log(this.connected)
+  }
+
   ngAfterViewInit(): void {
+    if (this.connected === 'false') {
+      this.renderer.listen(this.textera.nativeElement, 'focus', () => {
+        console.log('modal ouverture');
+        
+      });
+    }
   }
 
   shakeit() {

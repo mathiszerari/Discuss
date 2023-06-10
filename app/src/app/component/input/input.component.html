@@ -1,8 +1,8 @@
-<form (ngSubmit)="response()" #input class="mt-10 mx-auto w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3 max-w-xl w-56">
+<form #input (ngSubmit)="response()" class="mt-10 mx-auto w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3 max-w-xl w-56">
     <div class="w-full mb-4 border rounded-xl bg-gray-700 border-gray-600">
         <div class="px-4 py-2 rounded-t-xl bg-gray-800">
             <label for="comment" class="sr-only">Your comment</label>
-            <textarea id="comment" rows="3" name="replyContent" class="w-full resize-none focus-visible:outline-none px-0 text-sm 
+            <textarea #textera  id="comment" rows="3" name="replyContent" class="w-full resize-none focus-visible:outline-none px-0 text-sm 
             text-gray-900 border-0 bg-gray-800 focus:ring-0 text-white dark:placeholder-gray-400" 
             placeholder="Write a comment..." required [ngModel]="replyContent" (ngModelChange)="replyContent = $event"></textarea>
         </div>

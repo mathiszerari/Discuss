@@ -40,10 +40,10 @@ export class ConnexionComponent {
   ) {}
 
   ngOnInit() {
-    this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+    this.inSession = localStorage.getItem('connected') === 'true';
     console.log(localStorage);
-    // console.log('connected : ' + localStorage['userAuthenticated']);
-    if (localStorage.getItem('userAuthenticated') === 'true') {
+    // console.log('connected : ' + localStorage['connected']);
+    if (localStorage.getItem('connected') === 'true') {
       console.log('name : ' + localStorage['username']);
     }
     
@@ -86,8 +86,8 @@ export class ConnexionComponent {
         (response: any) => { // Définir le type de 'response' comme 'any'
           if (response && response.message == 'Authentification réussie') {
             this.success = response.message
-            localStorage.setItem('userAuthenticated', 'true');
-            this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+            localStorage.setItem('connected', 'true');
+            this.inSession = localStorage.getItem('connected') === 'true';
             // console.log(this.inSession);
 
             localStorage.setItem('username', this.emailOrUsername);
@@ -134,8 +134,8 @@ export class ConnexionComponent {
         (response) => {
           // Traitement de la réponse si nécessaire
           if (response.message == 'Utilisateur créé avec succès') {
-            localStorage.setItem('userAuthenticated', 'true');
-            this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+            localStorage.setItem('connected', 'true');
+            this.inSession = localStorage.getItem('connected') === 'true';
             console.log(this.inSession);
             this.success = response.message
             this.erreur = ''
@@ -167,8 +167,8 @@ export class ConnexionComponent {
   logout() {
     console.log(this.inSession);
     this.message = 'Vous avez été déconnecté';
-    localStorage.setItem('userAuthenticated', 'false');
-    this.inSession = localStorage.getItem('userAuthenticated') === 'true';
+    localStorage.setItem('connected', 'false');
+    this.inSession = localStorage.getItem('connected') === 'true';
     console.log(this.inSession);
 
 

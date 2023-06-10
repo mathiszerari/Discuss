@@ -49,7 +49,7 @@ export class ReponsesComponent implements OnInit {
       this.clicked = nouvelleValeur;
     });
   
-    console.log('connected : ' + localStorage['userAuthenticated']);
+    console.log('connected : ' + localStorage['connected']);
     this.username = localStorage['username'];
   }
   
