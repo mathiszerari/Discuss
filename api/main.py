@@ -29,20 +29,6 @@ collection_users = db.usersdatas
 collection_responses = db.responses
 
 
-@app.route("/users", methods=["GET"])
-def get_users():
-    users = []
-    for user in collection_users.find():
-        users.append(
-            {
-                "username": user["username"],
-                "email": user["email"],
-                "password": user["password"],
-            }
-        )
-    return jsonify({"users": users})
-
-
 @app.route("/login", methods=["POST"])
 def login():
     data = request.get_json()
@@ -136,6 +122,7 @@ def response():
 
     user = collection_users.find_one({"username": username})
     if not user:
+        app.logger.error("Utilisateur non trouvé")
         return jsonify({"message": "Utilisateur non trouvé"})
 
     user_id = str(user["_id"])
@@ -189,6 +176,7 @@ def get_responses():
             responses.append(response_data)
 
     responses.reverse()
+    app.logger.data(responses)
     return jsonify(responses)
 
 
@@ -201,6 +189,7 @@ def downvote():
     # Rechercher la réponse dans la base de données
     response = collection_responses.find_one({"username": username, "reply": reply})
     if not response:
+        app.logger.error("Réponse introuvable")
         return jsonify({"message": "Réponse introuvable"})
 
     # Mettre à jour le nombre de downvotes
@@ -212,7 +201,7 @@ def downvote():
         {"username": username, "reply": reply},
         {"$set": {"downvote": downvotes}}
     )
-
+    app.logger.error("Downvote enregistré avec succès")
     return jsonify({"message": "Downvote enregistré avec succès"})
 
 
@@ -225,6 +214,7 @@ def canceldownvote():
     # Rechercher la réponse dans la base de données
     response = collection_responses.find_one({"username": username, "reply": reply})
     if not response:
+        app.logger.error("Réponse introuvable")
         return jsonify({"message": "Réponse introuvable"})
 
     # Mettre à jour le nombre de downvotes
@@ -236,7 +226,7 @@ def canceldownvote():
         {"username": username, "reply": reply},
         {"$set": {"downvote": downvotes}}
     )
-
+    app.logger.error("downvote annulé avec succès")
     return jsonify({"message": "downvote annulé avec succès"})
 
 
@@ -249,6 +239,7 @@ def upvote():
     # Rechercher la réponse dans la base de données
     response = collection_responses.find_one({"username": username, "reply": reply})
     if not response:
+        app.logger.error("Réponse introuvable")
         return jsonify({"message": "Réponse introuvable"})
 
     # Mettre à jour le nombre de upvotes
@@ -260,7 +251,7 @@ def upvote():
         {"username": username, "reply": reply},
         {"$set": {"upvote": upvotes}}
     )
-
+    app.logger.error("Upvote enregistré avec succès")
     return jsonify({"message": "Upvote enregistré avec succès"})
 
 
@@ -273,6 +264,7 @@ def cancelupvote():
     # Rechercher la réponse dans la base de données
     response = collection_responses.find_one({"username": username, "reply": reply})
     if not response:
+        app.logger.error("Réponse introuvable")
         return jsonify({"message": "Réponse introuvable"})
 
     # Mettre à jour le nombre de upvotes
@@ -285,6 +277,7 @@ def cancelupvote():
         {"$set": {"upvote": upvotes}}
     )
 
+    app.logger.error("Upvote annulé avec succès")
     return jsonify({"message": "Upvote annulé avec succès"})
 
 if __name__ == "__main__":
