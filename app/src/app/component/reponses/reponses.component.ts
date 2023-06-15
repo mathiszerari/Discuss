@@ -27,6 +27,7 @@ export class ReponsesComponent implements OnInit {
   voteddown: boolean = false
   votedup: boolean = false
   instant: string = 'À l\'instant'
+  noresponse: boolean = false
 
 
   ngOnInit() {
@@ -34,6 +35,10 @@ export class ReponsesComponent implements OnInit {
       (data) => {
         this.responses = data;
         console.log(this.responses);
+        if (this.responses.length == 0) {
+          this.noresponse = true
+          console.log("aucune réponse disponible pour le moment");
+        }
   
         this.responses.forEach((response) => {
           response.upvoteimg = 'assets/arrow.up@2x.png';

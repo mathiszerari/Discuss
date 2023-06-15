@@ -1,4 +1,7 @@
-<h2 class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 mt-10 text text-gray-200">Top responses</h2>
+<h2 *ngIf="!noresponse" class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 mt-10 text text-gray-200">Top responses</h2>
+<div class="flex">
+  <h1 *ngIf="noresponse" class="text-2xl max-w-3xl mx-auto p-10 mt-10 pb-24 text justify-center text-gray-200">Auncune réponse disponible pour le moment</h1>
+</div>
 
 <div class="flex flex-wrap justify-center">
   <ng-container *ngFor="let response of responses.slice(0, 1), let i = index" class=" pb-10 mx-3">

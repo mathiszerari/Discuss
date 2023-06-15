@@ -29,6 +29,29 @@ collection_users = db.usersdatas
 collection_responses = db.responses
 
 
+
+@app.route("/getresponses", methods=["GET"])
+def get_responses():
+    responses = []
+    for response in collection_responses.find():
+        username = response["username"]
+        users = collection_users.find({"username": username})
+        for user in users:
+            response_data = {"username": user["username"], "reply": response["reply"]}
+            if "index" in response:
+                response_data["index"] = response["index"]
+            if "heure" in response:
+                response_data["heure"] = response["heure"]
+            if "upvote" in response:
+                response_data["upvote"] = response["upvote"]
+            if "downvote" in response:
+                response_data["downvote"] = response["downvote"]
+            responses.append(response_data)
+
+    responses.reverse()
+    return jsonify(responses)
+
+
 @app.route("/login", methods=["POST"])
 def login():
     data = request.get_json()
@@ -109,7 +132,6 @@ def create_users():
     return jsonify({"message": "Utilisateur créé avec succès"})
 
 
-
 @app.route("/response", methods=["POST"])
 def response():
     data = request.get_json()
@@ -159,29 +181,6 @@ def response():
     )
 
 
-
-@app.route("/getresponses", methods=["GET"])
-def get_responses():
-    responses = []
-    for response in collection_responses.find():
-        username = response["username"]
-        users = collection_users.find({"username": username})
-        for user in users:
-            response_data = {"username": user["username"], "reply": response["reply"]}
-            if "index" in response:
-                response_data["index"] = response["index"]
-            if "heure" in response:
-                response_data["heure"] = response["heure"]
-            if "upvote" in response:
-                response_data["upvote"] = response["upvote"]
-            if "downvote" in response:
-                response_data["downvote"] = response["downvote"]
-            responses.append(response_data)
-
-    responses.reverse()
-    return jsonify(responses)
-
-
 @app.route("/downvote", methods=["POST"])
 def downvote():
     data = request.get_json()
@@ -205,7 +204,7 @@ def downvote():
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"downvote": downvotes}}
+        {"$set": {"downvote": downvotes, "score": score}}
     )
     app.logger.info("Downvote enregistré avec succès")
     return jsonify({"message": "Downvote enregistré avec succès"})
@@ -227,10 +226,14 @@ def canceldownvote():
     downvotes = response.get("downvote", 0)
     downvotes -= 1
 
+    # Mettre à jour le nombre de score
+    score = response.get("score", 0)
+    score += 100
+
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"downvote": downvotes}}
+        {"$set": {"downvote": downvotes, "score": score}}
     )
     app.logger.error("downvote annulé avec succès")
     return jsonify({"message": "downvote annulé avec succès"})
@@ -281,14 +284,20 @@ def cancelupvote():
     upvotes = response.get("upvote", 0)
     upvotes -= 1
 
+    # Mettre à jour le nombre de score
+    score = response.get("score", 0)
+    score -= 100
+
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"upvote": upvotes}}
+        {"$set": {"upvote": upvotes, "score": score}}
     )
 
     app.logger.error("Upvote annulé avec succès")
     return jsonify({"message": "Upvote annulé avec succès"})
+
+
 
 if __name__ == "__main__":
     app.run()
