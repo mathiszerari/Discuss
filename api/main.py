@@ -118,6 +118,7 @@ def response():
     upvote = data["upvote"]
     downvote = data["downvote"]
     question = data["question"]
+    score = data["score"]
     heure_actuelle = datetime.now()
 
     user = collection_users.find_one({"username": username})
@@ -139,6 +140,7 @@ def response():
         "downvote": downvote,
         "heure": heure_actuelle,
         "index": index,
+        "score": score
     }
     response = collection_responses.insert_one(responses)
 
@@ -150,6 +152,7 @@ def response():
         {
             "message": "Réponse enregistrée avec succès",
             "responses": responses,
+            "score": score,
             "user_id": user_id,
             "index": index,
         }
@@ -195,12 +198,16 @@ def downvote():
     downvotes = response.get("downvote", 0)
     downvotes += 1
 
+    # Mettre à jour le nombre de score
+    score = response.get("score", 0)
+    score -= 100
+
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
         {"$set": {"downvote": downvotes}}
     )
-    app.logger.error("Downvote enregistré avec succès")
+    app.logger.info("Downvote enregistré avec succès")
     return jsonify({"message": "Downvote enregistré avec succès"})
 
 
@@ -245,12 +252,16 @@ def upvote():
     upvotes = response.get("upvote", 0)
     upvotes += 1
 
+    # Mettre à jour le nombre de score
+    score = response.get("score", 0)
+    score += 100
+
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"upvote": upvotes}}
+        {"$set": {"upvote": upvotes, "score": score}}
     )
-    app.logger.error("Upvote enregistré avec succès")
+    app.logger.info("Upvote enregistré avec succès")
     return jsonify({"message": "Upvote enregistré avec succès"})
 
 
