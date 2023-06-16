@@ -29,10 +29,9 @@ collection_users = db.usersdatas
 collection_responses = db.responses
 
 
-
-@app.route("/getresponses", methods=["GET"])
+@app.route("/api/getresponses", methods=["GET"])
 def get_responses():
-    algorithm = request.args.get('algorithm')
+    algorithm = request.args.get("algorithm")
     responses = []
 
     for response in collection_responses.find():
@@ -60,7 +59,7 @@ def get_responses():
     return jsonify(responses)
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/api/login", methods=["POST"])
 def login():
     data = request.get_json()
     email_or_username = data[
@@ -90,10 +89,12 @@ def login():
 
 regex = re.compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
 regex_username = re.compile(r"^[a-zA-Z0-9_]{1,15}$")
-regex_password = re.compile(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$')
+regex_password = re.compile(
+    r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+)
 
 
-@app.route("/users", methods=["POST"])
+@app.route("/api/users", methods=["POST"])
 def create_users():
     data = request.get_json()
     username = data["username"].lower()
@@ -104,10 +105,12 @@ def create_users():
     if username == "" or email == "" or password == "":
         app.logger.error("Champ(s) invalide(s)")
         return jsonify({"message": "Champ(s) invalide(s)"})
-    
+
     if not re.match(regex_password, password):
         app.logger.error("Le mot de passe ne respecte pas les critères de sécurité")
-        return jsonify({"message": "Le mot de passe ne respecte pas les critères de sécurité"})
+        return jsonify(
+            {"message": "Le mot de passe ne respecte pas les critères de sécurité"}
+        )
 
     salt = bcrypt.gensalt()
     password = bcrypt.hashpw(password.encode("utf-8"), salt)
@@ -140,7 +143,7 @@ def create_users():
     return jsonify({"message": "Utilisateur créé avec succès"})
 
 
-@app.route("/response", methods=["POST"])
+@app.route("/api/response", methods=["POST"])
 def response():
     data = request.get_json()
     username = data["username"]
@@ -158,7 +161,9 @@ def response():
 
     user_id = str(user["_id"])
 
-    total_responses = collection_responses.count_documents({})  # Nombre total de réponses dans la collection
+    total_responses = collection_responses.count_documents(
+        {}
+    )  # Nombre total de réponses dans la collection
     index = total_responses  # Nouvelle valeur de l'index pour la réponse actuelle
 
     responses = {
@@ -170,7 +175,7 @@ def response():
         "downvote": downvote,
         "heure": heure_actuelle,
         "index": index,
-        "score": score
+        "score": score,
     }
     response = collection_responses.insert_one(responses)
 
@@ -189,7 +194,7 @@ def response():
     )
 
 
-@app.route("/downvote", methods=["POST"])
+@app.route("/api/downvote", methods=["POST"])
 def downvote():
     data = request.get_json()
     username = data["username"]
@@ -212,13 +217,13 @@ def downvote():
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"downvote": downvotes, "score": score}}
+        {"$set": {"downvote": downvotes, "score": score}},
     )
     app.logger.info("Downvote enregistré avec succès")
     return jsonify({"message": "Downvote enregistré avec succès"})
 
 
-@app.route("/canceldownvote", methods=["POST"])
+@app.route("/api/canceldownvote", methods=["POST"])
 def canceldownvote():
     data = request.get_json()
     username = data["username"]
@@ -241,13 +246,13 @@ def canceldownvote():
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"downvote": downvotes, "score": score}}
+        {"$set": {"downvote": downvotes, "score": score}},
     )
     app.logger.error("downvote annulé avec succès")
     return jsonify({"message": "downvote annulé avec succès"})
 
 
-@app.route("/upvote", methods=["POST"])
+@app.route("/api/upvote", methods=["POST"])
 def upvote():
     data = request.get_json()
     username = data["username"]
@@ -270,13 +275,13 @@ def upvote():
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"upvote": upvotes, "score": score}}
+        {"$set": {"upvote": upvotes, "score": score}},
     )
     app.logger.info("Upvote enregistré avec succès")
     return jsonify({"message": "Upvote enregistré avec succès"})
 
 
-@app.route("/cancelupvote", methods=["POST"])
+@app.route("/api/cancelupvote", methods=["POST"])
 def cancelupvote():
     data = request.get_json()
     username = data["username"]
@@ -299,12 +304,11 @@ def cancelupvote():
     # Mettre à jour la réponse dans la base de données
     collection_responses.update_one(
         {"username": username, "reply": reply},
-        {"$set": {"upvote": upvotes, "score": score}}
+        {"$set": {"upvote": upvotes, "score": score}},
     )
 
     app.logger.error("Upvote annulé avec succès")
     return jsonify({"message": "Upvote annulé avec succès"})
-
 
 
 if __name__ == "__main__":
