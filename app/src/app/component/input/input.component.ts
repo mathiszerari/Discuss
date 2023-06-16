@@ -19,7 +19,7 @@ export class InputComponent implements AfterViewInit {
   replyContent: string = '';
   isReplyClicked: boolean = false;
   isShaking: boolean = false;
-  url: string = 'https://mathiszer.pythonanywhere.com/api/';
+  url: string = 'https://discuss-api.onrender.com/api/';
   newresponse: string = '';
   upvote: number = 0;
   downvote: number = 0;
