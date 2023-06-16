@@ -26,7 +26,7 @@ export class ConnexionComponent {
   erreur: string = '';
   success: string = '';
   creatingAccount: boolean = false;
-  url: string = 'https://mathiszerari.pythonanywhere.com/api/';
+  url: string = 'https://mathiszer.pythonanywhere.com/api/';
   inSession: boolean = false;
   emailOrUsername: string = '';
   sessionName: string = '';

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ReplyService {
-  private apiUrl: string = 'https://mathiszerari.pythonanywhere.com/api/';
+  private apiUrl: string = 'https://mathiszer.pythonanywhere.com/api/';
   private replySubject = new BehaviorSubject<string>('');
   responses: any[] = [];
 
