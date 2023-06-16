@@ -11,7 +11,7 @@ import * as moment from 'moment';
 
 export class ReponsesComponent implements OnInit {
   responses: any[] = [];
-  url: string = 'http://mathiszerari.pythonanywhere.com/api/';
+  url: string = 'https://mathiszerari.pythonanywhere.com/api/';
 
   clicked: any;
   reply: string | undefined;
