@@ -88,9 +88,9 @@ def login():
 
 regex = re.compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
 regex_username = re.compile(r"^[a-zA-Z0-9_]{1,15}$")
-regex_password = re.compile(
-    r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-)
+# regex_password = re.compile(
+#     r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+# )
 
 
 @app.route("/api/users", methods=["POST"])
@@ -105,11 +105,11 @@ def create_users():
         app.logger.error("Champ(s) invalide(s)")
         return jsonify({"message": "Champ(s) invalide(s)"})
 
-    if not re.match( password):
-        app.logger.error("Le mot de passe ne respecte pas les critères de sécurité")
-        return jsonify(
-            {"message": "Le mot de passe ne respecte pas les critères de sécurité"}
-        )
+    # if not re.match(regex_password, password):
+    #     app.logger.error("Le mot de passe ne respecte pas les critères de sécurité")
+    #     return jsonify(
+    #         {"message": "Le mot de passe ne respecte pas les critères de sécurité"}
+    #     )
 
     salt = bcrypt.gensalt()
     password = bcrypt.hashpw(password.encode("utf-8"), salt)
