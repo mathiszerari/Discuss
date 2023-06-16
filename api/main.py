@@ -222,11 +222,6 @@ def downvote():
     return jsonify({"message": "Downvote enregistré avec succès"})
 
 
-@app.route("/api/test", methods=["GET"])
-def test():
-    return jsonify({"message": "it's working"})
-
-
 @app.route("/api/canceldownvote", methods=["POST"])
 def canceldownvote():
     data = request.get_json()
