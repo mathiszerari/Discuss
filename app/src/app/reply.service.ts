@@ -33,7 +33,7 @@ export class ReplyService {
   }
 
   getResponses(algorithm: string) {
-    const url = `${this.apiUrl}/getresponses?algorithm=${algorithm}`;
+    const url = `${this.apiUrl}getresponses?algorithm=${algorithm}`;
     return this.http.get<any[]>(url);
   }
 }
