@@ -28,7 +28,7 @@ export class ReponsesComponent implements OnInit {
   votedup: boolean = false
   instant: string = 'À l\'instant'
   noresponse: boolean = false
-  selectedAlgorithm: string = 'relevant';
+  selectedAlgorithm: string = 'recent';
 
 
   ngOnInit() {
