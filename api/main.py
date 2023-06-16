@@ -137,7 +137,7 @@ def create_users():
     # Insérer le nouvel utilisateur dans la base de données
     user_data = {"username": username, "email": email, "password": password}
 
-    # collection_users.insert_one(user_data)
+    collection_users.insert_one(user_data)
 
     return jsonify({"message": "Utilisateur créé avec succès"})
 
