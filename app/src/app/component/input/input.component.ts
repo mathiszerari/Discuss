@@ -19,7 +19,7 @@ export class InputComponent implements AfterViewInit {
   replyContent: string = '';
   isReplyClicked: boolean = false;
   isShaking: boolean = false;
-  url: string = 'http://127.0.0.1:5000/api/';
+  url: string = 'http://mathiszerari.pythonanywhere.com/api/';
   newresponse: string = '';
   upvote: number = 0;
   downvote: number = 0;
