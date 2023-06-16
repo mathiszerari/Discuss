@@ -32,7 +32,8 @@ export class ReplyService {
     this.isClicked.next(reply);
   }
 
-  getResponses() {
-    return this.http.get<any[]>(`${this.apiUrl}/getresponses`);
+  getResponses(algorithm: string) {
+    const url = `${this.apiUrl}/getresponses?algorithm=${algorithm}`;
+    return this.http.get<any[]>(url);
   }
 }

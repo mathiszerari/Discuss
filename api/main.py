@@ -32,7 +32,9 @@ collection_responses = db.responses
 
 @app.route("/getresponses", methods=["GET"])
 def get_responses():
+    algorithm = request.args.get('algorithm')
     responses = []
+
     for response in collection_responses.find():
         username = response["username"]
         users = collection_users.find({"username": username})
@@ -40,6 +42,8 @@ def get_responses():
             response_data = {"username": user["username"], "reply": response["reply"]}
             if "index" in response:
                 response_data["index"] = response["index"]
+            if "score" in response:
+                response_data["score"] = response["score"]
             if "heure" in response:
                 response_data["heure"] = response["heure"]
             if "upvote" in response:
@@ -48,7 +52,11 @@ def get_responses():
                 response_data["downvote"] = response["downvote"]
             responses.append(response_data)
 
-    responses.reverse()
+    if algorithm == "relevant":
+        responses.sort(key=lambda x: x.get("score", 0), reverse=True)
+    elif algorithm == "recent":
+        responses.sort(key=lambda x: x.get("heure", datetime.min), reverse=True)
+
     return jsonify(responses)
 
 

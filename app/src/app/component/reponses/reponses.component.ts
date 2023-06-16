@@ -28,10 +28,11 @@ export class ReponsesComponent implements OnInit {
   votedup: boolean = false
   instant: string = 'À l\'instant'
   noresponse: boolean = false
+  selectedAlgorithm: string = 'relevant';
 
 
   ngOnInit() {
-    this.replyService.getResponses().subscribe(
+    this.replyService.getResponses(this.selectedAlgorithm).subscribe(
       (data) => {
         this.responses = data;
         console.log(this.responses);
@@ -65,6 +66,30 @@ export class ReponsesComponent implements OnInit {
       this.reply = reply;
     });
   }  
+
+  changeAlgorithm(algorithm: string) {
+    this.selectedAlgorithm = algorithm;
+    console.log(this.selectedAlgorithm);
+    
+    this.replyService.getResponses(this.selectedAlgorithm).subscribe(
+      (data) => {
+        this.responses = data;
+        console.log(this.responses);
+        if (this.responses.length == 0) {
+          this.noresponse = true
+          console.log("aucune réponse disponible pour le moment");
+        }
+  
+        this.responses.forEach((response) => {
+          response.upvoteimg = 'assets/arrow.up@2x.png';
+          response.downvoteimg = 'assets/arrow.down@2x.png';
+        });
+      },
+      (error) => {
+        console.log('Une erreur est survenue lors de la récupération des réponses.');
+      }
+    );
+  }
 
   downvotefn(response: any) {
     this.replyService.onClick(response);

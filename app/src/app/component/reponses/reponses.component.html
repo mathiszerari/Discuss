@@ -1,4 +1,12 @@
-<h2 *ngIf="!noresponse" class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 mt-10 text text-gray-200">Top responses</h2>
+<div *ngIf="selectedAlgorithm == 'relevant'" class="text-center">
+  <button (click)="changeAlgorithm('recent')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Recent</button>
+</div>
+
+<div *ngIf="selectedAlgorithm == 'recent'" class="text-center">
+  <button (click)="changeAlgorithm('relevant')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Relevant</button>
+</div>
+
+<h2 *ngIf="!noresponse" class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 text text-gray-200">Top responses</h2>
 <div class="flex">
   <h1 *ngIf="noresponse" class="text-2xl max-w-3xl mx-auto p-10 mt-10 pb-24 text justify-center text-gray-200">Auncune réponse disponible pour le moment</h1>
 </div>
