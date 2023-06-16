@@ -19,3 +19,4 @@ SQLAlchemy==2.0.15
 typing_extensions==4.5.0
 virtualenv==20.23.0
 Werkzeug==2.2.3
+Gunicorn
