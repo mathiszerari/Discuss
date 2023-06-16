@@ -33,30 +33,29 @@ def get_responses():
     algorithm = request.args.get("algorithm")
     responses = []
 
-    # for response in collection_responses.find():
-    #     username = response["username"]
-    #     users = collection_users.find({"username": username})
-    #     for user in users:
-    #         response_data = {"username": user["username"], "reply": response["reply"]}
-    #         if "index" in response:
-    #             response_data["index"] = response["index"]
-    #         if "score" in response:
-    #             response_data["score"] = response["score"]
-    #         if "heure" in response:
-    #             response_data["heure"] = response["heure"]
-    #         if "upvote" in response:
-    #             response_data["upvote"] = response["upvote"]
-    #         if "downvote" in response:
-    #             response_data["downvote"] = response["downvote"]
-    #         responses.append(response_data)
+    for response in collection_responses.find():
+        username = response["username"]
+        users = collection_users.find({"username": username})
+        for user in users:
+            response_data = {"username": user["username"], "reply": response["reply"]}
+            if "index" in response:
+                response_data["index"] = response["index"]
+            if "score" in response:
+                response_data["score"] = response["score"]
+            if "heure" in response:
+                response_data["heure"] = response["heure"]
+            if "upvote" in response:
+                response_data["upvote"] = response["upvote"]
+            if "downvote" in response:
+                response_data["downvote"] = response["downvote"]
+            responses.append(response_data)
 
-    # if algorithm == "relevant":
-    #     responses.sort(key=lambda x: x.get("score", 0), reverse=True)
-    # elif algorithm == "recent":
-    #     responses.sort(key=lambda x: x.get("heure", datetime.min), reverse=True)
-
-    return jsonify({"message": "test"})
-    # return jsonify(responses)
+    if algorithm == "relevant":
+        responses.sort(key=lambda x: x.get("score", 0), reverse=True)
+    elif algorithm == "recent":
+        responses.sort(key=lambda x: x.get("heure", datetime.min), reverse=True)
+        
+    return jsonify(responses)
 
 
 @app.route("/api/login", methods=["POST"])
