@@ -13,7 +13,7 @@ MarkupSafe==2.1.2
 platformdirs==3.5.1
 pycodestyle==2.10.0
 pymongo==4.3.3
-python-dotenv==1.0.0
+python-dotenv==0.21.1
 six==1.16.0
 SQLAlchemy==2.0.15
 typing_extensions==4.5.0
