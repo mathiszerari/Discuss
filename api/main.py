@@ -15,7 +15,7 @@ load_dotenv(find_dotenv())
 password = os.environ.get("MONGO_PWD")
 
 # connection_string = f"mongodb://127.0.0.1/discuss"
-connection_string = "mongodb+srv://mathis:buvyg1mIoxULoFlP@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
+connection_string = "mongodb+srv://mathis:{password}@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
 
 parsed_uri = parse_uri(connection_string)
 host = parsed_uri["nodelist"][0][0]
