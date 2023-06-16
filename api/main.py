@@ -9,22 +9,20 @@ import os
 import re
 import bcrypt
 from bson import ObjectId
+from pymongo.server_api import ServerApi
 
 load_dotenv(find_dotenv())
 
 password = os.environ.get("MONGO_PWD")
 
+
 # connection_string = f"mongodb://127.0.0.1/discuss"
 connection_string = "mongodb+srv://mathis:buvyg1mIoxULoFlP@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
-
-parsed_uri = parse_uri(connection_string)
-host = parsed_uri["nodelist"][0][0]
-port = parsed_uri["nodelist"][0][1]
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-client = MongoClient(host, port)
+client = MongoClient(connection_string, server_api=ServerApi('1'))
 db = client.discuss
 collection_users = db.usersdatas
 collection_responses = db.responses
@@ -107,7 +105,7 @@ def create_users():
         app.logger.error("Champ(s) invalide(s)")
         return jsonify({"message": "Champ(s) invalide(s)"})
 
-    if not re.match(regex_password, password):
+    if not re.match( password):
         app.logger.error("Le mot de passe ne respecte pas les critères de sécurité")
         return jsonify(
             {"message": "Le mot de passe ne respecte pas les critères de sécurité"}
@@ -223,6 +221,9 @@ def downvote():
     app.logger.info("Downvote enregistré avec succès")
     return jsonify({"message": "Downvote enregistré avec succès"})
 
+@app.route("/api/test", methods=["GET"])
+def test():
+    return jsonify({"message": "it's working"})
 
 @app.route("/api/canceldownvote", methods=["POST"])
 def canceldownvote():
