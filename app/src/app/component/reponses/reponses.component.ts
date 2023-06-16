@@ -8,7 +8,7 @@ import * as moment from 'moment';
   selector: 'app-reponses',
   templateUrl: './reponses.component.html',
 })
-  
+
 export class ReponsesComponent implements OnInit {
   responses: any[] = [];
   url: string = 'http://127.0.0.1:5000/';

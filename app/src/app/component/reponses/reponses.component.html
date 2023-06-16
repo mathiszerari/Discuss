@@ -64,6 +64,6 @@
   </div>
 </div>
 
-<div class="text-center">
+<div *ngIf="responses.length > 6" class="text-center">
   <button (click)="seemore()" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Voir plus</button>
 </div>
