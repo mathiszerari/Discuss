@@ -174,7 +174,7 @@ def response():
         "downvote": downvote,
         "heure": heure_actuelle,
         "index": index,
-        "score": score,
+        "score": score
     }
     response = collection_responses.insert_one(responses)
 
