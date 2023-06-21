@@ -19,13 +19,14 @@ export class InputComponent implements AfterViewInit {
   replyContent: string = '';
   isReplyClicked: boolean = false;
   isShaking: boolean = false;
-  url: string = 'https://discuss-api.onrender.com/api/';
+  url: string = 'http://127.0.0.1:5000/api/';
   newresponse: string = '';
   upvote: number = 0;
   downvote: number = 0;
   index: number = 0;
   connected: string = localStorage['connected'];
   score: number = 0;
+  shakeshake: boolean | undefined;
 
   constructor(
     private replyService: ReplyService,
@@ -74,7 +75,10 @@ export class InputComponent implements AfterViewInit {
 
   response() {
 
-    if (this.replyContent.length === 0) {
+    console.log('1');
+    
+    if (this.replyContent.length === 0 && this.shakeshake) {
+      console.log('2');
       this.shakeit();
       return;
     }
@@ -120,9 +124,12 @@ export class InputComponent implements AfterViewInit {
     this.replyService.updateMaVariable(nouvelleValeur);
     this.isReplyClicked = true;
     this.replyContent = '';
+    console.log('3');
+
+    this.shakeshake = false;
 
     setTimeout(() => {
       window.location.reload();
-    }, 500)
+    }, 55500)
   }
 }

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ReplyService {
-  private apiUrl: string = 'https://discuss-api.onrender.com/api/';
+  private apiUrl: string = 'http://127.0.0.1:5000/api/';
   private replySubject = new BehaviorSubject<string>('');
   responses: any[] = [];
 
