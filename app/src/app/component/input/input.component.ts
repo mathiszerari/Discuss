@@ -114,13 +114,15 @@ export class InputComponent implements AfterViewInit {
         }
     );
 
-    // window.location.reload();
-
     this.replyService.setReply(this.replyContent);
     console.log(this.replyContent);
-    this.replyContent = '';
     const nouvelleValeur = true;
     this.replyService.updateMaVariable(nouvelleValeur);
     this.isReplyClicked = true;
+    this.replyContent = '';
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 500)
   }
 }
