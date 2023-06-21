@@ -26,7 +26,7 @@ export class InputComponent implements AfterViewInit {
   index: number = 0;
   connected: string = localStorage['connected'];
   score: number = 0;
-  shakeshake: boolean | undefined;
+  shakeshake: boolean = true;
 
   constructor(
     private replyService: ReplyService,
@@ -74,11 +74,8 @@ export class InputComponent implements AfterViewInit {
   }
 
   response() {
-
-    console.log('1');
     
     if (this.replyContent.length === 0 && this.shakeshake) {
-      console.log('2');
       this.shakeit();
       return;
     }
@@ -93,30 +90,43 @@ export class InputComponent implements AfterViewInit {
     index++
   
     // Envoie les données vers Flask
-    this.http.post<any>(this.url + 'response', { index: index, username: usernameValue, question: question, reply: replyValue, upvote: upvote, downvote: downvote, score: score })
-      .pipe(
-        catchError(error => {
-          return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
-        })
-      )
-      .subscribe(
-        (response) => {
-          // Traitement de la réponse si nécessaire
-          if (response.message == 'Réponse enregistrée avec succès') {
-            console.log(response.responses);
-            console.log(replyValue);
-  
-            // Stocker l'ID utilisateur dans le localStorage
-            const userId = response.user_id;
-            localStorage.setItem('user_id', userId);
-          } else {
-            console.log('Réponse non enregistrée');
+    if (this.replyContent.length > 2) {
+      const table = {
+        index: index,
+        username: usernameValue,
+        question: question,
+        reply: replyValue,
+        upvote: upvote,
+        downvote: downvote,
+        score: score
+      }
+      this.http.post<any>(this.url + 'response', table)
+        .pipe(
+          catchError(error => {
+            return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse si nécessaire
+            if (response.message == 'Réponse enregistrée avec succès') {
+              console.log(response.responses);
+              console.log(replyValue);
+              console.log('1');
+              
+    
+              // Stocker l'ID utilisateur dans le localStorage
+              const userId = response.user_id;
+              localStorage.setItem('user_id', userId);
+            } else {
+              console.log('Réponse non enregistrée');
+            }
+          },
+          (error) => {
+            console.error('Erreur lors de l\'envoi du formulaire :', error);
           }
-        },
-        (error) => {
-          console.error('Erreur lors de l\'envoi du formulaire :', error);
-        }
-    );
+      );
+    }
 
     this.replyService.setReply(this.replyContent);
     console.log(this.replyContent);
@@ -124,12 +134,12 @@ export class InputComponent implements AfterViewInit {
     this.replyService.updateMaVariable(nouvelleValeur);
     this.isReplyClicked = true;
     this.replyContent = '';
-    console.log('3');
 
     this.shakeshake = false;
+    console.log('2');
 
     setTimeout(() => {
       window.location.reload();
-    }, 55500)
+    }, 500)
   }
 }
