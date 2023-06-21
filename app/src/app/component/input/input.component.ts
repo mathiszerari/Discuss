@@ -20,6 +20,8 @@ export class InputComponent implements AfterViewInit {
   isReplyClicked: boolean = false;
   isShaking: boolean = false;
   url: string = 'http://127.0.0.1:5000/api/';
+  upvoteimg: string = 'assets/arrow.up@2x.png';
+  downvoteimg: string = 'assets/arrow.down@2x.png';
   newresponse: string = '';
   upvote: number = 0;
   downvote: number = 0;
@@ -105,7 +107,7 @@ export class InputComponent implements AfterViewInit {
         score: score
       }
       console.log(this.replyService.responses);
-      this.replyService.responses.push(table);
+      this.replyService.responses.unshift(table);
       console.log(this.replyService.responses);
       
       this.http.post<any>(this.url + 'response', table)
@@ -148,6 +150,6 @@ export class InputComponent implements AfterViewInit {
 
     setTimeout(() => {
       window.location.reload();
-    }, 100000000)
+    }, 10000000000)
   }
 }

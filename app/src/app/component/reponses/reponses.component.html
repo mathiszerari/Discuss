@@ -12,35 +12,6 @@
 </div>
 
 <div class="flex flex-wrap justify-center">
-  <!-- <ng-container *ngFor="let response of responses.slice(0, 1), let i = index" class=" pb-10 mx-3">
-    <div *ngIf="clicked == true" class="py-5 basis-1/4 mx-3 items-center">
-        <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
-          <div class="container card p-5 bg-gray-700 rounded-3xl">
-            <div class="pr-10 flex items-center">
-              <img src="assets/newlogo.png" alt="Description de l'image" class="w-10 h-10 rounded-full mr-4">
-              <div>
-                <h3 class="text-gray-200">@{{ username }}</h3>
-              </div>
-            </div>
-            <h3 class="text-xl mt-5 pb-5 pl-10 pr-10 text break-all text-gray-200"> {{ reply }}</h3>
-            <p class="text-gray-200">{{instant}}</p>
-          </div>
-          <div class="flex items-center justify-around text-center">
-            <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
-              <img (click)="downvotefn(response)" src="assets/arrow.up@2x.png" alt="">
-              {{downvote}}
-            </h5>
-            <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
-              <img (click)="upvotefn(response)" src="assets/arrow.down@2x.png" alt="">
-              {{upvote}}
-            </h5>
-            <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
-              <img src="assets/square.and.arrow.up@2x.png" alt="share">
-            </h5>
-          </div>
-        </div>
-      </div>
-  </ng-container> -->
   <div *ngFor="let response of this.replyService.responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/4 pb-10 mx-3">
     <div class="py-5 w-full items-center">
       <div class="bg-gray-800 mx-auto max-w-md rounded-3xl">
@@ -57,10 +28,13 @@
         <div class="flex items-center justify-around text-center">
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
             <img (click)="upvotefn(response)" [src]="response.upvoteimg" alt="">
+            <img *ngIf="!response.upvoteimg" (click)="upvotefn(response)" src="assets/arrow.up@2x.png" alt="">
             {{response.upvote}}
           </h5>
+          
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
             <img (click)="downvotefn(response)" [src]="response.downvoteimg" alt="">
+            <img *ngIf="!response.upvoteimg" (click)="upvotefn(response)" src="assets/arrow.down@2x.png" alt="">
             {{response.downvote}}
           </h5>
           <h5 class="text-gray-200 cursor-pointer font-semibold py-2 px-3">
@@ -72,6 +46,6 @@
   </div>
 </div>
 
-<div *ngIf="responses.length > 6" class="text-center">
+<div *ngIf="replyService.responses.length > 6" class="text-center">
   <button (click)="seemore()" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Voir plus</button>
 </div>

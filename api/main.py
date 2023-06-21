@@ -10,6 +10,18 @@ import re
 import bcrypt
 from bson import ObjectId
 from pymongo.server_api import ServerApi
+import logging
+
+# Configuration du module logging
+logging.basicConfig(
+    level=logging.DEBUG,  # Niveau de log souhaité (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    format="%(asctime)s %(levelname)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        logging.FileHandler("app.log"),  # Chemin vers le fichier de logs
+        logging.StreamHandler()  # Affiche les logs dans la console
+    ]
+)
 
 load_dotenv(find_dotenv())
 
@@ -52,10 +64,17 @@ def get_responses():
 
     if algorithm == "relevant":
         responses.sort(key=lambda x: x.get("score", 0), reverse=True)
+        app.logger.info("Réponses récupérées avec succès")
     elif algorithm == "recent":
         responses.sort(key=lambda x: x.get("heure", datetime.min), reverse=True)
+        app.logger.info("Réponses récupérées avec succès")
         
-    return jsonify(responses)
+    return jsonify(
+        {
+            "message": "Réponses récupérées avec succès",
+            "data": responses, 
+        }
+    )
 
 
 @app.route("/api/login", methods=["POST"])

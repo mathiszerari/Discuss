@@ -10,7 +10,6 @@ import * as moment from 'moment';
 })
 
 export class ReponsesComponent implements OnInit {
-  responses: any[] = [];
   url: string = 'http://127.0.0.1:5000/api/';
 
   clicked: any;
@@ -29,20 +28,25 @@ export class ReponsesComponent implements OnInit {
   instant: string = 'À l\'instant'
   noresponse: boolean = false
   selectedAlgorithm: string = 'recent';
+  message: string | undefined;
+
 
 
   ngOnInit() {
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
-      (data) => {
-        this.responses = data;
-        this.replyService.responses = data;
-        console.log(this.responses);
-        if (this.responses.length == 0) {
+      (data:any) => {
+        this.replyService.responses = data.data;
+        const message = data.message;
+        console.log(this.replyService.responses);
+        if (this.replyService.responses.length == 0) {
           this.noresponse = true
           console.log("aucune réponse disponible pour le moment");
         }
+        // if (this.message == "Réponses récupérées avec succès") {
+        //   console.log("SPIN ENFOIRE");
+        // }
   
-        this.responses.forEach((response) => {
+        this.replyService.responses.forEach((response) => {
           response.upvoteimg = 'assets/arrow.up@2x.png';
           response.downvoteimg = 'assets/arrow.down@2x.png';
         });
@@ -59,12 +63,11 @@ export class ReponsesComponent implements OnInit {
     console.log('connected : ' + localStorage['connected']);
     this.username = localStorage['username'];
   }
-  
 
   constructor(public replyService: ReplyService,
-              private http: HttpClient) {
+        private http: HttpClient) {
     this.replyService.reply$.subscribe(reply => {
-      this.reply = reply;
+    this.reply = reply;
     });
   }  
 
@@ -73,15 +76,15 @@ export class ReponsesComponent implements OnInit {
     console.log(this.selectedAlgorithm);
     
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
-      (data) => {
-        this.responses = data;
-        console.log(this.responses);
-        if (this.responses.length == 0) {
+      (data:any) => {
+        this.replyService.responses = data.data;
+        console.log(this.replyService.responses);
+        if (this.replyService.responses.length == 0) {
           this.noresponse = true
           console.log("aucune réponse disponible pour le moment");
         }
   
-        this.responses.forEach((response) => {
+        this.replyService.responses.forEach((response) => {
           response.upvoteimg = 'assets/arrow.up@2x.png';
           response.downvoteimg = 'assets/arrow.down@2x.png';
         });
@@ -257,7 +260,7 @@ export class ReponsesComponent implements OnInit {
   }
   
   addCard(response: any) {
-    this.responses.push(response);
+    this.replyService.responses.push(response);
   }
   
 }
