@@ -88,6 +88,10 @@ export class InputComponent implements AfterViewInit {
     let index = this.index;
     let score = this.score;
     index++
+
+    if (this.replyContent.length < 2 && this.shakeshake) { 
+      alert('Votre réponse est trop courte pour apporter au débat')
+    }
   
     // Envoie les données vers Flask
     if (this.replyContent.length > 2) {
@@ -100,6 +104,10 @@ export class InputComponent implements AfterViewInit {
         downvote: downvote,
         score: score
       }
+      console.log(this.replyService.responses);
+      this.replyService.responses.push(table);
+      console.log(this.replyService.responses);
+      
       this.http.post<any>(this.url + 'response', table)
         .pipe(
           catchError(error => {
@@ -140,6 +148,6 @@ export class InputComponent implements AfterViewInit {
 
     setTimeout(() => {
       window.location.reload();
-    }, 500)
+    }, 100000000)
   }
 }

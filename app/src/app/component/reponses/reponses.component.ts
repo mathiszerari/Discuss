@@ -35,6 +35,7 @@ export class ReponsesComponent implements OnInit {
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
       (data) => {
         this.responses = data;
+        this.replyService.responses = data;
         console.log(this.responses);
         if (this.responses.length == 0) {
           this.noresponse = true
@@ -60,7 +61,7 @@ export class ReponsesComponent implements OnInit {
   }
   
 
-  constructor(private replyService: ReplyService,
+  constructor(public replyService: ReplyService,
               private http: HttpClient) {
     this.replyService.reply$.subscribe(reply => {
       this.reply = reply;

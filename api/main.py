@@ -309,6 +309,5 @@ def cancelupvote():
     app.logger.error("Upvote annulé avec succès")
     return jsonify({"message": "Upvote annulé avec succès"})
 
-
 if __name__ == "__main__":
     app.run()

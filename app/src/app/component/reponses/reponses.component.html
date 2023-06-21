@@ -12,7 +12,7 @@
 </div>
 
 <div class="flex flex-wrap justify-center">
-  <ng-container *ngFor="let response of responses.slice(0, 1), let i = index" class=" pb-10 mx-3">
+  <!-- <ng-container *ngFor="let response of responses.slice(0, 1), let i = index" class=" pb-10 mx-3">
     <div *ngIf="clicked == true" class="py-5 basis-1/4 mx-3 items-center">
         <div class="bg-gray-800 max-w-md rounded-3xl grid-cols-4">
           <div class="container card p-5 bg-gray-700 rounded-3xl">
@@ -40,8 +40,8 @@
           </div>
         </div>
       </div>
-  </ng-container>
-  <div *ngFor="let response of responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/4 pb-10 mx-3">
+  </ng-container> -->
+  <div *ngFor="let response of this.replyService.responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/4 pb-10 mx-3">
     <div class="py-5 w-full items-center">
       <div class="bg-gray-800 mx-auto max-w-md rounded-3xl">
         <div class="container card p-5 bg-gray-700 rounded-3xl">
