@@ -114,7 +114,7 @@ export class InputComponent implements AfterViewInit {
         }
     );
 
-    window.location.reload();
+    // window.location.reload();
 
     this.replyService.setReply(this.replyContent);
     console.log(this.replyContent);
@@ -123,5 +123,4 @@ export class InputComponent implements AfterViewInit {
     this.replyService.updateMaVariable(nouvelleValeur);
     this.isReplyClicked = true;
   }
-  
 }
