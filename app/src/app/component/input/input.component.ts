@@ -147,9 +147,5 @@ export class InputComponent implements AfterViewInit {
 
     this.shakeshake = false;
     console.log('2');
-
-    setTimeout(() => {
-      window.location.reload();
-    }, 10000000000)
   }
 }

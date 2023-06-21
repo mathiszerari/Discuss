@@ -117,3 +117,5 @@ INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 21:10:06] "POST /users HTTP/1.1" 200 -
 2023-06-21 23:19:54 INFO: 127.0.0.1 - - [21/Jun/2023 23:19:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
 2023-06-21 23:20:01 INFO: 127.0.0.1 - - [21/Jun/2023 23:20:01] "OPTIONS /api/response HTTP/1.1" 200 -
 2023-06-21 23:20:01 INFO: 127.0.0.1 - - [21/Jun/2023 23:20:01] "POST /api/response HTTP/1.1" 200 -
+2023-06-21 23:23:19 INFO: Réponses récupérées avec succès
+2023-06-21 23:23:19 INFO: 127.0.0.1 - - [21/Jun/2023 23:23:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
