@@ -30,6 +30,7 @@ export class InputComponent implements AfterViewInit {
   score: number = 0;
   shakeshake: boolean = true;
   messageSend: boolean | undefined;
+  warningValue: string | undefined;
 
   constructor(
     private replyService: ReplyService,
@@ -46,7 +47,6 @@ export class InputComponent implements AfterViewInit {
     if (this.connected === 'false') {
       this.renderer.listen(this.textera.nativeElement, 'focus', () => {
         console.log('modal ouverture');
-        
       });
     }
   }
@@ -80,6 +80,11 @@ export class InputComponent implements AfterViewInit {
     
     if (this.replyContent.length === 0 && this.shakeshake) {
       this.shakeit();
+      this.warningValue = "Your message is too short"
+      this.messageSend = false
+      setTimeout(() => {
+        this.messageSend = undefined;
+      }, 4000);
       return;
     }
 
@@ -91,10 +96,6 @@ export class InputComponent implements AfterViewInit {
     let index = this.index;
     let score = this.score;
     index++
-
-    if (this.replyContent.length < 2 && this.shakeshake) { 
-      alert('Votre réponse est trop courte pour apporter au débat')
-    }
   
     // Envoie les données vers Flask
     if (this.replyContent.length > 2) {
@@ -125,13 +126,22 @@ export class InputComponent implements AfterViewInit {
               console.log(replyValue);
 
               this.messageSend = true
+              setTimeout(() => {
+                this.messageSend = undefined;
+              }, 4000);
               // Stocker l'ID utilisateur dans le localStorage
               const userId = response.user_id;
               localStorage.setItem('user_id', userId);
             } else {
-
               console.log('Réponse non enregistrée');
               this.messageSend = false
+              setTimeout(() => {
+                this.messageSend = undefined;
+              }, 4000);
+
+              if (!this.connected == false) {
+                this.warningValue = "Connect you to reply"
+              }
             }
           },
           (error) => {
