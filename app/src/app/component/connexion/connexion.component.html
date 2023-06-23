@@ -21,48 +21,52 @@
             <div class="px-6 py-6 lg:px-8">
             <div *ngIf="!inSession && !infoOpen">
                 <h3 class="mb-4 text-xl font-medium text-white">Sign in to our platform</h3>
-                <h3 class="mb-4 text-xl font-medium text-white">{{ message }}</h3>
-                <form class="space-y-6" action="#">
-                    <div *ngIf="creatingAccount">
-                        <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
-                        <input [(ngModel)]="email" type="email" name="email" id="email" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" placeholder="name@company.com" required>
-                    </div>
-                    <div *ngIf="creatingAccount">
-                        <label for="username" class="block mb-2 text-sm font-medium text-white">Your username</label>
-                        <input [(ngModel)]="username" type="username" name="username" id="username" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" placeholder="name@company.com" required>
-                    </div>
-                    <div *ngIf="!creatingAccount">
-                        <label for="emailOrUsername" class="block mb-2 text-sm font-medium text-white">Email or username</label>
-                        <input [(ngModel)]="emailOrUsername" type="text" name="emailOrUsername" id="emailOrUsername" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" placeholder="Enter your email or username" required>
-                    </div>                        
-                    <div>
-                        <div class="flex items-center">
-                            <label for="password" class="flex items-center mb-2 text-sm font-medium text-white">
-                                Your password
-                                <img (click)="openmini()" src="assets/info.circle@2x.png" alt="" class="ml-2">
-                            </label>
-                        </div>   
-                        <input [(ngModel)]="password" type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" required>
-                    </div>                     
-                    <div class="flex justify-between">
-                        <div *ngIf="!creatingAccount" class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-300" required>
-                            </div>
-                            <label for="remember" class="ml-2 text-sm font-medium text-white">Remember me</label>
+                <div *ngIf="isLoading" class="flex items-center justify-center p-24">
+                    <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-200"></div>
+                </div>
+                <div *ngIf="!isLoading">
+                    <h3 class="mb-4 text-xl font-medium text-white">{{ message }}</h3>
+                    <form class="space-y-6" action="#">
+                        <div *ngIf="creatingAccount">
+                            <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
+                            <input [(ngModel)]="email" type="email" name="email" id="email" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" placeholder="name@company.com" required>
                         </div>
-                        <a *ngIf="!creatingAccount" href="#" class="text-sm0 hover:underline text-cyan-400">Lost Password?</a>
-
-                        <p *ngIf="this.success" class="text-green-500">{{ this.success }}</p>
-                        <p *ngIf="this.erreur" class="text-red-500">{{ this.erreur }}</p>
-                    </div>
-                    <button *ngIf="!creatingAccount" (click)="login()" type="submit" class="w-full text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 focus:ring-cyan-500">Login to your account</button>
-                    <button *ngIf="creatingAccount" (click)="signup()" type="submit" class="w-full text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 focus:ring-cyan-500">Create an account</button>
-                    <div *ngIf="!authService.isLogged" class="text-sm flex justify-between text-white font-medium">
-                        <a *ngIf="!creatingAccount" (click)="createAccount()" class=" hover:underline mx-auto text-cyan-400 cursor-pointer">Create account</a>
-                        <a *ngIf="creatingAccount" (click)="loginAccount()" class=" hover:underline mx-auto text-cyan-400 cursor-pointer">Login</a>
-                    </div>
-                </form>
+                        <div *ngIf="creatingAccount">
+                            <label for="username" class="block mb-2 text-sm font-medium text-white">Your username</label>
+                            <input [(ngModel)]="username" type="username" name="username" id="username" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" placeholder="name@company.com" required>
+                        </div>
+                        <div *ngIf="!creatingAccount">
+                            <label for="emailOrUsername" class="block mb-2 text-sm font-medium text-white">Email or username</label>
+                            <input [(ngModel)]="emailOrUsername" type="text" name="emailOrUsername" id="emailOrUsername" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" placeholder="Enter your email or username" required>
+                        </div>                        
+                        <div>
+                            <div class="flex items-center">
+                                <label for="password" class="flex items-center mb-2 text-sm font-medium text-white">
+                                    Your password
+                                    <img (click)="openmini()" src="assets/info.circle@2x.png" alt="" class="ml-2">
+                                </label>
+                            </div>   
+                            <input [(ngModel)]="password" type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 bg-gray-600 placeholder-gray-400 text-white" required>
+                        </div>                     
+                        <div class="flex justify-between">
+                            <div *ngIf="!creatingAccount" class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-300" required>
+                                </div>
+                                <label for="remember" class="ml-2 text-sm font-medium text-white">Remember me</label>
+                            </div>
+                            <a *ngIf="!creatingAccount" href="#" class="text-sm0 hover:underline text-cyan-400">Lost Password?</a>
+                            <p *ngIf="this.success" class="text-green-500">{{ this.success }}</p>
+                            <p *ngIf="this.erreur" class="text-red-500">{{ this.erreur }}</p>
+                        </div>
+                        <button *ngIf="!creatingAccount" (click)="login()" type="submit" class="w-full text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 focus:ring-cyan-500">Login to your account</button>
+                        <button *ngIf="creatingAccount" (click)="signup()" type="submit" class="w-full text-white hover:bg-cyan-400 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-cyan-500 focus:ring-cyan-500">Create an account</button>
+                        <div *ngIf="!authService.isLogged" class="text-sm flex justify-between text-white font-medium">
+                            <a *ngIf="!creatingAccount" (click)="createAccount()" class=" hover:underline mx-auto text-cyan-400 cursor-pointer">Create account</a>
+                            <a *ngIf="creatingAccount" (click)="loginAccount()" class=" hover:underline mx-auto text-cyan-400 cursor-pointer">Login</a>
+                        </div>
+                    </form>
+                </div>
             </div>
 
             <div (click)="logout()" *ngIf="inSession" class="text-sm flex justify-between text-white font-medium">

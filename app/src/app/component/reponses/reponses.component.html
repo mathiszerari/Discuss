@@ -6,10 +6,20 @@
   <button (click)="changeAlgorithm('relevant')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Relevant</button>
 </div>
 
+<!-- spinner.component.html -->
+<div *ngIf="isLoading" class="flex items-center justify-center p-24">
+  <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-200"></div>
+</div>
+
 <h2 *ngIf="!noresponse" class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 text text-gray-200">Top responses</h2>
 <div class="flex">
   <h1 *ngIf="noresponse" class="text-2xl max-w-3xl mx-auto p-10 mt-10 pb-24 text justify-center text-gray-200">Auncune réponse disponible pour le moment</h1>
 </div>
+
+<div class="flex">
+  <h1 *ngIf="recupissues" class="text-2xl max-w-3xl mx-auto p-10 mt-10 pb-24 text justify-center text-gray-200">Une erreur est survenue lors de la récupération des réponses.</h1>
+</div>
+
 
 <div class="flex flex-wrap justify-center">
   <div *ngFor="let response of this.replyService.responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/4 pb-10 mx-3">

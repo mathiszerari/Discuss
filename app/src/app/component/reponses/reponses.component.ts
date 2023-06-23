@@ -29,8 +29,8 @@ export class ReponsesComponent implements OnInit {
   noresponse: boolean = false
   selectedAlgorithm: string = 'recent';
   message: string | undefined;
-
-
+  isLoading: boolean = true;
+  recupissues: boolean = false
 
   ngOnInit() {
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
@@ -40,19 +40,21 @@ export class ReponsesComponent implements OnInit {
         console.log(this.replyService.responses);
         if (this.replyService.responses.length == 0) {
           this.noresponse = true
+          this.isLoading = false
           console.log("aucune réponse disponible pour le moment");
         }
-        // if (this.message == "Réponses récupérées avec succès") {
-        //   console.log("SPIN ENFOIRE");
-        // }
   
         this.replyService.responses.forEach((response) => {
           response.upvoteimg = 'assets/arrow.up@2x.png';
           response.downvoteimg = 'assets/arrow.down@2x.png';
         });
+
+        this.isLoading = false;
       },
       (error) => {
         console.log('Une erreur est survenue lors de la récupération des réponses.');
+        this.recupissues = true
+        this.isLoading = false;
       }
     );
   

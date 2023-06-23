@@ -32,6 +32,7 @@ export class ConnexionComponent {
   sessionName: string = '';
   iDconnexion: string = '';
   infoOpen: boolean | undefined;
+  isLoading: boolean | undefined;
 
   constructor(
     private router: Router,
@@ -74,6 +75,7 @@ export class ConnexionComponent {
 
   login() {
     this.message = 'Connexion en cours';
+    this.isLoading = true;
     this.authService.login(this.emailOrUsername, this.password) // Passer emailOrUsername au lieu de email et laisser une chaîne vide pour username
     console.log(this.emailOrUsername, this.password);
     this.http.post<any>(this.url + 'login', { emailOrUsername: this.emailOrUsername, password: this.password }) // Utiliser emailOrUsername dans la requête HTTP
@@ -85,10 +87,10 @@ export class ConnexionComponent {
       .subscribe(
         (response: any) => { // Définir le type de 'response' comme 'any'
           if (response && response.message == 'Authentification réussie') {
+            this.isLoading = false;
             this.success = response.message
             localStorage.setItem('connected', 'true');
             this.inSession = localStorage.getItem('connected') === 'true';
-            // console.log(this.inSession);
 
             localStorage.setItem('username', this.emailOrUsername);
             console.log(localStorage['username']);
@@ -98,13 +100,11 @@ export class ConnexionComponent {
             this.iDconnexion = localStorage['username']
             this.router.navigate(['home']);
           } else {
-
             this.message = 'Utilisateur introuvable';
+            this.isLoading = false;
             console.log('auth ratée');
             console.log(response);
             console.log(response.message);
-            
-            this.password = '';
             this.router.navigate(['home/login']);
           }
           
