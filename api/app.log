@@ -503,3 +503,23 @@ INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 21:10:06] "POST /users HTTP/1.1" 200 -
 2023-06-24 00:21:52 INFO: 127.0.0.1 - - [24/Jun/2023 00:21:52] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
 2023-06-24 00:21:56 INFO: 127.0.0.1 - - [24/Jun/2023 00:21:56] "OPTIONS /api/login HTTP/1.1" 200 -
 2023-06-24 00:21:56 INFO: 127.0.0.1 - - [24/Jun/2023 00:21:56] "POST /api/login HTTP/1.1" 200 -
+2023-06-24 00:26:23 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:23 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:26:27 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:27 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:26:33 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:33 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:26:35 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:35 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:26:39 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:39 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:26:41 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:41 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:41] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:26:44 INFO: Réponses récupérées avec succès
+2023-06-24 00:26:44 INFO: 127.0.0.1 - - [24/Jun/2023 00:26:44] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-24 00:27:06 INFO: 127.0.0.1 - - [24/Jun/2023 00:27:06] "OPTIONS /api/users HTTP/1.1" 200 -
+2023-06-24 00:27:06 INFO: 127.0.0.1 - - [24/Jun/2023 00:27:06] "POST /api/users HTTP/1.1" 200 -
+2023-06-24 00:27:32 INFO: 127.0.0.1 - - [24/Jun/2023 00:27:32] "OPTIONS /api/response HTTP/1.1" 200 -
+2023-06-24 00:27:32 INFO: 127.0.0.1 - - [24/Jun/2023 00:27:32] "POST /api/response HTTP/1.1" 200 -
+2023-06-24 00:27:49 INFO: Réponses récupérées avec succès
+2023-06-24 00:27:49 INFO: 127.0.0.1 - - [24/Jun/2023 00:27:49] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -

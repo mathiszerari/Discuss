@@ -122,6 +122,7 @@ export class ConnexionComponent {
     const emailValue = this.email;
     const usernameValue = this.username;
     const passwordValue = this.password;
+    this.isLoading = true;
   
     // Envoie les données vers Flask
     this.http.post<any>(this.url + 'users', { email: emailValue, username: usernameValue, password: passwordValue })
@@ -134,6 +135,7 @@ export class ConnexionComponent {
         (response) => {
           // Traitement de la réponse si nécessaire
           if (response.message == 'Utilisateur créé avec succès') {
+            this.isLoading = false;
             localStorage.setItem('connected', 'true');
             this.inSession = localStorage.getItem('connected') === 'true';
             console.log(this.inSession);
@@ -145,6 +147,7 @@ export class ConnexionComponent {
             localStorage.setItem('username', usernameValue) 
             this.iDconnexion = localStorage['username']
           } else {
+            this.isLoading = false;
             this.erreur = response.message
             this.success = ''
           }
