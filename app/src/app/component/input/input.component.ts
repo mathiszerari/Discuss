@@ -29,6 +29,7 @@ export class InputComponent implements AfterViewInit {
   connected: string = localStorage['connected'];
   score: number = 0;
   shakeshake: boolean = true;
+  messageSend: boolean | undefined;
 
   constructor(
     private replyService: ReplyService,
@@ -122,14 +123,15 @@ export class InputComponent implements AfterViewInit {
             if (response.message == 'Réponse enregistrée avec succès') {
               console.log(response.responses);
               console.log(replyValue);
-              console.log('1');
-              
-    
+
+              this.messageSend = true
               // Stocker l'ID utilisateur dans le localStorage
               const userId = response.user_id;
               localStorage.setItem('user_id', userId);
             } else {
+
               console.log('Réponse non enregistrée');
+              this.messageSend = false
             }
           },
           (error) => {

@@ -119,3 +119,74 @@ INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 21:10:06] "POST /users HTTP/1.1" 200 -
 2023-06-21 23:20:01 INFO: 127.0.0.1 - - [21/Jun/2023 23:20:01] "POST /api/response HTTP/1.1" 200 -
 2023-06-21 23:23:19 INFO: Réponses récupérées avec succès
 2023-06-21 23:23:19 INFO: 127.0.0.1 - - [21/Jun/2023 23:23:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:37:33 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-23 23:37:33 INFO: [33mPress CTRL+C to quit[0m
+2023-06-23 23:37:47 INFO: Réponses récupérées avec succès
+2023-06-23 23:37:47 INFO: 127.0.0.1 - - [23/Jun/2023 23:37:47] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:45:40 INFO: Réponses récupérées avec succès
+2023-06-23 23:45:40 INFO: 127.0.0.1 - - [23/Jun/2023 23:45:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:45:54 INFO: Réponses récupérées avec succès
+2023-06-23 23:45:54 INFO: 127.0.0.1 - - [23/Jun/2023 23:45:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:45:55 INFO: Réponses récupérées avec succès
+2023-06-23 23:45:55 INFO: 127.0.0.1 - - [23/Jun/2023 23:45:55] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:46:01 INFO: Réponses récupérées avec succès
+2023-06-23 23:46:01 INFO: 127.0.0.1 - - [23/Jun/2023 23:46:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:46:03 INFO: Réponses récupérées avec succès
+2023-06-23 23:46:03 INFO: 127.0.0.1 - - [23/Jun/2023 23:46:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:46:05 INFO: Réponses récupérées avec succès
+2023-06-23 23:46:05 INFO: 127.0.0.1 - - [23/Jun/2023 23:46:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:46:13 INFO: Réponses récupérées avec succès
+2023-06-23 23:46:13 INFO: 127.0.0.1 - - [23/Jun/2023 23:46:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:46:22 INFO: Réponses récupérées avec succès
+2023-06-23 23:46:22 INFO: 127.0.0.1 - - [23/Jun/2023 23:46:22] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:46:24 INFO: Réponses récupérées avec succès
+2023-06-23 23:46:24 INFO: 127.0.0.1 - - [23/Jun/2023 23:46:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:12 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:12 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:12] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:14 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:14 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:21 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:21 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:25 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:25 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:25] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:30 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:30 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:33 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:33 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:42 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:42 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:42] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:47:44 INFO: Réponses récupérées avec succès
+2023-06-23 23:47:44 INFO: 127.0.0.1 - - [23/Jun/2023 23:47:44] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:48:15 INFO: Réponses récupérées avec succès
+2023-06-23 23:48:15 INFO: 127.0.0.1 - - [23/Jun/2023 23:48:15] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:48:23 INFO: Réponses récupérées avec succès
+2023-06-23 23:48:23 INFO: 127.0.0.1 - - [23/Jun/2023 23:48:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:48:28 INFO: Réponses récupérées avec succès
+2023-06-23 23:48:28 INFO: 127.0.0.1 - - [23/Jun/2023 23:48:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:48:35 INFO: 127.0.0.1 - - [23/Jun/2023 23:48:35] "OPTIONS /api/response HTTP/1.1" 200 -
+2023-06-23 23:48:35 INFO: 127.0.0.1 - - [23/Jun/2023 23:48:35] "POST /api/response HTTP/1.1" 200 -
+2023-06-23 23:48:44 INFO: Réponses récupérées avec succès
+2023-06-23 23:48:44 INFO: 127.0.0.1 - - [23/Jun/2023 23:48:44] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:50:31 INFO: Réponses récupérées avec succès
+2023-06-23 23:50:31 INFO: 127.0.0.1 - - [23/Jun/2023 23:50:31] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:50:50 INFO: Réponses récupérées avec succès
+2023-06-23 23:50:50 INFO: 127.0.0.1 - - [23/Jun/2023 23:50:50] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:50:51 INFO: Réponses récupérées avec succès
+2023-06-23 23:50:51 INFO: 127.0.0.1 - - [23/Jun/2023 23:50:51] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:50:58 INFO: Réponses récupérées avec succès
+2023-06-23 23:50:58 INFO: 127.0.0.1 - - [23/Jun/2023 23:50:58] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:51:10 INFO: Réponses récupérées avec succès
+2023-06-23 23:51:10 INFO: 127.0.0.1 - - [23/Jun/2023 23:51:10] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:51:15 INFO: 127.0.0.1 - - [23/Jun/2023 23:51:15] "OPTIONS /api/response HTTP/1.1" 200 -
+2023-06-23 23:51:15 INFO: 127.0.0.1 - - [23/Jun/2023 23:51:15] "POST /api/response HTTP/1.1" 200 -
+2023-06-23 23:51:49 INFO: Réponses récupérées avec succès
+2023-06-23 23:51:49 INFO: 127.0.0.1 - - [23/Jun/2023 23:51:49] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:51:53 INFO: 127.0.0.1 - - [23/Jun/2023 23:51:53] "OPTIONS /api/response HTTP/1.1" 200 -
+2023-06-23 23:51:53 INFO: 127.0.0.1 - - [23/Jun/2023 23:51:53] "POST /api/response HTTP/1.1" 200 -
+2023-06-23 23:52:11 INFO: Réponses récupérées avec succès
+2023-06-23 23:52:11 INFO: 127.0.0.1 - - [23/Jun/2023 23:52:11] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:52:13 INFO: Réponses récupérées avec succès
+2023-06-23 23:52:13 INFO: 127.0.0.1 - - [23/Jun/2023 23:52:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-23 23:52:17 INFO: 127.0.0.1 - - [23/Jun/2023 23:52:17] "OPTIONS /api/response HTTP/1.1" 200 -
+2023-06-23 23:52:17 INFO: 127.0.0.1 - - [23/Jun/2023 23:52:17] "POST /api/response HTTP/1.1" 200 -
