@@ -31,6 +31,7 @@ export class ReponsesComponent implements OnInit {
   message: string | undefined;
   isLoading: boolean = true;
   recupissues: boolean = false
+  isDropdownOpen: boolean = false;
 
   ngOnInit() {
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
@@ -73,19 +74,26 @@ export class ReponsesComponent implements OnInit {
     });
   }  
 
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
   changeAlgorithm(algorithm: string) {
     this.selectedAlgorithm = algorithm;
     console.log(this.selectedAlgorithm);
+    this.isLoading = true
+    this.isDropdownOpen = false;
     
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
       (data:any) => {
         this.replyService.responses = data.data;
+        this.isLoading = false
         console.log(this.replyService.responses);
         if (this.replyService.responses.length == 0) {
           this.noresponse = true
+          this.isLoading = false
           console.log("aucune réponse disponible pour le moment");
         }
-  
         this.replyService.responses.forEach((response) => {
           response.upvoteimg = 'assets/arrow.up@2x.png';
           response.downvoteimg = 'assets/arrow.down@2x.png';
@@ -93,6 +101,7 @@ export class ReponsesComponent implements OnInit {
       },
       (error) => {
         console.log('Une erreur est survenue lors de la récupération des réponses.');
+        this.isLoading = false
       }
     );
   }

@@ -1,17 +1,32 @@
-<div *ngIf="selectedAlgorithm == 'relevant'" class="pt-24 text-center">
+<!-- <div *ngIf="selectedAlgorithm == 'relevant'" class="pt-24 text-center">
   <button (click)="changeAlgorithm('recent')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Recent</button>
-</div>
+</div> -->
 
-<div *ngIf="selectedAlgorithm == 'recent'" class="pt-24 text-center">
-  <button (click)="changeAlgorithm('relevant')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Relevant</button>
-</div>
-
-<!-- spinner.component.html -->
-<div *ngIf="isLoading" class="flex items-center justify-center p-24">
-  <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-200"></div>
+<div class="pt-24 text-center">
+  <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-center inline-flex items-center bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50" type="button">
+    {{selectedAlgorithm}} <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <!-- Dropdown menu -->
+  <div id="dropdownHover" [class.hidden]="!isDropdownOpen" class="z-10 hidden bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2">
+      <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownHoverButton">
+        <li>
+          <a (click)="changeAlgorithm('recent')" class="block px-4 py-2 rounded-lg hover:bg-indigo-400 hover:shadow-indigo-400/50">Recent</a>
+        </li>
+        <li>
+          <a (click)="changeAlgorithm('relevant')" class="block px-4 py-2 rounded-lg hover:bg-indigo-400 hover:shadow-indigo-400/50">Relevant</a>
+        </li>
+      </ul>
+  </div>
 </div>
 
 <h2 *ngIf="!noresponse" class="text-2xl max-w-3xl ml-10 sm:ml-18 md:ml-20 lg:ml-44 p-5 text text-gray-200">Top responses</h2>
+
+<div *ngIf="isLoading" class="flex mt-10 items-center justify-center p-24">
+  <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-200"></div>
+</div>
+
 <div class="flex">
   <h1 *ngIf="noresponse" class="text-2xl max-w-3xl mx-auto p-10 mt-10 pb-24 text justify-center text-gray-200">Auncune réponse disponible pour le moment</h1>
 </div>
