@@ -21,8 +21,8 @@
 </div>
 
 
-<div class="flex flex-wrap justify-center">
-  <div *ngFor="let response of this.replyService.responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/4 pb-10 px-8">
+<div class="flex flex-wrap justify-center px-4">
+  <div *ngFor="let response of this.replyService.responses.slice?.(0,sliceIndex), let i = index" [attr.id]="'response-' + i" class="basis-1/3 pb-10 px-4">
     <div class="py-5 w-full items-center">
       <div class="bg-gray-800 mx-auto max-w-md rounded-3xl">
         <div class="container card p-5 bg-gray-700 rounded-3xl">
