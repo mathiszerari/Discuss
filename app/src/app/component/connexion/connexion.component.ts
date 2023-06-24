@@ -43,7 +43,6 @@ export class ConnexionComponent {
   ngOnInit() {
     this.inSession = localStorage.getItem('connected') === 'true';
     console.log(localStorage);
-    // console.log('connected : ' + localStorage['connected']);
     if (localStorage.getItem('connected') === 'true') {
       console.log('name : ' + localStorage['username']);
     }
@@ -109,8 +108,10 @@ export class ConnexionComponent {
           }
           
           setTimeout(() => {
-            this.close();
-          }, 2000);
+            if (this.success === 'Authentification réussie') {
+              this.close();
+            }
+          }, 5000);
         },
         (error) => {
           console.error('Error submitting form:', error);
@@ -163,7 +164,9 @@ export class ConnexionComponent {
     this.password = '';
         
     setTimeout(() => {
-      this.close();
+      if (this.success == 'Utilisateur créé avec succès') {
+        this.close();
+      }
     }, 5000);
   }
 

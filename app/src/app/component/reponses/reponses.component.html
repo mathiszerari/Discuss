@@ -1,8 +1,8 @@
-<div *ngIf="selectedAlgorithm == 'relevant'" class="text-center">
+<div *ngIf="selectedAlgorithm == 'relevant'" class="pt-24 text-center">
   <button (click)="changeAlgorithm('recent')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Recent</button>
 </div>
 
-<div *ngIf="selectedAlgorithm == 'recent'" class="text-center">
+<div *ngIf="selectedAlgorithm == 'recent'" class="pt-24 text-center">
   <button (click)="changeAlgorithm('relevant')" class="bg-indigo-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 text-white transform -translate-y-1/2 hover:bg-indigo-400 hover:shadow-indigo-400/50">Relevant</button>
 </div>
 
