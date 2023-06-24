@@ -98,3 +98,4 @@ e2e/*.map
 
 .angular
 *.log
+api/app.log
