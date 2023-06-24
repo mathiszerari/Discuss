@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
       // this.router.navigate[ConnexionComponent]
     }
 
-    console.log('guard call');
+    // console.log('guard call');
     
     return true;
   }

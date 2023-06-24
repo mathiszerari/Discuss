@@ -17,7 +17,7 @@ export class AuthService {
       tap(isLogged => this.isLogged = isLogged)
     );
 
-    console.log(isLogged);
+    // console.log(isLogged);
     
   }
 

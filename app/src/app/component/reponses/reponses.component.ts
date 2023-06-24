@@ -37,11 +37,11 @@ export class ReponsesComponent implements OnInit {
       (data:any) => {
         this.replyService.responses = data.data;
         const message = data.message;
-        console.log(this.replyService.responses);
+        // console.log(this.replyService.responses);
         if (this.replyService.responses.length == 0) {
           this.noresponse = true
           this.isLoading = false
-          console.log("aucune réponse disponible pour le moment");
+          // console.log("aucune réponse disponible pour le moment");
         }
   
         this.replyService.responses.forEach((response) => {
@@ -52,7 +52,7 @@ export class ReponsesComponent implements OnInit {
         this.isLoading = false;
       },
       (error) => {
-        console.log('Une erreur est survenue lors de la récupération des réponses.');
+        // console.log('Une erreur est survenue lors de la récupération des réponses.');
         this.recupissues = true
         this.isLoading = false;
       }
@@ -62,7 +62,7 @@ export class ReponsesComponent implements OnInit {
       this.clicked = nouvelleValeur;
     });
   
-    console.log('connected : ' + localStorage['connected']);
+    // console.log('connected : ' + localStorage['connected']);
     this.username = localStorage['username'];
   }
 
@@ -75,15 +75,15 @@ export class ReponsesComponent implements OnInit {
 
   changeAlgorithm(algorithm: string) {
     this.selectedAlgorithm = algorithm;
-    console.log(this.selectedAlgorithm);
+    // console.log(this.selectedAlgorithm);
     
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
       (data:any) => {
         this.replyService.responses = data.data;
-        console.log(this.replyService.responses);
+        // console.log(this.replyService.responses);
         if (this.replyService.responses.length == 0) {
           this.noresponse = true
-          console.log("aucune réponse disponible pour le moment");
+          // console.log("aucune réponse disponible pour le moment");
         }
   
         this.replyService.responses.forEach((response) => {
@@ -92,18 +92,18 @@ export class ReponsesComponent implements OnInit {
         });
       },
       (error) => {
-        console.log('Une erreur est survenue lors de la récupération des réponses.');
+        // console.log('Une erreur est survenue lors de la récupération des réponses.');
       }
     );
   }
 
   downvotefn(response: any) {
     this.replyService.onClick(response);
-    console.log('downvote');
+    // console.log('downvote');
     this.clickedUser = response.username;
     this.clickedReply = response.reply;
-    console.log(this.clickedUser);
-    console.log(this.clickedReply);
+    // console.log(this.clickedUser);
+    // console.log(this.clickedReply);
 
     if (response.downvoteimg == 'assets/arrow.down.red@2x.png' && this.voteddown) {
       response.downvoteimg = 'assets/arrow.down@2x.png'
@@ -119,9 +119,9 @@ export class ReponsesComponent implements OnInit {
           (response) => {
             // Traitement de la réponse si nécessaire
             if (response.message === "Downvote annulé avec succès") {
-              console.log(response.message);
+              // console.log(response.message);
             } else {
-              console.log('Le vote a échoué');
+              // console.log('Le vote a échoué');
             }
           },
           (error) => {
@@ -145,9 +145,9 @@ export class ReponsesComponent implements OnInit {
           (response) => {
             // Traitement de la réponse si nécessaire
             if (response.message === "Downvote enregistré avec succès") {
-              console.log(response.message);
+              // console.log(response.message);
             } else {
-              console.log('Le vote a échoué');
+              // console.log('Le vote a échoué');
             }
           },
           (error) => {
@@ -166,11 +166,11 @@ export class ReponsesComponent implements OnInit {
 
   upvotefn(response: any) {
     this.replyService.onClick(response);
-    console.log('upvote');
+    // console.log('upvote');
     this.clickedUser = response.username;
     this.clickedReply = response.reply;
-    console.log(this.clickedUser);
-    console.log(this.clickedReply);
+    // console.log(this.clickedUser);
+    // console.log(this.clickedReply);
 
     if (response.upvoteimg == 'assets/arrow.up.blue@2x.png' && this.votedup) {
       response.upvoteimg = 'assets/arrow.up@2x.png'
@@ -186,9 +186,9 @@ export class ReponsesComponent implements OnInit {
           (response) => {
             // Traitement de la réponse si nécessaire
             if (response.message == 'Upvote annulé avec succès') {
-              console.log(response.message);
+              // console.log(response.message);
             } else {
-              console.log('Le vote a échoué');
+              // console.log('Le vote a échoué');
             }
           },
           (error) => {
@@ -211,23 +211,23 @@ export class ReponsesComponent implements OnInit {
           (response) => {
             // Traitement de la réponse si nécessaire
             if (response.message == 'Upvote enregistré avec succès') {
-              console.log(response.message);
+              // console.log(response.message);
             } else {
-              console.log('Le vote a échoué');
+              // console.log('Le vote a échoué');
             }
           },
           (error) => {
             console.error('Erreur lors de la transmission des informations :', error);
           }
       );
-      console.log(this.votedup);
+      // console.log(this.votedup);
           
       // Incrémente le compteur d'upvote
       response.upvote += 1;
       response.upvoteimg = 'assets/arrow.up.blue@2x.png';
       this.votedup = true
-      console.log(this.votedup);
-      console.log(this.upvoteimg);
+      // console.log(this.votedup);
+      // console.log(this.upvoteimg);
     }
     
     if (response.downvoteimg === 'assets/arrow.down.red@2x.png') {

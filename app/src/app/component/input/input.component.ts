@@ -40,13 +40,13 @@ export class InputComponent implements AfterViewInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.connected)
+    // console.log(this.connected)
   }
 
   ngAfterViewInit(): void {
     if (this.connected === 'false') {
       this.renderer.listen(this.textera.nativeElement, 'focus', () => {
-        console.log('modal ouverture');
+        // console.log('modal ouverture');
       });
     }
   }
@@ -66,7 +66,7 @@ export class InputComponent implements AfterViewInit {
   old() {
     if (this.replyContent.length > 0) {
       this.replyService.setReply(this.replyContent);
-      console.log(this.replyContent);
+      // console.log(this.replyContent);
       this.replyContent = '';
       const nouvelleValeur = true;
       this.replyService.updateMaVariable(nouvelleValeur);
@@ -108,9 +108,9 @@ export class InputComponent implements AfterViewInit {
         downvote: downvote,
         score: score
       }
-      console.log(this.replyService.responses);
+      // console.log(this.replyService.responses);
       this.replyService.responses.unshift(table);
-      console.log(this.replyService.responses);
+      // console.log(this.replyService.responses);
       
       this.http.post<any>(this.url + 'response', table)
         .pipe(
@@ -122,8 +122,8 @@ export class InputComponent implements AfterViewInit {
           (response) => {
             // Traitement de la réponse si nécessaire
             if (response.message == 'Réponse enregistrée avec succès') {
-              console.log(response.responses);
-              console.log(replyValue);
+              // console.log(response.responses);
+              // console.log(replyValue);
 
               this.messageSend = true
               setTimeout(() => {
@@ -133,7 +133,7 @@ export class InputComponent implements AfterViewInit {
               const userId = response.user_id;
               localStorage.setItem('user_id', userId);
             } else {
-              console.log('Réponse non enregistrée');
+              // console.log('Réponse non enregistrée');
               this.messageSend = false
               setTimeout(() => {
                 this.messageSend = undefined;
@@ -151,13 +151,13 @@ export class InputComponent implements AfterViewInit {
     }
 
     this.replyService.setReply(this.replyContent);
-    console.log(this.replyContent);
+    // console.log(this.replyContent);
     const nouvelleValeur = true;
     this.replyService.updateMaVariable(nouvelleValeur);
     this.isReplyClicked = true;
     this.replyContent = '';
 
     this.shakeshake = false;
-    console.log('2');
+    // console.log('2');
   }
 }

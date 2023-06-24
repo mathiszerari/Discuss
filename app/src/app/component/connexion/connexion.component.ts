@@ -42,9 +42,9 @@ export class ConnexionComponent {
 
   ngOnInit() {
     this.inSession = localStorage.getItem('connected') === 'true';
-    console.log(localStorage);
+    // console.log(localStorage);
     if (localStorage.getItem('connected') === 'true') {
-      console.log('name : ' + localStorage['username']);
+      // console.log('name : ' + localStorage['username']);
     }
     
     if (localStorage['username']) {
@@ -76,7 +76,7 @@ export class ConnexionComponent {
     this.message = 'Connexion en cours';
     this.isLoading = true;
     this.authService.login(this.emailOrUsername, this.password) // Passer emailOrUsername au lieu de email et laisser une chaîne vide pour username
-    console.log(this.emailOrUsername, this.password);
+    // console.log(this.emailOrUsername, this.password);
     this.http.post<any>(this.url + 'login', { emailOrUsername: this.emailOrUsername, password: this.password }) // Utiliser emailOrUsername dans la requête HTTP
       .pipe(
         catchError(error => {
@@ -92,7 +92,7 @@ export class ConnexionComponent {
             this.inSession = localStorage.getItem('connected') === 'true';
 
             localStorage.setItem('username', this.emailOrUsername);
-            console.log(localStorage['username']);
+            // console.log(localStorage['username']);
             
             
             localStorage.setItem('username', this.emailOrUsername) // Utiliser emailOrUsername comme nom d'utilisateur
@@ -101,9 +101,9 @@ export class ConnexionComponent {
           } else {
             this.message = 'Utilisateur introuvable';
             this.isLoading = false;
-            console.log('auth ratée');
-            console.log(response);
-            console.log(response.message);
+            // console.log('auth ratée');
+            // console.log(response);
+            // console.log(response.message);
             this.router.navigate(['home/login']);
           }
           
@@ -139,11 +139,11 @@ export class ConnexionComponent {
             this.isLoading = false;
             localStorage.setItem('connected', 'true');
             this.inSession = localStorage.getItem('connected') === 'true';
-            console.log(this.inSession);
+            // console.log(this.inSession);
             this.success = response.message
             this.erreur = ''
 
-            console.log(usernameValue);
+            // console.log(usernameValue);
             
             localStorage.setItem('username', usernameValue) 
             this.iDconnexion = localStorage['username']
@@ -171,11 +171,11 @@ export class ConnexionComponent {
   }
 
   logout() {
-    console.log(this.inSession);
+    // console.log(this.inSession);
     this.message = 'Vous avez été déconnecté';
     localStorage.setItem('connected', 'false');
     this.inSession = localStorage.getItem('connected') === 'true';
-    console.log(this.inSession);
+    // console.log(this.inSession);
 
 
     localStorage.setItem('username', '');
