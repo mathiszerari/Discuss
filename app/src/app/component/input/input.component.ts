@@ -19,7 +19,7 @@ export class InputComponent implements AfterViewInit {
   replyContent: string = '';
   isReplyClicked: boolean = false;
   isShaking: boolean = false;
-  url: string = 'http://127.0.0.1:5000/api/';
+  url: string = 'https://discuss-api.onrender.com/api/';
   upvoteimg: string = 'assets/arrow.up@2x.png';
   downvoteimg: string = 'assets/arrow.down@2x.png';
   newresponse: string = '';

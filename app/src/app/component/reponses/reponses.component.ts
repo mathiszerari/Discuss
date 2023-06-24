@@ -10,7 +10,7 @@ import * as moment from 'moment';
 })
 
 export class ReponsesComponent implements OnInit {
-  url: string = 'http://127.0.0.1:5000/api/';
+  url: string = 'https://discuss-api.onrender.com/api/';
 
   clicked: any;
   reply: string | undefined;

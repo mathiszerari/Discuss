@@ -26,7 +26,7 @@ export class ConnexionComponent {
   erreur: string = '';
   success: string = '';
   creatingAccount: boolean = false;
-  url: string = 'http://127.0.0.1:5000/api/';
+  url: string = 'https://discuss-api.onrender.com/api/';
   inSession: boolean = false;
   emailOrUsername: string = '';
   sessionName: string = '';
