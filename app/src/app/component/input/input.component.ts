@@ -109,7 +109,6 @@ export class InputComponent implements AfterViewInit {
         score: score
       }
       // console.log(this.replyService.responses);
-      this.replyService.responses.unshift(table);
       // console.log(this.replyService.responses);
       
       this.http.post<any>(this.url + 'response', table)
@@ -126,6 +125,7 @@ export class InputComponent implements AfterViewInit {
               // console.log(replyValue);
 
               this.messageSend = true
+              this.replyService.responses.unshift(table);
               setTimeout(() => {
                 this.messageSend = undefined;
               }, 4000);
