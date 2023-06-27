@@ -5,6 +5,8 @@ import { HomeComponent } from './component/home/home.component';
 import { AuthGuard } from './auth.guard';
 import { InputComponent } from './component/input/input.component';
 import { ConnexionComponent } from './component/connexion/connexion.component';
+import { CalendarStreakComponent } from './component/calendar-streak/calendar-streak.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -14,12 +16,17 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'reply', component: InputComponent, canActivate:[AuthGuard] },
       { path: 'login', component: ConnexionComponent },
+      { path: 'calendar', component: CalendarStreakComponent },
       // Ajoutez d'autres routes pour les composants de la page
     ]
   },
   {
     path: 'concept',
     component: ConceptComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
   },
   {
     path: '**',

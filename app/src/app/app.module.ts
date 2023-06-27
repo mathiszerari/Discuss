@@ -15,6 +15,8 @@ import { ConceptTextComponent } from './component/concept-text/concept-text.comp
 import { ReplyService } from './reply.service';
 import { ConnexionComponent } from './component/connexion/connexion.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CalendarStreakComponent } from './component/calendar-streak/calendar-streak.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterRedirectHomeComponent,
     ConceptTextComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    CalendarStreakComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
