@@ -33,6 +33,7 @@ export class ConnexionComponent {
   iDconnexion: string = '';
   infoOpen: boolean | undefined;
   isLoading: boolean | undefined;
+  profilePhoto: File | undefined;
 
   constructor(
     private router: Router,
@@ -125,38 +126,73 @@ export class ConnexionComponent {
     const passwordValue = this.password;
     this.isLoading = true;
   
-    // Envoie les données vers Flask
-    this.http.post<any>(this.url + 'users', { email: emailValue, username: usernameValue, password: passwordValue })
-      .pipe(
-        catchError(error => {
-          return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
-        })
-      )
-      .subscribe(
-        (response) => {
-          // Traitement de la réponse si nécessaire
-          if (response.message == 'Utilisateur créé avec succès') {
-            this.isLoading = false;
-            localStorage.setItem('connected', 'true');
-            this.inSession = localStorage.getItem('connected') === 'true';
-            console.log(this.inSession);
-            this.success = response.message
-            this.erreur = ''
-
-            console.log(usernameValue);
-            
-            localStorage.setItem('username', usernameValue) 
-            this.iDconnexion = localStorage['username']
-          } else {
-            this.isLoading = false;
-            this.erreur = response.message
-            this.success = ''
+    // Récupérer le fichier sélectionné
+    const profilePhotoFile: File | undefined = this.profilePhoto;
+    
+    // Créer un objet FormData pour envoyer les données et le fichier
+    if (profilePhotoFile) {
+      // Un fichier a été sélectionné, inclure le fichier dans la requête
+      const formData = new FormData();
+      formData.append('email', emailValue);
+      formData.append('username', usernameValue);
+      formData.append('password', passwordValue);
+      formData.append('profilePhoto', profilePhotoFile, profilePhotoFile.name);
+  
+      // Envoyer les données et le fichier à la base de données
+      this.http.post<any>(this.url + 'users', formData)
+        .pipe(
+          catchError(error => {
+            return throwError(error);
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse
+            // ...
+          },
+          (error) => {
+            console.error('Error submitting form:', error);
           }
-        },
-        (error) => {
-          console.error('Error submitting form:', error);
-        }
-      );
+        );
+    } else {
+      const formData = new FormData();
+      formData.append('email', emailValue);
+      formData.append('username', usernameValue);
+      formData.append('password', passwordValue);
+    
+      // Envoie les données vers Flask
+      this.http.post<any>(this.url + 'users', formData)
+        .pipe(
+          catchError(error => {
+            return throwError(error); // Renvoyer l'erreur pour le traitement ultérieur
+          })
+        )
+        .subscribe(
+          (response) => {
+            // Traitement de la réponse si nécessaire
+            if (response.message == 'Utilisateur créé avec succès') {
+              this.isLoading = false;
+              localStorage.setItem('connected', 'true');
+              this.inSession = localStorage.getItem('connected') === 'true';
+              console.log(this.inSession);
+              this.success = response.message;
+              this.erreur = '';
+    
+              console.log(usernameValue);
+              
+              localStorage.setItem('username', usernameValue) ;
+              this.iDconnexion = localStorage['username'];
+            } else {
+              this.isLoading = false;
+              this.erreur = response.message;
+              this.success = '';
+            }
+          },
+          (error) => {
+            console.error('Error submitting form:', error);
+          }
+        );
+    }
   
     // Réinitialise les valeurs des inputs après l'envoi du formulaire
     this.email = '';
@@ -168,7 +204,11 @@ export class ConnexionComponent {
         this.close();
       }
     }, 5000);
-  }
+  }  
+
+  onFileSelected(event: any) {
+    this.profilePhoto = event.target.files && event.target.files.length > 0 ? event.target.files[0] : undefined;
+  }  
 
   logout() {
     console.log(this.inSession);

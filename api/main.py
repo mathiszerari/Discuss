@@ -11,6 +11,9 @@ import bcrypt
 from bson import ObjectId
 from pymongo.server_api import ServerApi
 import logging
+from flask import request, jsonify
+from werkzeug.utils import secure_filename
+from gridfs import GridFS
 
 # Configuration du module logging
 logging.basicConfig(
@@ -27,7 +30,6 @@ load_dotenv(find_dotenv())
 
 password = os.environ.get("MONGO_PWD")
 
-
 connection_string = f"mongodb://127.0.0.1/discuss"
 # connection_string = "mongodb+srv://mathis:buvyg1mIoxULoFlP@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
 
@@ -38,7 +40,13 @@ client = MongoClient(connection_string, server_api=ServerApi("1"))
 db = client.discuss
 collection_users = db.usersdatas
 collection_responses = db.responses
+fs = GridFS(db)
 
+ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png', 'gif'}
+
+
+def allowed_file(filename):
+    return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/api/getresponses", methods=["GET"])
 def get_responses():
@@ -114,10 +122,13 @@ regex_username = re.compile(r"^[a-zA-Z0-9_]{1,15}$")
 
 @app.route("/api/users", methods=["POST"])
 def create_users():
-    data = request.get_json()
+    data = request.form.to_dict()
     username = data["username"].lower()
     email = data["email"].lower()
     password = data["password"]
+
+    # Retrieve the uploaded profile photo
+    profile_photo = request.files.get('profilePhoto')
 
     # Conditions de validation
     if username == "" or email == "" or password == "":
@@ -152,9 +163,27 @@ def create_users():
     if existing_email:
         app.logger.error("L'email est déjà pris")
         return jsonify({"message": "L'email est déjà pris"})
+    
+    if profile_photo:
+        # Validate the file extension
+        if not allowed_file(profile_photo.filename):
+            app.logger.error("Extension de fichier non autorisée")
+            return jsonify({"message": "Extension de fichier non autorisée"})
+        
+        # Generate a secure filename
+        filename = secure_filename(profile_photo.filename)
+
+        # Convert the file data to Binary
+        file_id = fs.put(profile_photo, filename=filename)
+    else:
+        file_id = None
 
     # Insérer le nouvel utilisateur dans la base de données
-    user_data = {"username": username, "email": email, "password": password}
+    user_data = {"username": username, 
+                 "email": email, 
+                 "password": password,
+                 "profile_photo_id": file_id
+                 }
 
     collection_users.insert_one(user_data)
 
