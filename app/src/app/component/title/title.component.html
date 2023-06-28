@@ -1,1 +1,8 @@
 <h1 class="text-center text-3xl mb-10 text-white font-bold ">Discuss ✨</h1>
+
+<h1 class="text-3xl text-gray-200">{{username}}</h1>
+
+<div *ngIf="profilePhoto">
+  <img [src]="profilePhoto.url" alt="Photo de profil" />
+</div>
+  
