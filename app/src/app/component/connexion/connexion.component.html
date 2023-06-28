@@ -21,6 +21,7 @@
             <div class="px-6 py-6 lg:px-8">
             <div *ngIf="!inSession && !infoOpen">
                 <h3 class="mb-4 text-xl font-medium text-white">Sign in to our platform</h3>
+                <h1>{{success}}</h1>
                 <div *ngIf="isLoading" class="flex items-center justify-center p-24">
                     <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-200"></div>
                 </div>
@@ -60,7 +61,7 @@
                                 </div>
                                 <label for="remember" class="ml-2 text-sm font-medium text-white">Remember me</label>
                             </div>
-                            <a *ngIf="!creatingAccount" href="#" class="text-sm0 hover:underline text-cyan-400">Lost Password?</a>
+                            <!-- <a *ngIf="!creatingAccount" href="#" class="text-sm0 hover:underline text-cyan-400">Lost Password?</a> -->
                             <!-- <p *ngIf="this.success" class="text-green-500">{{ this.success }}</p> -->
                             <p *ngIf="this.erreur" class="text-red-500">{{ this.erreur }}</p>
                         </div>

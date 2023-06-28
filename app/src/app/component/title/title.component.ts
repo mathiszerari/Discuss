@@ -20,6 +20,7 @@ export class TitleComponent implements OnInit {
   userProfile: UserProfile | null = null;
   profilePhoto: ProfilePhoto | null = null;
   username: string | null = null;
+  newimg: any;
 
   constructor(private http: HttpClient) { }
 
@@ -43,6 +44,33 @@ export class TitleComponent implements OnInit {
     }
   }
 
+  convertBase64ToUrl(base64String: any): string {
+    if (base64String) {
+      // Supprime la partie "data:image/png;base64," du début de la chaîne base64
+      const base64Data = base64String.replace(/^data:image\/\w+;base64,/, '');
+      
+      // Crée un tableau de octets à partir de la chaîne base64
+      const byteCharacters = atob(base64Data);
+      
+      // Crée un tableau d'octets avec la longueur correspondante
+      const byteArrays = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteArrays[i] = byteCharacters.charCodeAt(i);
+      }
+      
+      // Crée un objet Blob à partir du tableau d'octets
+      const blob = new Blob([new Uint8Array(byteArrays)], { type: 'image/png' });
+      
+      // Crée un objet URL à partir du Blob
+      const fileUrl = URL.createObjectURL(blob);
+  
+      return fileUrl;
+    }
+  
+    return ''; // Retourne une chaîne vide si base64String est undefined
+  }  
+  
+
   loadProfilePhoto() {
     if (this.userProfile) {
       // Appeler l'API pour récupérer l'utilisateur
@@ -52,8 +80,8 @@ export class TitleComponent implements OnInit {
           if (userData.profile_photo) {
             // La photo de profil est déjà incluse dans les données de l'utilisateur
             this.profilePhoto = userData.profile_photo;
-            console.log(this.profilePhoto);
-            
+            this.newimg = this.convertBase64ToUrl(this.profilePhoto);
+            console.log(this.newimg);
           }
         },
         error => {
@@ -61,6 +89,5 @@ export class TitleComponent implements OnInit {
         }
       );
     }
-  }
-  
+  }  
 }

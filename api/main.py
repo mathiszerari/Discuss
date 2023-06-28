@@ -1,4 +1,3 @@
-import base64
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -16,6 +15,10 @@ from flask import request, jsonify
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
 from bson import ObjectId
+import io
+from PIL import Image
+import imghdr
+import base64
 
 # Configuration du module logging
 logging.basicConfig(
@@ -45,7 +48,6 @@ collection_responses = db.responses
 fs = GridFS(db)
 
 ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png', 'gif'}
-
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -88,23 +90,29 @@ def get_responses():
 
 @app.route("/api/getuser/<username>", methods=["GET"])
 def get_user(username):
-    # Recherchez l'utilisateur dans la base de données en utilisant le nom d'utilisateur
     user = collection_users.find_one({"username": username})
     if user:
         profile_photo_id = user.get("profile_photo_id")
         if profile_photo_id:
-            # Vérifiez si la photo de profil existe dans la collection GridFS
             if fs.exists(ObjectId(profile_photo_id)):
-                # Récupérez la photo de profil de l'utilisateur dans la même collection
                 profile_photo = fs.get(ObjectId(profile_photo_id))
-                # Convertir les données binaires en base64
                 photo_data = base64.b64encode(profile_photo.read()).decode('utf-8')
                 user["profile_photo"] = photo_data
+                
+                # Vérifier si profile_photo est une image valide
+                if imghdr.what(None, h=profile_photo.read()) is not None:
+                    # Ouvrir l'image avec PIL
+                    image = Image.open(io.BytesIO(profile_photo.read()))
+                    
+                    # Convertir en mode RVB si le mode est RGBA
+                    if image.mode == 'RGBA':
+                        image = image.convert('RGB')
+                    
+                    # Enregistrer l'image en tant qu'image JPEG
+                    image.save("profil.jpg")  # Remplacez "profil.jpg" par le nom et l'extension souhaités
         
-        # Convertir l'ObjectId en chaîne de caractères
         user["_id"] = str(user["_id"])
         
-        # Convertir les objets bytes en chaînes de caractères
         for key, value in user.items():
             if isinstance(value, (bytes, ObjectId)):
                 user[key] = str(value)
