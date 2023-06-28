@@ -1,5 +1,5 @@
 import { Component, Injectable } from '@angular/core';
-import { InputComponent } from './component/input/input.component';
+import { InputComponent } from '../component/input/input.component';
 import { Observable, delay, of, tap } from 'rxjs';
 
 @Injectable({

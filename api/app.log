@@ -902,3 +902,9 @@ UnboundLocalError: cannot access local variable 'file_id' where it is not associ
 2023-06-28 20:11:14 INFO: Réponses récupérées avec succès
 2023-06-28 20:11:14 INFO: 127.0.0.1 - - [28/Jun/2023 20:11:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
 2023-06-28 20:11:38 INFO: 127.0.0.1 - - [28/Jun/2023 20:11:38] "POST /api/users HTTP/1.1" 200 -
+2023-06-28 20:13:18 INFO: Réponses récupérées avec succès
+2023-06-28 20:13:18 INFO: 127.0.0.1 - - [28/Jun/2023 20:13:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-28 20:13:23 INFO: Réponses récupérées avec succès
+2023-06-28 20:13:23 INFO: 127.0.0.1 - - [28/Jun/2023 20:13:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-06-28 20:13:25 INFO: Réponses récupérées avec succès
+2023-06-28 20:13:25 INFO: 127.0.0.1 - - [28/Jun/2023 20:13:25] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -

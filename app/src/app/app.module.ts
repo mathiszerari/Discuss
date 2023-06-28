@@ -12,7 +12,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
 import { FooterRedirectHomeComponent } from './component/footer-redirect-home/footer-redirect-home.component';
 import { ConceptTextComponent } from './component/concept-text/concept-text.component';
-import { ReplyService } from './reply.service';
+import { ReplyService } from './services/reply.service';
 import { ConnexionComponent } from './component/connexion/connexion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CalendarStreakComponent } from './component/calendar-streak/calendar-streak.component';
