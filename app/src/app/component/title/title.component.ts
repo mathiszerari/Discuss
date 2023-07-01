@@ -27,15 +27,12 @@ export class TitleComponent implements OnInit {
   ngOnInit() {
     // Récupérer le username du local storage
     this.username = localStorage.getItem('username');
-    console.log(this.username);
-
     if (this.username) {
       // Appeler l'API pour récupérer les informations du profil de l'utilisateur
       this.http.get<UserProfile>(this.url + `getuser/${this.username}`).subscribe(
         data => {
           this.userProfile = data;
           this.loadProfilePhoto();
-          console.log(this.userProfile);
         },
         error => {
           console.log('Une erreur s\'est produite lors de la récupération du profil de l\'utilisateur :', error);
@@ -81,11 +78,8 @@ export class TitleComponent implements OnInit {
             // La photo de profil est déjà incluse dans les données de l'utilisateur
             this.profilePhoto = userData.profile_photo;
             this.newimg = this.convertBase64ToUrl(this.profilePhoto);
-            console.log(this.newimg);
           } else {
-            this.profilePhoto = userData.profile_photo_url;
-            this.newimg = this.profilePhoto;
-            console.log(this.profilePhoto);
+            this.newimg = userData.profile_photo_url;
           }
         },
         error => {
