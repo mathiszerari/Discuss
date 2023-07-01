@@ -105,7 +105,6 @@ export class ConnexionComponent {
             console.log('auth ratée');
             console.log(response);
             console.log(response.message);
-            this.router.navigate(['home/login']);
           }
           
           setTimeout(() => {
@@ -209,7 +208,6 @@ export class ConnexionComponent {
   }
 
   navigate() {
-    this.router.navigate(['home/login']);
     this.open()
   }
 
@@ -230,8 +228,6 @@ export class ConnexionComponent {
   }
 
   loginAccount() {
-    this.router.navigate(['home/login']);
-
     this.creatingAccount = false;
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 interface UserProfile {
@@ -22,7 +23,8 @@ export class TitleComponent implements OnInit {
   username: string | null = null;
   newimg: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private router: Router ) { }
 
   ngOnInit() {
     // Récupérer le username du local storage
@@ -78,8 +80,10 @@ export class TitleComponent implements OnInit {
             // La photo de profil est déjà incluse dans les données de l'utilisateur
             this.profilePhoto = userData.profile_photo;
             this.newimg = this.convertBase64ToUrl(this.profilePhoto);
+            localStorage.setItem('pp', this.newimg);
           } else {
             this.newimg = userData.profile_photo_url;
+            localStorage.setItem('pp', this.newimg);
           }
         },
         error => {
@@ -88,4 +92,8 @@ export class TitleComponent implements OnInit {
       );
     }
   }  
+
+  openprofile() {
+    this.router.navigate(['profile']);
+  }
 }
