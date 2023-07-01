@@ -92,7 +92,8 @@ export class ConnexionComponent {
             localStorage.setItem('connected', 'true');
             this.inSession = localStorage.getItem('connected') === 'true';
 
-            localStorage.setItem('username', this.emailOrUsername);
+            localStorage.setItem('username', this.emailOrUsername);;
+
             console.log(localStorage['username']);
             
             

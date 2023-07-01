@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   
     <app-title></app-title>
 
+    <app-infos></app-infos>
+
     <app-calendar-streak></app-calendar-streak>
   `,
   styles: [

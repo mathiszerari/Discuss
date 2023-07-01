@@ -1,1 +1,13 @@
-<p>infos works!</p>
+<div class="flex flex-col items-center">
+    <img [src]="newimg" alt="profile picture" class="w-1/4 rounded-full">
+    <div class="info mt-8 bg-gray-800 p-8 ">
+        <h1 class="text-2xl text-gray-200 p-5">{{ username }}</h1>
+        <h2 class="text-2xl text-gray-200 p-5">{{ email }}</h2>
+    </div>
+</div>
+
+<style>
+.info {
+    border-radius: 45px;
+}
+</style>
