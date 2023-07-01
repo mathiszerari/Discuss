@@ -81,8 +81,11 @@ export class TitleComponent implements OnInit {
             this.profilePhoto = userData.profile_photo;
             this.newimg = this.convertBase64ToUrl(this.profilePhoto);
             localStorage.setItem('pp', this.newimg);
+            console.log('store');
           } else {
             this.newimg = userData.profile_photo_url;
+            console.log('store');
+            
             localStorage.setItem('pp', this.newimg);
           }
         },
@@ -94,6 +97,10 @@ export class TitleComponent implements OnInit {
   }  
 
   openprofile() {
-    this.router.navigate(['profile']);
+    if (this.router.url == '/home') {
+      this.router.navigate(['profile']);
+    } else if (this.router.url == '/profile') {
+      this.router.navigate(['home']);
+    }
   }
 }

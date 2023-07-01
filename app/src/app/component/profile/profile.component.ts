@@ -4,9 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-profile',
   template: `
 
-  <div class="flex justify-center">
-      <h2 class="text-orange-300 text-2xl">{{ username }}</h2>
-  </div>
+  
+    <app-title></app-title>
 
     <app-calendar-streak></app-calendar-streak>
   `,
@@ -18,7 +17,7 @@ export class ProfileComponent {
 
   ngOnInit() {
     console.log(this.username);
-    
+    console.log(localStorage);
   }
 
 }
