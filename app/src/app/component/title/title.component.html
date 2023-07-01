@@ -1,14 +1,13 @@
-<div *ngIf="username" class="justify-between h-20">
+<div class="flex justify-between h-20">
   <div></div>
-  <div class="justify-center mx-auto">
+  <div class="relative left-24">
     <h1 class="text-center text-3xl mb-8 text-white font-bold mx-auto">Discuss ✨</h1>
   </div>
   
-  <div class="flex flex-row bg-gray-400 px-10 h-16   rounded-full">
-    <div class="bg-gray-100 mt-2 basis-1/2 w-12 h-12 rounded-full ">
-      <img [src]="newimg" alt="Profile Photo" class="w-12 h-12 rounded-full">
+  <div *ngIf="username" class="flex flex-row -mt-2 bg-slate-300 px-6 h-14 mr-4 rounded-full">
+    <div class="bg-gray-100 mt-2 basis-1/2 w-10 h-10 rounded-full ">
+      <img [src]="newimg" alt="Profile Photo" class="w-10 h-10 rounded-full">
     </div>
-    <h1 class="text-xl mt-4 ml-6 basis-1/2 text-gray-200">{{username}}</h1>
+    <h1 class="text-lg mt-3 ml-4 basis-1/2 text-gray-800">{{username}}</h1>
   </div>
 </div>
-  

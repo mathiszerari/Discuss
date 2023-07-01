@@ -3270,3 +3270,457 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 2023-07-01 14:27:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:27:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
 2023-07-01 14:27:27 INFO: Réponses récupérées avec succès
 2023-07-01 14:27:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:27:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:03 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:03] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:03] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:04 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:04] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:04 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:04 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:04] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:04 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:04] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:04 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:04] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:04 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:04] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:04 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:04 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:04] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:07 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:23] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:23 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:23] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:26 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:26] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:26 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:26 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:26] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:26 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:26] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:27 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:34] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:39] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:39] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:39 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:44 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:44] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:44 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:44] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:44 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:44 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:44] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:47 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:47] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:47 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:47] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:47 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:47 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:47] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:43:51 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:51] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:51 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:51] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:43:51 INFO: Réponses récupérées avec succès
+2023-07-01 14:43:51 INFO: 127.0.0.1 - - [01/Jul/2023 14:43:51] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:46:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:18] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:18] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:18 INFO: Réponses récupérées avec succès
+2023-07-01 14:46:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:46:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:28] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:46:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:46:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:28] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: Réponses récupérées avec succès
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: Réponses récupérées avec succès
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: Réponses récupérées avec succès
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:46:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:46:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:01] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:01] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:01 INFO: Réponses récupérées avec succès
+2023-07-01 14:47:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:47:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:14] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:14] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:15 INFO: Réponses récupérées avec succès
+2023-07-01 14:47:15 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:15] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:47:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:21] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:21 INFO: Réponses récupérées avec succès
+2023-07-01 14:47:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:47:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:21] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:33] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:33 INFO: Réponses récupérées avec succès
+2023-07-01 14:47:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:47:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:33] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:37] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:37] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:37 INFO: Réponses récupérées avec succès
+2023-07-01 14:47:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:37] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:47:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:43] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:47:43 INFO: Réponses récupérées avec succès
+2023-07-01 14:47:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:47:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:47:43] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:23 INFO: Réponses récupérées avec succès
+2023-07-01 14:48:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:48:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:23] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:23] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:33] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:33] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:33 INFO: Réponses récupérées avec succès
+2023-07-01 14:48:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:48:36 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:36 INFO: Réponses récupérées avec succès
+2023-07-01 14:48:36 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:36] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:48:36 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:43] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:43] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:43 INFO: Réponses récupérées avec succès
+2023-07-01 14:48:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:48:53 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:53] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:53 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:53] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:48:53 INFO: Réponses récupérées avec succès
+2023-07-01 14:48:53 INFO: 127.0.0.1 - - [01/Jul/2023 14:48:53] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:49:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:00] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:49:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:00] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:49:00 INFO: Réponses récupérées avec succès
+2023-07-01 14:49:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:00] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:49:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:49:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:49:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:49:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:49:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:49:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:49:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:49:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:49:31 INFO: Réponses récupérées avec succès
+2023-07-01 14:49:31 INFO: 127.0.0.1 - - [01/Jul/2023 14:49:31] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:07 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:10 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:10 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:10] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:14] "OPTIONS /api/login HTTP/1.1" 200 -
+2023-07-01 14:50:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:14] "POST /api/login HTTP/1.1" 200 -
+2023-07-01 14:50:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:16] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:16 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:16] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:16] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:36 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:36 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:36 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:36 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:36] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:39] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:39 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:39] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:45] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:45] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:45 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:45] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:50:54 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:54 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:50:54 INFO: Réponses récupérées avec succès
+2023-07-01 14:50:54 INFO: 127.0.0.1 - - [01/Jul/2023 14:50:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:08 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:08] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:08 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:08 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:08] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:08 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:08] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:13] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:13] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:13 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:14] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:14] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:14 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:20 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:20] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:20 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:20] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:20 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:20 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:20] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:24] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:24] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:24 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:27 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:40 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:40] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:40 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:40 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:51:40 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:40] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:42 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:42] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:42 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:42] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:51:42 INFO: Réponses récupérées avec succès
+2023-07-01 14:51:42 INFO: 127.0.0.1 - - [01/Jul/2023 14:51:42] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:54:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:13] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:13 INFO: Réponses récupérées avec succès
+2023-07-01 14:54:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:54:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:13] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:14] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:14] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:14 INFO: Réponses récupérées avec succès
+2023-07-01 14:54:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:54:19 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:19] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:19 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:19] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:19 INFO: Réponses récupérées avec succès
+2023-07-01 14:54:19 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:54:52 INFO: Réponses récupérées avec succès
+2023-07-01 14:54:52 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:52] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:54:52 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:52] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:52 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:52] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:54 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:54:54 INFO: Réponses récupérées avec succès
+2023-07-01 14:54:54 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:54:54 INFO: 127.0.0.1 - - [01/Jul/2023 14:54:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:01] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:01 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:01] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:02] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:02 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:02] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:02] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:10 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:10] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:10 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:10] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:10 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:10 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:10] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:16] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:16] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:16 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:16] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:17] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:17] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:17 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:17] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:25] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:25 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:25] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:25] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:28] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:28] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:56] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:55:56 INFO: Réponses récupérées avec succès
+2023-07-01 14:55:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:55:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:55:56] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:06 INFO: Réponses récupérées avec succès
+2023-07-01 14:56:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:56:06 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:22 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:22] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:22 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:22] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:22 INFO: Réponses récupérées avec succès
+2023-07-01 14:56:22 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:22] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:56:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:24] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:24] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:24 INFO: Réponses récupérées avec succès
+2023-07-01 14:56:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:56:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:30] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:30] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:56:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:56:32 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:32] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:56:32 INFO: Réponses récupérées avec succès
+2023-07-01 14:56:32 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:32] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:56:32 INFO: 127.0.0.1 - - [01/Jul/2023 14:56:32] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:01] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:01] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:01 INFO: Réponses récupérées avec succès
+2023-07-01 14:57:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:57:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:05 INFO: Réponses récupérées avec succès
+2023-07-01 14:57:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:05] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:57:11 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:11] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:11 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:11] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:11 INFO: Réponses récupérées avec succès
+2023-07-01 14:57:11 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:11] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:57:43 INFO: Réponses récupérées avec succès
+2023-07-01 14:57:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:57:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:43] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:43] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:59 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:59] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:57:59 INFO: Réponses récupérées avec succès
+2023-07-01 14:57:59 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:59] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:57:59 INFO: 127.0.0.1 - - [01/Jul/2023 14:57:59] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:58:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:16] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:58:16 INFO: Réponses récupérées avec succès
+2023-07-01 14:58:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:16] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:58:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:16] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:58:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:18] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:58:18 INFO: Réponses récupérées avec succès
+2023-07-01 14:58:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:58:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:18] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:58:58 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:58] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:58:58 INFO: Réponses récupérées avec succès
+2023-07-01 14:58:58 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:58] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:58:58 INFO: 127.0.0.1 - - [01/Jul/2023 14:58:58] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:00] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:00 INFO: Réponses récupérées avec succès
+2023-07-01 14:59:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:00] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:59:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:00] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:02] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:02 INFO: Réponses récupérées avec succès
+2023-07-01 14:59:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:02] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:59:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:02] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:17] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:17] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:17 INFO: Réponses récupérées avec succès
+2023-07-01 14:59:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:17] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:59:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:21] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:21] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:21 INFO: Réponses récupérées avec succès
+2023-07-01 14:59:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:59:26 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:26] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:26 INFO: Réponses récupérées avec succès
+2023-07-01 14:59:26 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:26] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:59:26 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:26] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:35] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 14:59:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:59:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:59:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:19 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:19] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:19 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:19] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:19 INFO: Réponses récupérées avec succès
+2023-07-01 15:00:19 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:24 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:24] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:24 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:24] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:24 INFO: Réponses récupérées avec succès
+2023-07-01 15:00:24 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:37 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:37] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:37 INFO: Réponses récupérées avec succès
+2023-07-01 15:00:37 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:37] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:37 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:37] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:41 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:41] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:41 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:41] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:41 INFO: Réponses récupérées avec succès
+2023-07-01 15:00:41 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:41] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:45 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:45] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:45 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:45] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:45 INFO: Réponses récupérées avec succès
+2023-07-01 15:00:45 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:45] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:48] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:00:48 INFO: Réponses récupérées avec succès
+2023-07-01 15:00:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:48] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:00:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:00:48] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:01:03 INFO: 127.0.0.1 - - [01/Jul/2023 15:01:03] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:01:03 INFO: 127.0.0.1 - - [01/Jul/2023 15:01:03] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:01:03 INFO: Réponses récupérées avec succès
+2023-07-01 15:01:03 INFO: 127.0.0.1 - - [01/Jul/2023 15:01:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:01:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:01:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:01:06 INFO: Réponses récupérées avec succès
+2023-07-01 15:01:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:01:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:01:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:01:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:28 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:28 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:28] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:28 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:28 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:28] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:37 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:37] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:37 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:37] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:37 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:37 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:37] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:40] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:40 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:40] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:42 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:42] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:42 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:42] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:42 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:42 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:42] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:45 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:45] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:45 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:45] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:45 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:45 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:45] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:47] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:47] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:47 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:47] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:51 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:51] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:03:51 INFO: Réponses récupérées avec succès
+2023-07-01 15:03:51 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:51] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:03:51 INFO: 127.0.0.1 - - [01/Jul/2023 15:03:51] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:04:27 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:04:27 INFO: Réponses récupérées avec succès
+2023-07-01 15:04:27 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:04:27 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:27] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:04:32 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:32] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:04:32 INFO: Réponses récupérées avec succès
+2023-07-01 15:04:32 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:32] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:04:32 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:32] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:04:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:04:36 INFO: Réponses récupérées avec succès
+2023-07-01 15:04:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:36] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:04:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
