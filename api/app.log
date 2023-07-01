@@ -3724,3 +3724,215 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 2023-07-01 15:04:36 INFO: Réponses récupérées avec succès
 2023-07-01 15:04:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:36] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
 2023-07-01 15:04:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:04:36] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:07:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:07:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:07:54 INFO: Réponses récupérées avec succès
+2023-07-01 15:07:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:07:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:07:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:07:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:07:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:07:56] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:07:56 INFO: Réponses récupérées avec succès
+2023-07-01 15:07:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:07:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:07:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:07:56] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:08:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:08:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:08:06 INFO: Réponses récupérées avec succès
+2023-07-01 15:08:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:08:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:08:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:08:06] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:10:48 INFO: Réponses récupérées avec succès
+2023-07-01 15:10:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:10:48] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:10:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:10:48] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:10:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:10:48] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:11:13 INFO: 127.0.0.1 - - [01/Jul/2023 15:11:13] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:11:13 INFO: Réponses récupérées avec succès
+2023-07-01 15:11:13 INFO: 127.0.0.1 - - [01/Jul/2023 15:11:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:11:13 INFO: 127.0.0.1 - - [01/Jul/2023 15:11:13] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:46 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:46] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:54] "GET /api/getuser/newmathis HTTP/1.1" 200 -
+2023-07-01 15:12:57 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:57 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:57] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:57 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:57 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:57] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:57 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:57 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:57] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:12:58 INFO: Réponses récupérées avec succès
+2023-07-01 15:12:58 INFO: 127.0.0.1 - - [01/Jul/2023 15:12:58] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:13:43 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:43] "POST /api/users HTTP/1.1" 200 -
+2023-07-01 15:13:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:46] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:13:46 INFO: Réponses récupérées avec succès
+2023-07-01 15:13:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:13:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:46] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:13:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:47] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:13:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:47] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:13:47 INFO: Réponses récupérées avec succès
+2023-07-01 15:13:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:13:47] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:14:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:40] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:40] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:40 INFO: Réponses récupérées avec succès
+2023-07-01 15:14:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:14:50 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:50] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:50 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:50] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:50 INFO: Réponses récupérées avec succès
+2023-07-01 15:14:50 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:50] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: Réponses récupérées avec succès
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: Réponses récupérées avec succès
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: Réponses récupérées avec succès
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:14:55 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:55] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:56] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:56] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:14:56 INFO: Réponses récupérées avec succès
+2023-07-01 15:14:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:14:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:15:29 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:29] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:29 INFO: Réponses récupérées avec succès
+2023-07-01 15:15:29 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:29] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:15:29 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:29] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:46] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:46] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:46 INFO: Réponses récupérées avec succès
+2023-07-01 15:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:46] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:46 INFO: Réponses récupérées avec succès
+2023-07-01 15:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:46] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:47] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:47] "GET /api/getuser/withoutpp HTTP/1.1" 200 -
+2023-07-01 15:15:47 INFO: Réponses récupérées avec succès
+2023-07-01 15:15:47 INFO: 127.0.0.1 - - [01/Jul/2023 15:15:47] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:16:08 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:08] "POST /api/users HTTP/1.1" 200 -
+2023-07-01 15:16:11 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:11] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:11 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:11] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:11 INFO: Réponses récupérées avec succès
+2023-07-01 15:16:11 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:11] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:16:11 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:11] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:11 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:11] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:11 INFO: Réponses récupérées avec succès
+2023-07-01 15:16:11 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:11] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:12] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:12 INFO: Réponses récupérées avec succès
+2023-07-01 15:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:12] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:12] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:12] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:12] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:16:12 INFO: Réponses récupérées avec succès
+2023-07-01 15:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 15:16:12] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:22:55 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-01 15:22:55 INFO: [33mPress CTRL+C to quit[0m
+2023-07-01 15:23:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:06] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:23:06 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:06] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:23:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:06] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:23:06 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:06 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:06] "GET /api/getuser/nopp HTTP/1.1" 200 -
+2023-07-01 15:23:09 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:09 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:09] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:35 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:35] "POST /api/users HTTP/1.1" 200 -
+2023-07-01 15:23:39 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:39] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:39 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:39 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:39 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:39] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:40] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:40 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:40] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:40] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:40] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:40 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:40 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:41 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:41] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:23:41 INFO: Réponses récupérées avec succès
+2023-07-01 15:23:41 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:41] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:23:41 INFO: 127.0.0.1 - - [01/Jul/2023 15:23:41] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:08 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:08] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:08 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:08] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:08 INFO: Réponses récupérées avec succès
+2023-07-01 15:26:08 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:08] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:26:32 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:32] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:32 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:32] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:32 INFO: Réponses récupérées avec succès
+2023-07-01 15:26:32 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:32] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:26:38 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:38] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:38 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:38] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:26:38 INFO: Réponses récupérées avec succès
+2023-07-01 15:26:38 INFO: 127.0.0.1 - - [01/Jul/2023 15:26:38] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:27:05 INFO: 127.0.0.1 - - [01/Jul/2023 15:27:05] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:27:05 INFO: Réponses récupérées avec succès
+2023-07-01 15:27:05 INFO: 127.0.0.1 - - [01/Jul/2023 15:27:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:27:05 INFO: 127.0.0.1 - - [01/Jul/2023 15:27:05] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:27:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:27:54] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:27:54 INFO: Réponses récupérées avec succès
+2023-07-01 15:27:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:27:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:27:54 INFO: 127.0.0.1 - - [01/Jul/2023 15:27:54] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:16 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:16] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:16 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:16 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:16] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:16 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:16] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:22 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:22] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:22 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:22] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:22 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:22 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:22] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:26 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:26] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:26 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:26 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:26] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:26 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:26] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:36] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:36] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:36 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:36 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:36] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:43 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:43] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:43 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:43 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:43 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:43] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:48] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:48] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:48 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:48 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:48] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:56] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:28:56 INFO: Réponses récupérées avec succès
+2023-07-01 15:28:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:28:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:28:56] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:01 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:01] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:01 INFO: Réponses récupérées avec succès
+2023-07-01 15:29:01 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:29:01 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:01] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:22 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:22] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:22 INFO: Réponses récupérées avec succès
+2023-07-01 15:29:22 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:22] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:29:22 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:22] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:25 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:25] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:25 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:25] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:25 INFO: Réponses récupérées avec succès
+2023-07-01 15:29:25 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:25] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:29:33 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:33] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:33 INFO: Réponses récupérées avec succès
+2023-07-01 15:29:33 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:29:33 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:33] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:51 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:51] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:51 INFO: Réponses récupérées avec succès
+2023-07-01 15:29:51 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:51] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 15:29:51 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:51] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:56] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:56] "GET /api/getuser/defaultpp HTTP/1.1" 200 -
+2023-07-01 15:29:56 INFO: Réponses récupérées avec succès
+2023-07-01 15:29:56 INFO: 127.0.0.1 - - [01/Jul/2023 15:29:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -

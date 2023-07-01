@@ -82,6 +82,10 @@ export class TitleComponent implements OnInit {
             this.profilePhoto = userData.profile_photo;
             this.newimg = this.convertBase64ToUrl(this.profilePhoto);
             console.log(this.newimg);
+          } else {
+            this.profilePhoto = userData.profile_photo_url;
+            this.newimg = this.profilePhoto;
+            console.log(this.profilePhoto);
           }
         },
         error => {

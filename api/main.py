@@ -166,6 +166,7 @@ def create_users():
 
     # Retrieve the uploaded profile photo
     profile_photo = request.files.get('profilePhoto')
+    profile_photo_url = data.get('profilePhotoUrl')
 
     # Conditions de validation
     if username == "" or email == "" or password == "":
@@ -215,12 +216,22 @@ def create_users():
     else:
         file_id = None
 
-    # Insérer le nouvel utilisateur dans la base de données
-    user_data = {"username": username, 
-                 "email": email, 
-                 "password": password,
-                 "profile_photo_id": file_id
-                 }
+    if profile_photo_url:
+        user_data = {
+            "username": username,
+            "email": email,
+            "password": password,
+            "profile_photo_id": None,  # Utilisez un champ différent pour l'URL de la photo de profil
+            "profile_photo_url": profile_photo_url
+        }
+    else:
+        # Sinon, utilisez le comportement précédent avec profile_photo_id
+        user_data = {
+            "username": username,
+            "email": email,
+            "password": password,
+            "profile_photo_id": file_id
+        }
 
     collection_users.insert_one(user_data)
 
