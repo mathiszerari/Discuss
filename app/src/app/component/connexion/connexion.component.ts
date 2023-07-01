@@ -147,8 +147,24 @@ export class ConnexionComponent {
         )
         .subscribe(
           (response) => {
-            // Traitement de la réponse
-            // ...
+            // Traitement de la réponse si nécessaire
+            if (response.message == 'Utilisateur créé avec succès') {
+              this.isLoading = false;
+              localStorage.setItem('connected', 'true');
+              this.inSession = localStorage.getItem('connected') === 'true';
+              console.log(this.inSession);
+              this.success = response.message;
+              this.erreur = '';
+    
+              console.log(usernameValue);
+              
+              localStorage.setItem('username', usernameValue) ;
+              this.iDconnexion = localStorage['username'];
+            } else {
+              this.isLoading = false;
+              this.erreur = response.message;
+              this.success = '';
+            }
           },
           (error) => {
             console.error('Error submitting form:', error);
