@@ -2700,3 +2700,506 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 2023-06-28 22:31:21 INFO: Réponses récupérées avec succès
 2023-06-28 22:31:21 INFO: 127.0.0.1 - - [28/Jun/2023 22:31:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
 2023-06-28 22:31:21 INFO: 127.0.0.1 - - [28/Jun/2023 22:31:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:22:38 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-01 13:22:38 INFO: [33mPress CTRL+C to quit[0m
+2023-07-01 13:23:15 INFO: Réponses récupérées avec succès
+2023-07-01 13:23:15 INFO: 127.0.0.1 - - [01/Jul/2023 13:23:15] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:23:15 INFO: 127.0.0.1 - - [01/Jul/2023 13:23:15] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:23:15 INFO: 127.0.0.1 - - [01/Jul/2023 13:23:15] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:03 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:03 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:03 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:03 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:06] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:06 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:06] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:09 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:09] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:09 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:09] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:09 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:09 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:09] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:12 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:12] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:12 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:12] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:12 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:12 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:12] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:16 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:16] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:16 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:16] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:16 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:16 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:16] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:18 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:18 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:18 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:18 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:23 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:23] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:23 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:23] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:23 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:23 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:26 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:26] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:26 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:26] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:27 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:27 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:36 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:36] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:36 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:36] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:36 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:36 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:36] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:41 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:41] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:41 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:41] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:41 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:41 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:41] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:43 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:43] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:43 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:43 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:43 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:43] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:46 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:46] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:46 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:46 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:46 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:46] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:50 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:50] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:50 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:50] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:50 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:50 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:50] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:52 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:52] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:52 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:52 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:52] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:52 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:52] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:56 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:56 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:56 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:56 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:24:58 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:58] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:58 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:58] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:24:58 INFO: Réponses récupérées avec succès
+2023-07-01 13:24:58 INFO: 127.0.0.1 - - [01/Jul/2023 13:24:58] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:07 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:07] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:07 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:07] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:07 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:07 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:13 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:13 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:13 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:13 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:18 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:18 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:18 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:18 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:21 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:21 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:21 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:21 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:29 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:29] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:29 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:29] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:29 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:29 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:29] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:31 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:31] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:31 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:31] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:31 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:31 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:31] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:32 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:32] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:32 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:32] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:32 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:32 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:32] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:47 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:47] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:25:47 INFO: Réponses récupérées avec succès
+2023-07-01 13:25:47 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:47] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:25:47 INFO: 127.0.0.1 - - [01/Jul/2023 13:25:47] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:38 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:38] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:39 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:39] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:39 INFO: Réponses récupérées avec succès
+2023-07-01 13:26:39 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:26:54 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:54] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:54 INFO: Réponses récupérées avec succès
+2023-07-01 13:26:54 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:54] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:26:54 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:54] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:58 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:58] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:58 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:58] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:26:58 INFO: Réponses récupérées avec succès
+2023-07-01 13:26:58 INFO: 127.0.0.1 - - [01/Jul/2023 13:26:58] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:06] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:06] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:06 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:09 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:09] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:09 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:09] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:09 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:09 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:09] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:14 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:14 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:14 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:14 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:19 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:19] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:19 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:19 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:19 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:19] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:22 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:22] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:22 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:22] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:22 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:22 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:22] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:24 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:24 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:24 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:24 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:27 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:27] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:27 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:27] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:27 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:27 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:50 INFO: Réponses récupérées avec succès
+2023-07-01 13:27:50 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:50] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:27:50 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:50] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:27:50 INFO: 127.0.0.1 - - [01/Jul/2023 13:27:50] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:06] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:06] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:06 INFO: Réponses récupérées avec succès
+2023-07-01 13:28:06 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:06] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:28:08 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:08] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:08 INFO: Réponses récupérées avec succès
+2023-07-01 13:28:08 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:08] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:28:08 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:08] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:17 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:17] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:17 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:17] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:17 INFO: Réponses récupérées avec succès
+2023-07-01 13:28:17 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:17] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:28:19 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:19] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:19 INFO: Réponses récupérées avec succès
+2023-07-01 13:28:19 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:28:19 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:19] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:24 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 13:28:24 INFO: Réponses récupérées avec succès
+2023-07-01 13:28:24 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 13:28:24 INFO: 127.0.0.1 - - [01/Jul/2023 13:28:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:06:58 INFO: Réponses récupérées avec succès
+2023-07-01 14:06:58 INFO: 127.0.0.1 - - [01/Jul/2023 14:06:58] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:06:58 INFO: 127.0.0.1 - - [01/Jul/2023 14:06:58] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:06:58 INFO: 127.0.0.1 - - [01/Jul/2023 14:06:58] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:01] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:01] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:01 INFO: Réponses récupérées avec succès
+2023-07-01 14:07:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:07:09 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:09] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:09 INFO: Réponses récupérées avec succès
+2023-07-01 14:07:09 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:09] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:07:09 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:09] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:51 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:51] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:51 INFO: Réponses récupérées avec succès
+2023-07-01 14:07:51 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:51] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:07:51 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:51] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:53 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:53] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:53 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:53] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:53 INFO: Réponses récupérées avec succès
+2023-07-01 14:07:53 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:53] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:07:57 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:57] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:07:57 INFO: Réponses récupérées avec succès
+2023-07-01 14:07:57 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:57] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:07:57 INFO: 127.0.0.1 - - [01/Jul/2023 14:07:57] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:08:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:00] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:08:00 INFO: Réponses récupérées avec succès
+2023-07-01 14:08:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:00] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:08:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:00] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:08:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:08:03 INFO: Réponses récupérées avec succès
+2023-07-01 14:08:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:08:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:08:49 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:49] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:08:49 INFO: Réponses récupérées avec succès
+2023-07-01 14:08:49 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:49] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:08:49 INFO: 127.0.0.1 - - [01/Jul/2023 14:08:49] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:02] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:02 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:02] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:02 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:02] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:03 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:14 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:21 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:29 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:29] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:30] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:30] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:33] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:33] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:33 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:35] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:09:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:09:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:09:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:09:35] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:10:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:10:17] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:10:17 INFO: Réponses récupérées avec succès
+2023-07-01 14:10:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:10:17] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:10:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:10:17] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:03 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:03] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:03 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:03] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:07] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:07 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:07] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:20 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:20] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:20 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:20 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:20] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:20 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:20] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:21 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:25] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:25 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:25] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:25] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:33] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:33 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:33] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:35] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:35] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:35 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:35 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:35] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:39] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:39 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:39] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:41 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:41] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:41 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:41 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:41] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:41 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:41] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:42 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:42] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:42 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:42 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:42] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:42 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:42] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:45] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:45] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:45 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:45] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:46] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:11:46 INFO: Réponses récupérées avec succès
+2023-07-01 14:11:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:11:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:11:46] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:13 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:18 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:24 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:27] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:27 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:27] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:27 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:27] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:33] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:33 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:33] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:33 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:33] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:37] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:37 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:37] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:37] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:38 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:38] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:38 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:38] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:38 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:38 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:38] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:43] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:12:43 INFO: Réponses récupérées avec succès
+2023-07-01 14:12:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:12:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:12:43] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:08 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:08] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:08 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:08 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:08] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:08 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:08] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:11 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:11] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:11 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:11 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:11] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:11 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:11] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:14 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:30] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:30 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:30] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:30 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:30] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:32 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:32] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:32 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:32 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:32] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:32 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:32] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:38 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:38] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:38 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:38 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:38] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:38 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:38] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:40 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:40] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:40 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:40] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:40 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:40 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:40] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:45] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:13:45 INFO: Réponses récupérées avec succès
+2023-07-01 14:13:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:45] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:13:45 INFO: 127.0.0.1 - - [01/Jul/2023 14:13:45] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:00] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:00 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:00] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:00 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:00] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:05] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:05 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:05] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:05 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:05] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:13 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:17] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:17] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:17 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:17 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:17] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:21 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:22 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:22] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:22 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:22] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:22 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:22 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:22] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:25] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:25 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:25] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:25 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:25] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:29 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:29] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:29 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:29 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:29] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:29 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:29] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:57 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:57] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:14:57 INFO: Réponses récupérées avec succès
+2023-07-01 14:14:57 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:57] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:14:57 INFO: 127.0.0.1 - - [01/Jul/2023 14:14:57] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:01] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:01 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:01] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:14 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:14] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:14 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:14] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:21 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:21] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:21 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:21] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:24 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:34] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:34 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:34] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:34 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:34] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:37] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:37 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:37] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:37 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:37] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:43] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:43 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:43] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:43 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:43] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:46] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:15:46 INFO: Réponses récupérées avec succès
+2023-07-01 14:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:46] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:15:46 INFO: 127.0.0.1 - - [01/Jul/2023 14:15:46] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:01] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:01 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:01] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:01 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:01] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:12] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:12 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:12] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:12 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:12] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:13 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:13] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:13 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:13] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:16] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:16 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:16] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:16 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:16] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:19 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:19] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:19 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:19 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:19] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:19 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:19] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:23] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:23 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:23] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:23 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:23] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:39] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:39 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:39] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:39 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:39] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:44 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:44] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:44 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:44 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:44] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:44 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:44] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:50 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:50] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:50 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:50] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:50 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:50 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:50] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:16:56 INFO: Réponses récupérées avec succès
+2023-07-01 14:16:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:16:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:16:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:07] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:07 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:07] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:07 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:07] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:18] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:18 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:18 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:18] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:24 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:24] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:24 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:24] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:28 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:28] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:28 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:28] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:49 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:49] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:49 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:49] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:49 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:49 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:49] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:55 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:55] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:55 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:55] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:55 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:55 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:55] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:17:56 INFO: Réponses récupérées avec succès
+2023-07-01 14:17:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -
+2023-07-01 14:17:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:17:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:18:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:18:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:18:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:18:56] "GET /api/getuser/jaguar2 HTTP/1.1" 200 -
+2023-07-01 14:18:56 INFO: Réponses récupérées avec succès
+2023-07-01 14:18:56 INFO: 127.0.0.1 - - [01/Jul/2023 14:18:56] "GET /api/getresponses?algorithm=recent HTTP/1.1" 200 -

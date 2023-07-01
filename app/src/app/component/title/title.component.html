@@ -1,8 +1,14 @@
-<h1 class="text-center text-3xl mb-10 text-white font-bold ">Discuss ✨</h1>
-
-<h1 class="text-3xl text-gray-200">{{username}}</h1>
-
-<div class="bg-gray-100 w-24 h-24">
-  <img [src]="newimg" alt="Profile Photo" class="w-24 h-24">
+<div class="flex justify-between h-20">
+  <div></div>
+  <div class="justify-center mx-auto">
+    <h1 class="text-center text-3xl mb-8 text-white font-bold mx-auto">Discuss ✨</h1>
+  </div>
+  
+  <div class="flex flex-row bg-gray-400 px-10 h-16   rounded-full">
+    <div class="bg-gray-100 mt-2 basis-1/2 w-12 h-12 rounded-full ">
+      <img [src]="newimg" alt="Profile Photo" class="w-12 h-12 rounded-full">
+    </div>
+    <h1 class="text-xl mt-4 ml-6 basis-1/2 text-gray-200">{{username}}</h1>
+  </div>
 </div>
   
