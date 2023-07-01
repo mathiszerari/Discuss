@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReplyService } from '../../services/reply.service';
+import { ReplyService } from '../../../services/reply.service';
 import { HttpClient } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
 import * as moment from 'moment';

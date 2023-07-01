@@ -101,6 +101,8 @@ export class TitleComponent implements OnInit {
       this.router.navigate(['profile']);
     } else if (this.router.url == '/profile') {
       this.router.navigate(['home']);
+    } else if (this.router.url == '/concept') {
+      this.router.navigate(['profile']);
     }
   }
 }

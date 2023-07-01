@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { ReplyService } from '../../services/reply.service';
+import { ReplyService } from '../../../services/reply.service';
 import { HttpClient } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
 
