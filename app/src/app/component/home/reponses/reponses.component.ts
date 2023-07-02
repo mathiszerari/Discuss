@@ -32,6 +32,7 @@ export class ReponsesComponent implements OnInit {
   isLoading: boolean = true;
   recupissues: boolean = false
   isDropdownOpen: boolean = false;
+  pp : any | undefined
 
   ngOnInit() {
     this.replyService.getResponses(this.selectedAlgorithm).subscribe(
@@ -39,6 +40,7 @@ export class ReponsesComponent implements OnInit {
         this.replyService.responses = data.data;
         const message = data.message;
         console.log(this.replyService.responses);
+        this.pp = this.replyService.responses
         if (this.replyService.responses.length == 0) {
           this.noresponse = true
           this.isLoading = false

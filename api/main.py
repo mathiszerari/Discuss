@@ -72,6 +72,9 @@ def get_responses():
                 response_data["upvote"] = response["upvote"]
             if "downvote" in response:
                 response_data["downvote"] = response["downvote"]
+            if "pp" in response:
+                response_data["pp"] = response["pp"]
+            print(response_data)
             responses.append(response_data)
 
     if algorithm == "relevant":
@@ -247,6 +250,8 @@ def response():
     downvote = data["downvote"]
     question = data["question"]
     score = data["score"]
+    pp = data.get("pp")
+
     heure_actuelle = datetime.now()
 
     user = collection_users.find_one({"username": username})
@@ -270,7 +275,8 @@ def response():
         "downvote": downvote,
         "heure": heure_actuelle,
         "index": index,
-        "score": score
+        "score": score,
+        "pp": pp,
     }
     response = collection_responses.insert_one(responses)
 
@@ -285,6 +291,7 @@ def response():
             "score": score,
             "user_id": user_id,
             "index": index,
+            "pp": pp
         }
     )
 

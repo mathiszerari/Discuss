@@ -34,6 +34,7 @@ export class TitleComponent implements OnInit {
       this.http.get<UserProfile>(this.url + `getuser/${this.username}`).subscribe(
         data => {
           this.userProfile = data;
+          
           this.loadProfilePhoto();
         },
         error => {
@@ -81,10 +82,10 @@ export class TitleComponent implements OnInit {
             this.profilePhoto = userData.profile_photo;
             this.newimg = this.convertBase64ToUrl(this.profilePhoto);
             localStorage.setItem('pp', this.newimg);
-            console.log('store');
+            
           } else {
             this.newimg = userData.profile_photo_url;
-            console.log('store');
+            
             
             localStorage.setItem('pp', this.newimg);
           }
