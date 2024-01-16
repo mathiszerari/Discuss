@@ -16,7 +16,7 @@ interface ProfilePhoto {
 })
 
 export class ReplyService {
-  private apiUrl: string = 'http://127.0.0.1:5000/api/';
+  private apiUrl: string = 'http://10.57.33.33:5000/api/';
   private replySubject = new BehaviorSubject<string>('');
   responses: any[] = [];
   userProfile: UserProfile | null = null;

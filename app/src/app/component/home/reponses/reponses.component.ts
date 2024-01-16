@@ -10,7 +10,7 @@ import * as moment from 'moment';
 })
 
 export class ReponsesComponent implements OnInit {
-  url: string = 'http://127.0.0.1:5000/api/';
+  url: string = 'http://10.57.33.33:5000/api/';
 
   clicked: any;
   reply: string | undefined;
