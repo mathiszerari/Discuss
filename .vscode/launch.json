@@ -7,7 +7,7 @@
       "type": "pwa-chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://10.57.33.33:24/"
+      "url": "http://192.168.128.2/"
     }
   ]
 }
