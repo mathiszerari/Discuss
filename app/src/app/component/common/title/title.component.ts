@@ -17,7 +17,7 @@ interface ProfilePhoto {
   styles: []
 })
 export class TitleComponent implements OnInit {
-  url: string = 'http://10.57.33.33:5000/api/';
+  url: string = 'http://192.168.64.4:24/api/';
   userProfile: UserProfile | null = null;
   profilePhoto: ProfilePhoto | null = null;
   username: string | null = null;

@@ -1,6 +1,6 @@
 {
     "/users/*": {
-      "target": "http://10.57.33.33:5000",
+      "target": "http://192.168.64.4:24",
       "secure": false,
       "logLevel": "debug"
     }

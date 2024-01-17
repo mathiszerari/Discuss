@@ -26,7 +26,7 @@ export class ConnexionComponent {
   erreur: string = '';
   success: string = '';
   creatingAccount: boolean = false;
-  url: string = 'http://10.57.33.33:5000/api/';
+  url: string = 'http://192.168.64.4:24/api/';
   inSession: boolean = false;
   emailOrUsername: string = '';
   sessionName: string = '';
@@ -112,7 +112,7 @@ export class ConnexionComponent {
             if (this.success === 'Authentification réussie') {
               this.close();
             }
-          }, 5000);
+          }, 24);
         },
         (error) => {
           console.error('Error submitting form:', error);
@@ -188,7 +188,7 @@ export class ConnexionComponent {
       if (this.success == 'Utilisateur créé avec succès') {
         this.close();
       }
-    }, 5000);
+    }, 24);
   }
   
 

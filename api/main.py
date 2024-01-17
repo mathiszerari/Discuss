@@ -27,15 +27,15 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
         logging.FileHandler("app.log"),  # Chemin vers le fichier de logs
-        logging.StreamHandler()  # Affiche les logs dans la console
-    ]
+        logging.StreamHandler(),  # Affiche les logs dans la console
+    ],
 )
 
 load_dotenv(find_dotenv())
 
 password = os.environ.get("MONGO_PWD")
 
-connection_string = f"mongodb://10.57.33.33/discuss"
+connection_string = f"mongodb://192.168.64.4/discuss"
 # connection_string = "mongodb+srv://mathis:buvyg1mIoxULoFlP@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
 
 app = Flask(__name__)
@@ -47,10 +47,12 @@ collection_users = db.usersdatas
 collection_responses = db.responses
 fs = GridFS(db)
 
-ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png', 'gif'}
+ALLOWED_EXTENSIONS = {"jpg", "jpeg", "png", "gif"}
+
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 @app.route("/api/getresponses", methods=["GET"])
 def get_responses():
@@ -83,13 +85,14 @@ def get_responses():
     elif algorithm == "recent":
         responses.sort(key=lambda x: x.get("heure", datetime.min), reverse=True)
         app.logger.info("Réponses récupérées avec succès")
-        
+
     return jsonify(
         {
             "message": "Réponses récupérées avec succès",
-            "data": responses, 
+            "data": responses,
         }
     )
+
 
 @app.route("/api/getuser/<username>", methods=["GET"])
 def get_user(username):
@@ -99,27 +102,29 @@ def get_user(username):
         if profile_photo_id:
             if fs.exists(ObjectId(profile_photo_id)):
                 profile_photo = fs.get(ObjectId(profile_photo_id))
-                photo_data = base64.b64encode(profile_photo.read()).decode('utf-8')
+                photo_data = base64.b64encode(profile_photo.read()).decode("utf-8")
                 user["profile_photo"] = photo_data
-                
+
                 # Vérifier si profile_photo est une image valide
                 if imghdr.what(None, h=profile_photo.read()) is not None:
                     # Ouvrir l'image avec PIL
                     image = Image.open(io.BytesIO(profile_photo.read()))
-                    
+
                     # Convertir en mode RVB si le mode est RGBA
-                    if image.mode == 'RGBA':
-                        image = image.convert('RGB')
-                    
+                    if image.mode == "RGBA":
+                        image = image.convert("RGB")
+
                     # Enregistrer l'image en tant qu'image JPEG
-                    image.save("profil.jpg")  # Remplacez "profil.jpg" par le nom et l'extension souhaités
-        
+                    image.save(
+                        "profil.jpg"
+                    )  # Remplacez "profil.jpg" par le nom et l'extension souhaités
+
         user["_id"] = str(user["_id"])
-        
+
         for key, value in user.items():
             if isinstance(value, (bytes, ObjectId)):
                 user[key] = str(value)
-        
+
         return jsonify(user)
     else:
         return jsonify({"message": "Utilisateur introuvable"})
@@ -168,8 +173,8 @@ def create_users():
     password = data["password"]
 
     # Retrieve the uploaded profile photo
-    profile_photo = request.files.get('profilePhoto')
-    profile_photo_url = data.get('profilePhotoUrl')
+    profile_photo = request.files.get("profilePhoto")
+    profile_photo_url = data.get("profilePhotoUrl")
 
     # Conditions de validation
     if username == "" or email == "" or password == "":
@@ -204,13 +209,13 @@ def create_users():
     if existing_email:
         app.logger.error("L'email est déjà pris")
         return jsonify({"message": "L'email est déjà pris"})
-    
+
     if profile_photo:
         # Validate the file extension
         if not allowed_file(profile_photo.filename):
             app.logger.error("Extension de fichier non autorisée")
             return jsonify({"message": "Extension de fichier non autorisée"})
-        
+
         # Generate a secure filename
         filename = secure_filename(profile_photo.filename)
 
@@ -225,7 +230,7 @@ def create_users():
             "email": email,
             "password": password,
             "profile_photo_id": None,  # Utilisez un champ différent pour l'URL de la photo de profil
-            "profile_photo_url": profile_photo_url
+            "profile_photo_url": profile_photo_url,
         }
     else:
         # Sinon, utilisez le comportement précédent avec profile_photo_id
@@ -233,7 +238,7 @@ def create_users():
             "username": username,
             "email": email,
             "password": password,
-            "profile_photo_id": file_id
+            "profile_photo_id": file_id,
         }
 
     collection_users.insert_one(user_data)
@@ -291,7 +296,7 @@ def response():
             "score": score,
             "user_id": user_id,
             "index": index,
-            "pp": pp
+            "pp": pp,
         }
     )
 
@@ -411,6 +416,7 @@ def cancelupvote():
 
     app.logger.error("Upvote annulé avec succès")
     return jsonify({"message": "Upvote annulé avec succès"})
+
 
 if __name__ == "__main__":
     app.run()
