@@ -79,6 +79,11 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "virtual": {
+              "browserTarget": "ng-discuss-app:build:development",
+              "port": 24,
+              "host": "0.0.0.0" 
             }
           },
           "defaultConfiguration": "production"

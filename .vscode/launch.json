@@ -8,6 +8,7 @@
       "request": "launch",
       "preLaunchTask": "npm: start",
       "url": "http://192.168.128.2/"
+      // new ip adress
     }
   ]
 }
