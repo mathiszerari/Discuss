@@ -35,7 +35,8 @@ load_dotenv(find_dotenv())
 
 password = os.environ.get("MONGO_PWD")
 
-connection_string = f"mongodb://192.168.64.4/discuss"
+connection_string = f"mongodb://192.168.64.4:27017/discuss"
+
 # connection_string = "mongodb+srv://mathis:buvyg1mIoxULoFlP@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
 
 app = Flask(__name__)
@@ -416,6 +417,11 @@ def cancelupvote():
 
     app.logger.error("Upvote annulé avec succès")
     return jsonify({"message": "Upvote annulé avec succès"})
+
+    
+@app.route("/api/test", methods=["GET"])
+def test():
+    return jsonify({"message": "test"})
 
 
 if __name__ == "__main__":
