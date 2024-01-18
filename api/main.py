@@ -35,7 +35,7 @@ load_dotenv(find_dotenv())
 
 password = os.environ.get("MONGO_PWD")
 
-connection_string = f"mongodb://192.168.64.4:27017/discuss"
+connection_string = f"mongodb://192.168.64.4:27017"
 
 # connection_string = "mongodb+srv://mathis:buvyg1mIoxULoFlP@discuss.8rkcwju.mongodb.net/?retryWrites=true&w=majority"
 
